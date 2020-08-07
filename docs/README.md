@@ -6,25 +6,25 @@ A könyvben sok sok minden van,  amire nem jut majd időnk.
 Ezért egy szűkített változat és a gyakorlatokon használt feladatgyűjtemény
 Puskás tanárúr [honlapjáról](http://web.uni-corvinus.hu/puskas) letölthető.
 
-Egy még tovább szűkített változat: [http://web.uni-corvinus.hu/magyarkuti/pages_7-58.pdf pages_7-58.pdf]
+Egy még tovább szűkített [változatot](https://magyarkuti.github.io/linearalgebra) én is írok.
 
 Az eredmények a kis dolgozatok után: [http://web.uni-corvinus.hu/magyarkuti/Algebra1Eredmenyek.pdf Eredmények]
 
 ## Órarend a 2019-20 tanév őszi félévében
-Előadás: Szerda 8-9.30
-Gyakorlat: Szerda 9.50-11.20 és Csütörtök 13.40-15.10
+* Előadás: Szerda 8-9.30
+* Gyakorlat: Szerda 9.50-11.20 és Csütörtök 13.40-15.10
 
 ## Követemények
 <!--
 A kurzus szillabusza [http://web.uni-corvinus.hu/magyarkuti/4MA12NAK62B-2018.pdf letölthető],
 de itt összefoglalom legfontosabbakat:
 -->
- Fogadó órám: Péntek 18 óra, S218/B. Kérem előtte lévő nap este 8 óráig jelezzék részvételi szándékukat;
- Az órákon és a gyakorlatokon a megjelenés kötelező;
- Osztályzás: 
- A 3.,6.,9.,12, héten dolgozatot írunk 5-5 pontért. 
- A téli vizsgaidőszakban esedékes dolgozat 30 pontért. Az így megszerezhető 50 pont képezi az írásbeli jegyet.
- A vizsgaidőszakban szóbeli vizsga, a szóbeli és az írásbeli vizsga átlagaként kapják a végső jegyet.
+ * Fogadó órám: Péntek 18 óra, S218/B. Kérem előtte lévő nap este 8 óráig jelezzék részvételi szándékukat;
+ * Az órákon és a gyakorlatokon a megjelenés kötelező;
+ * Osztályzás: 
+   A 3.,6.,9.,12, héten dolgozatot írunk 5-5 pontért. 
+   A téli vizsgaidőszakban esedékes dolgozat 30 pontért. Az így megszerezhető 50 pont képezi az írásbeli jegyet.
+   A vizsgaidőszakban szóbeli vizsga, a szóbeli és az írásbeli vizsga átlagaként kapják a végső jegyet.
 
 ## Tételjegyzék
 Az alábbi tételjegyzéket igyekeztem úgy összeállítani, hogy egy tétel nagyjából egy heti tananyag legyen.
