@@ -29,7 +29,7 @@ de itt összefoglalom legfontosabbakat:
 ## Tételjegyzék
 Az alábbi tételjegyzéket igyekeztem úgy összeállítani, hogy egy tétel nagyjából egy heti tananyag legyen.
 Így az anyag heti bontásban a következő:
-[ ] Algebrai struktúrák
+1. Algebrai struktúrák
 * Félcsoport
 * Neutrális elemes félcsoport
 * Additív multiplikatív írásmód
@@ -41,7 +41,7 @@ Az alábbi tételjegyzéket igyekeztem úgy összeállítani, hogy egy tétel na
 * Test
 * Test nullosztómentessége
 
-[ ] Polinomok
+1. Polinomok
 * Egy test feletti polinomok, kummutatív egységelemes, nullosztómentes gyűrűt alkotnak
 * Polinomok fokszáma
 * Polinomok oszthatósága
@@ -50,14 +50,14 @@ Az alábbi tételjegyzéket igyekeztem úgy összeállítani, hogy egy tétel na
 * Euklideszi algoritmus
 * Bézout-formula
 
-### Polinomok faktorizációja 
+1. Polinomok faktorizációja 
 * A gyöktényező faktorizálható
 * Irreducibilis polinom fogalma
 * Minden legalább elsőfokú polinom előáll irreducibilis polinomok szorzataként
 * Prim és irreducibilis polinomok
 * A polinom faktorizáció egyértelműsége
 
-### Komplex számok 
+1. Komplex számok 
 * Komplex számtest mint a sík pontjain definiált test
 * Algebrai struktúrák izomorfiája
 * A valós test beágyazása a komplex testbe
