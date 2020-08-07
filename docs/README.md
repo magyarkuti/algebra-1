@@ -29,7 +29,7 @@ de itt összefoglalom legfontosabbakat:
 ## Tételjegyzék
 Az alábbi tételjegyzéket igyekeztem úgy összeállítani, hogy egy tétel nagyjából egy heti tananyag legyen.
 Így az anyag heti bontásban a következő:
-### Algebrai struktúrák
+[ ] Algebrai struktúrák
 * Félcsoport
 * Neutrális elemes félcsoport
 * Additív multiplikatív írásmód
@@ -41,7 +41,7 @@ Az alábbi tételjegyzéket igyekeztem úgy összeállítani, hogy egy tétel na
 * Test
 * Test nullosztómentessége
 
-### Polinomok
+[ ] Polinomok
 * Egy test feletti polinomok, kummutatív egységelemes, nullosztómentes gyűrűt alkotnak
 * Polinomok fokszáma
 * Polinomok oszthatósága
