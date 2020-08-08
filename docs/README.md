@@ -67,7 +67,7 @@ Az alábbi tételjegyzéket igyekeztem úgy összeállítani, hogy egy tétel na
 * Moivre-formula
 * Egységgyökök
 
-### Az algebra alaptételének következményei 
+1. Az algebra alaptételének következményei 
 * Irreducibilis polinom a komplex számtest felett
 * Polinomfaktorizáció a komplex számtest felett
 * Polinomfaktorizáció a valós számtest felett
@@ -75,32 +75,32 @@ Az alábbi tételjegyzéket igyekeztem úgy összeállítani, hogy egy tétel na
 * Valódi komplex gyökökből páros sok van.
 * Páratlan fokú polinomnak van valós gyöke.
 
-### Vektorterek bevezetése 
+1. Vektorterek bevezetése 
 * Vektortér mint algebrai struktúra
 * Példák vektorterekre
 
-### Vektortér alterei 
+1. Vektortér alterei 
 * Generátorrendszer
 * Lineáris burok
 
-### Lineáris függetlenség 
+1. Lineáris függetlenség 
 * Ekvivalens megfogalmazások
 * Nem véges rendszer lineáris függetlensége
 * Lineáris összefüggőség
 
-### Független és generátorrendszer elemszáma 
+1. Független és generátorrendszer elemszáma 
 
-### Bázis 
+1. Bázis 
 
-### Koordinátázás, Izomorf vektorterek 
+1. Koordinátázás, Izomorf vektorterek 
 
-### Maximális és minimális vektorrendszerek 
+1. Maximális és minimális vektorrendszerek 
 
-### Direktösszegek 
+1. Direktösszegek 
 
-### Faktorterek 
+1. Faktorterek 
 
-### Mátrixok 
+1. Mátrixok 
 * Mátrixok vektorterének dimenziója
 * Mátrixszorzás
 * Transzponált
@@ -112,7 +112,7 @@ Az alábbi tételjegyzéket igyekeztem úgy összeállítani, hogy egy tétel na
 * Magtér és képtér meghatározása
 * A rang-defektus tétel
 
-### Lineáris egyenletrendszerek megoldása 
+1. Lineáris egyenletrendszerek megoldása 
 * Homogén lineáris egyenletrendszer fogalma
 * Ezek ekvivalenciája
 * Elemi sorműveletek
