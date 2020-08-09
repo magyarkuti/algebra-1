@@ -1,8 +1,3 @@
----
-title: "Algebra 1."
-description: "Magyarkuti Gyula Algebra-1 kurzusa"
-permalink: /algebra-1.html
----
 A kurzus közvetlen folytatása: [Algebra-2](/algebra-2).
 
 # Jegyzetek
