@@ -1,8 +1,7 @@
-----
+---
 title: "Algebra 1."
 description: "Magyarkuti Gyula Algebra-1 kurzusa"
-----
-
+---
 A kurzus közvetlen folytatása: [Algebra-2](/algebra-2).
 
 # Jegyzetek
