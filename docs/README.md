@@ -1,7 +1,7 @@
 A Corvinus Egyetem Matematika Tanszéke Algebra 1. kurzusának weblapja. 
 A kurzus közvetlen folytatása: [Algebra-2](/algebra-2).
 
-# Jegyzetek
+## Jegyzetek
 A tankönyv: [Puskás Csaba, Dancs István: Vektorterek](http://hunteka.uni-corvinus.hu/record/-/record/BCEKK379187).
 A könyvben sok sok minden van,  amire nem jut majd időnk. 
 Ezért egy szűkített változat és a gyakorlatokon használt feladatgyűjtemény Puskás tanárúr [honlapjáról](http://web.uni-corvinus.hu/puskas) letölthető.\
@@ -21,13 +21,11 @@ de itt összefoglalom legfontosabbakat:
  * Fogadó órám: Péntek 18 óra, S218/B. Kérem előtte lévő nap este 8 óráig jelezzék részvételi szándékukat;
  * Az órákon és a gyakorlatokon a megjelenés kötelező;
  * Osztályzás: 
-   A 3.,6.,9.,12, héten dolgozatot írunk 5-5 pontért. 
-   A téli vizsgaidőszakban esedékes dolgozat 30 pontért. Az így megszerezhető 50 pont képezi az írásbeli jegyet.
-   A vizsgaidőszakban szóbeli vizsga, a szóbeli és az írásbeli vizsga átlagaként kapják a végső jegyet.
+   - A 3.,6.,9.,12, héten dolgozatot írunk 5-5 pontért. 
+   - A téli vizsgaidőszakban esedékes dolgozat 30 pontért. Az így megszerezhető 50 pont képezi az írásbeli jegyet.
+   - A vizsgaidőszakban szóbeli vizsga, a szóbeli és az írásbeli vizsga átlagaként kapják a végső jegyet.
 
 ## Tételjegyzék
-Az alábbi tételjegyzéket igyekeztem úgy összeállítani, hogy egy tétel nagyjából egy heti tananyag legyen.
-Így az anyag heti bontásban a következő:
 1. Algebrai struktúrák
 * Félcsoport
 * Neutrális elemes félcsoport
