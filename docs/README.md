@@ -6,9 +6,9 @@ A könyvben sok sok minden van,  amire nem jut majd időnk.
 Ezért egy szűkített változat és a gyakorlatokon használt feladatgyűjtemény
 Puskás tanárúr [honlapjáról](http://web.uni-corvinus.hu/puskas) letölthető.
 
-Egy még tovább szűkített [változatot](https://magyarkuti.github.io/linearalgebra) én is írok.
+Egy még tovább szűkített én is írok, amely [innen is letölthető](/linearalgebra).
 
-Az eredmények a kis dolgozatok után: [http://web.uni-corvinus.hu/magyarkuti/Algebra1Eredmenyek.pdf Eredmények]
+Az eredmények a kis dolgozatok után: [Eredmények](http://web.uni-corvinus.hu/magyarkuti/Algebra1Eredmenyek.pdf).
 
 ## Órarend a 2019-20 tanév őszi félévében
 * Előadás: Szerda 8-9.30
