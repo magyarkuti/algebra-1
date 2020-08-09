@@ -3,16 +3,14 @@ A kurzus közvetlen folytatása: [Algebra-2](/algebra-2).
 # Jegyzetek
 A tankönyv: [Puskás Csaba, Dancs István: Vektorterek](http://hunteka.uni-corvinus.hu/record/-/record/BCEKK379187).
 A könyvben sok sok minden van,  amire nem jut majd időnk. 
-Ezért egy szűkített változat és a gyakorlatokon használt feladatgyűjtemény
-Puskás tanárúr [honlapjáról](http://web.uni-corvinus.hu/puskas) letölthető.
-
+Ezért egy szűkített változat és a gyakorlatokon használt feladatgyűjtemény Puskás tanárúr [honlapjáról](http://web.uni-corvinus.hu/puskas) letölthető.\
 Egy még tovább szűkített én is írok, amely [innen is letölthető](/linearalgebra).
 
 Az eredmények a kis dolgozatok után: [Eredmények](http://web.uni-corvinus.hu/magyarkuti/Algebra1Eredmenyek.pdf).
 
 ## Órarend a 2019-20 tanév őszi félévében
-* Előadás: Szerda 8-9.30
-* Gyakorlat: Szerda 9.50-11.20 és Csütörtök 13.40-15.10
+Előadás: Szerda 8-9.30\
+Gyakorlat: Szerda 9.50-11.20 és Csütörtök 13.40-15.10
 
 ## Követemények
 <!--
