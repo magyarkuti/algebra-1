@@ -10,9 +10,9 @@ Egy még tovább szűkített én is írok, amely [innen is letölthető](/linear
 Az eredmények a kis dolgozatok után: [Eredmények](http://web.uni-corvinus.hu/magyarkuti/Algebra1Eredmenyek.pdf).
 
 ## Órarend a 2019-20 tanév őszi félévében
-   Előadás: Szerda 8-9.30
-   Gyakorlat: Szerda 9.50-11.20 
-              Csütörtök 13.40-15.10
+    Előadás: Szerda 8-9.30.
+    Gyakorlat: Szerda 9.50-11.20,
+               Csütörtök 13.40-15.10.
 
 ## Követemények
 <!--
