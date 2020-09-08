@@ -3,23 +3,24 @@ A kurzus közvetlen folytatása: [Algebra-2](/algebra-2).
 
 ## Jegyzetek
 A tankönyv: [Puskás Csaba, Dancs István: Vektorterek](http://hunteka.uni-corvinus.hu/record/-/record/BCEKK379187).
-A könyvben sok sok minden van,  amire nem jut majd időnk. 
+A könyvben sok sok minden van, amire nem jut majd időnk. 
 Ezért egy szűkített változat és a gyakorlatokon használt feladatgyűjtemény Puskás tanárúr [honlapjáról](http://web.uni-corvinus.hu/puskas) letölthető.\
 Egy még tovább szűkített én is írok, amely [innen is letölthető](/linearalgebra).
 
+<!--
 Az eredmények a kis dolgozatok után: [Eredmények](http://web.uni-corvinus.hu/magyarkuti/Algebra1Eredmenyek.pdf).
 
-## Órarend a 2019-20 tanév őszi félévében
+-->
+## Órarend a 2020-21 tanév őszi félévében
     Előadás: Szerda 8-9.30.
-    Gyakorlat: Szerda 9.50-11.20,
-               Csütörtök 13.40-15.10.
+    Gyakorlat: Csütörtök 9.50-11.20. (G1)
+               Csütörtök 13.40-15.10. (G2)
+               Csütörtök 9.50-11.20. (G3)
 
 ## Követemények
-<!--
-A kurzus szillabusza [http://web.uni-corvinus.hu/magyarkuti/4MA12NAK62B-2018.pdf letölthető],
+A kurzus szillabusza [letölthető](https://www.uni-corvinus.hu/tantargyak/4MA12NAK02O/),
 de itt összefoglalom legfontosabbakat:
--->
- * Fogadó órám: Péntek 18 óra, S218/B. Kérem előtte lévő nap este 8 óráig jelezzék részvételi szándékukat;
+ * Fogadó órám: Péntek 18 óra. Kérem előtte lévő nap este 8 óráig jelezzék részvételi szándékukat. Ez esetben én kezdeményezem a hívást a TEAMS felületen;
  * Az órákon és a gyakorlatokon a megjelenés kötelező;
  * Osztályzás: 
    - A 3.,6.,9.,12, héten dolgozatot írunk 5-5 pontért. 
