@@ -95,10 +95,6 @@ de itt összefoglalom legfontosabbakat:
 
 1. Maximális és minimális vektorrendszerek 
 
-1. Direktösszegek 
-
-1. Faktorterek 
-
 1. Mátrixok 
 * Mátrixok vektorterének dimenziója
 * Mátrixszorzás
@@ -109,7 +105,6 @@ de itt összefoglalom legfontosabbakat:
 * Inhomogén lineáris egyenletrendszer megoldása
 * Magtér és képtér
 * Magtér és képtér meghatározása
-* A rang-defektus tétel
 
 1. Lineáris egyenletrendszerek megoldása 
 * Homogén lineáris egyenletrendszer fogalma
