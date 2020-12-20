@@ -113,3 +113,8 @@ de itt összefoglalom legfontosabbakat:
 * Gauss-Jordan eliminációs lépés
 * Homogén lineáris egyenletrendszernek, amelyben az ismeretlenek száma több mint az egyenletek száma, mindig van nem triviális megoldása
 * Gauss-Jordan elimináció táblázattal
+
+1. Kvadratikus alakok
+* Kvadratikus alakok és szimmetrikus mátrixok kapcsolata
+* Szimmetrikus mátrixok diádfelbontása eliminációval
+* Kvadratikus alakok osztályozása
