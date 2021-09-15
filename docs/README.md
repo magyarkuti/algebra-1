@@ -13,19 +13,21 @@ Az eredmények a kis dolgozatok után: [Eredmények](http://web.uni-corvinus.hu/
 -->
 ## Órarend a 2020-21 tanév őszi félévében
     Előadás: Szerda 8-9.30.
-    Gyakorlat: Csütörtök 9.50-11.20. (G1)
-               Csütörtök 13.40-15.10. (G2)
-               Csütörtök 9.50-11.20. (G3)
+    Gyakorlat: Szerda  9.50-11.20. (G1)
+               Szerda 11.40-13.10. (G3)
 
 ## Követemények
 A kurzus szillabusza [letölthető](https://www.uni-corvinus.hu/tantargyak/4MA12NAK02O/),
 de itt összefoglalom legfontosabbakat:
- * Fogadó órám: Péntek 18 óra. Kérem előtte lévő nap este 8 óráig jelezzék részvételi szándékukat. Ez esetben én kezdeményezem a hívást a TEAMS felületen;
+ * Fogadó órám: Hétfő 17 óra, S208/B. Kérem előtte lévő nap este 8 óráig jelezzék részvételi szándékukat.
  * Az órákon és a gyakorlatokon a megjelenés kötelező;
  * Osztályzás: 
-   - A 3.,6.,9.,12, héten dolgozatot írunk 5-5 pontért. 
+   - A 4.,7.,10.,13, héten dolgozatot írunk 5-5 pontért. 
    - A téli vizsgaidőszakban esedékes dolgozat 30 pontért. Az így megszerezhető 50 pont képezi az írásbeli jegyet.
    - A vizsgaidőszakban szóbeli vizsga, a szóbeli és az írásbeli vizsga átlagaként kapják a végső jegyet.
+
+## Az órákon használt anyagok:
+1. [Struktúrák](https://mega.nz/file/RtgCEJ6a#2iDAotruWJUVEyCbEQ4xhNDSchTZpAzc8f7DBAEAdhk)
 
 ## Tételjegyzék
 1. Algebrai struktúrák
