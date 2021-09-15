@@ -27,7 +27,7 @@ de itt összefoglalom legfontosabbakat:
    - A vizsgaidőszakban szóbeli vizsga, a szóbeli és az írásbeli vizsga átlagaként kapják a végső jegyet.
 
 ## Az órákon használt anyagok:
-1. [Struktúrák](https://mega.nz/file/RtgCEJ6a#2iDAotruWJUVEyCbEQ4xhNDSchTZpAzc8f7DBAEAdhk)
+1. [Struktúrák](https://mega.nz/file/o0oGjaYI#GvfzrPNFhY9eVxXQxfGWNRt3JypZuatE9g8HMx7G9eM)
 
 ## Tételjegyzék
 1. Algebrai struktúrák
