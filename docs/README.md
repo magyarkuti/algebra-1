@@ -27,7 +27,7 @@ de itt összefoglalom legfontosabbakat:
    - A vizsgaidőszakban szóbeli vizsga, a szóbeli és az írásbeli vizsga átlagaként kapják a végső jegyet.
 
 ## Az órákon használt anyagok:
-1. [Struktúrák](https://mega.nz/file/o0oGjaYI#GvfzrPNFhY9eVxXQxfGWNRt3JypZuatE9g8HMx7G9eM)
+1. [Struktúrák](http://web.uni-corvinus.hu/magyarkuti/1-Algebra1.pdf)
 
 ## Tételjegyzék
 1. Algebrai struktúrák
@@ -42,7 +42,7 @@ de itt összefoglalom legfontosabbakat:
 * Test
 * Test nullosztómentessége
 
-1. Polinomok
+1. [Polinomok](http://web.uni-corvinus.hu/magyarkuti/2-Algebra1.pdf)
 * Egy test feletti polinomok, kummutatív egységelemes, nullosztómentes gyűrűt alkotnak
 * Polinomok fokszáma
 * Polinomok oszthatósága
