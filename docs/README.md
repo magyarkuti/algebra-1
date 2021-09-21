@@ -26,11 +26,8 @@ de itt összefoglalom legfontosabbakat:
    - A téli vizsgaidőszakban esedékes dolgozat 30 pontért. Az így megszerezhető 50 pont képezi az írásbeli jegyet.
    - A vizsgaidőszakban szóbeli vizsga, a szóbeli és az írásbeli vizsga átlagaként kapják a végső jegyet.
 
-## Az órákon használt anyagok:
-1. [Struktúrák](http://web.uni-corvinus.hu/magyarkuti/1-Algebra1.pdf)
-
-## Tételjegyzék
-1. Algebrai struktúrák
+## Az órákon használt anyagok és tételjegyzék
+1. [Algebrai struktúrák](http://web.uni-corvinus.hu/magyarkuti/1-Algebra1.pdf)
 * Félcsoport
 * Neutrális elemes félcsoport
 * Additív multiplikatív írásmód
