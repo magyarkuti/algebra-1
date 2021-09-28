@@ -43,8 +43,11 @@ de itt összefoglalom legfontosabbakat:
 * Egy test feletti polinomok, kummutatív egységelemes, nullosztómentes gyűrűt alkotnak
 * Polinomok fokszáma
 * Polinomok oszthatósága
-* Polinomok legnagyobb közös osztója
-* Polinomok maradékos osztása
+* Maradékos osztás
+* Test feletti polinomgyűrű főideál-gyűrű
+
+1. [Legnyagyobb közös osztó és legkisebb közös többszörös](http://web.uni-corvinus.hu/magyarkuti/3-Algebra1.pdf)
+* Legkisebb közös törbbszörös és legnagyobb közös osztó létezése
 * Euklideszi algoritmus
 * Bézout-formula
 
