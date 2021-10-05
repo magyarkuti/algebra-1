@@ -51,14 +51,21 @@ de itt összefoglalom legfontosabbakat:
 * Euklideszi algoritmus
 * Bézout-formula
 
-1. Polinomok faktorizációja 
+1. [Polinomok faktorizációja](http://web.uni-corvinus.hu/magyarkuti/4-Algebra1.pdf)
 * A gyöktényező faktorizálható
 * Irreducibilis polinom fogalma
 * Minden legalább elsőfokú polinom előáll irreducibilis polinomok szorzataként
 * Prim és irreducibilis polinomok
 * A polinom faktorizáció egyértelműsége
 
-1. Komplex számok 
+1. [Mátrixok](http://web.uni-corvinus.hu/magyarkuti/4-Algebra1.pdf)
+* Mátrixok összege, és számmal való szorzata
+* Mátrixok szorzata
+* A mátrixszorzat értékelése mint sorok vagy oszlopok lineáris kombinációja
+* A mátrixok szorzás asszociativitása
+* Az inverz mátrix két oldalúsága
+
+3. Komplex számok 
 * Komplex számtest mint a sík pontjain definiált test
 * Algebrai struktúrák izomorfiája
 * A valós test beágyazása a komplex testbe
