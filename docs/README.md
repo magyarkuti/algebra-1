@@ -83,13 +83,14 @@ de itt összefoglalom legfontosabbakat:
 * Valódi komplex gyökökből páros sok van.
 * Páratlan fokú polinomnak van valós gyöke.
 
-1. Vektorterek bevezetése 
+1. [Vektorterek bevezetése](http://web.uni-corvinus.hu/magyarkuti/5-Algebra1.pdf)
 * Vektortér mint algebrai struktúra
 * Példák vektorterekre
 
-1. Vektortér alterei 
+1. [Vektortér alterei](http://web.uni-corvinus.hu/magyarkuti/5-Algebra1.pdf)
 * Generátorrendszer
 * Lineáris burok
+* Generátorcsere-lemma
 
 1. Lineáris függetlenség 
 * Ekvivalens megfogalmazások
