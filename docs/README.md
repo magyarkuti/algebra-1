@@ -75,7 +75,7 @@ de itt összefoglalom legfontosabbakat:
 * Moivre-formula
 * Egységgyökök
 
-1. [Az algebra alaptételének következményei](http://web.uni-corvinus.hu/magyarkuti/5-Algebra1.pdf)
+1. [Az algebra alaptételének következményei](http://web.uni-corvinus.hu/magyarkuti/6-Algebra1.pdf)
 * Irreducibilis polinom a komplex számtest felett
 * Polinomfaktorizáció a komplex számtest felett
 * Polinomfaktorizáció a valós számtest felett
@@ -83,11 +83,11 @@ de itt összefoglalom legfontosabbakat:
 * Valódi komplex gyökökből páros sok van.
 * Páratlan fokú polinomnak van valós gyöke.
 
-1. [Vektorterek bevezetése](http://web.uni-corvinus.hu/magyarkuti/5-Algebra1.pdf)
+1. [Vektorterek bevezetése](http://web.uni-corvinus.hu/magyarkuti/6-Algebra1.pdf)
 * Vektortér mint algebrai struktúra
 * Példák vektorterekre
 
-1. [Vektortér alterei](http://web.uni-corvinus.hu/magyarkuti/5-Algebra1.pdf)
+1. [Vektortér alterei](http://web.uni-corvinus.hu/magyarkuti/6-Algebra1.pdf)
 * Generátorrendszer
 * Lineáris burok
 * Generátorcsere-lemma
