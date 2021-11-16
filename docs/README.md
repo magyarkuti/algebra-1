@@ -87,23 +87,27 @@ de itt összefoglalom legfontosabbakat:
 * Vektortér mint algebrai struktúra
 * Példák vektorterekre
 
-1. [Vektortér alterei](http://web.uni-corvinus.hu/magyarkuti/6-Algebra1.pdf)
+1. [Vektortér alterei](http://web.uni-corvinus.hu/magyarkuti/7-Algebra1.pdf)
 * Generátorrendszer
 * Lineáris burok
 * Generátorcsere-lemma
 
-1. Lineáris függetlenség 
+1. [Lineáris függetlenség](http://web.uni-corvinus.hu/magyarkuti/8-Algebra1.pdf)
+* Lineáris összefüggőség
 * Ekvivalens megfogalmazások
 * Nem véges rendszer lineáris függetlensége
-* Lineáris összefüggőség
+* Függetlenség
+* Ekvivalens megfogalmazások
+* Maximális független rendszerek
+* Minimális generátorrendszerek
 
-1. Független és generátorrendszer elemszáma 
-
-1. Bázis 
+1. [Független és generátorrendszer elemszáma](http://web.uni-corvinus.hu/magyarkuti/9-Algebra1.pdf)
+* Steinitz-lemma
+* Rang-tétel
+* Bázis
+* Dimenzió fogalma
 
 1. Koordinátázás, Izomorf vektorterek 
-
-1. Maximális és minimális vektorrendszerek 
 
 1. Mátrixok 
 * Mátrixok vektorterének dimenziója
