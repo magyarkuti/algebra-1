@@ -7,10 +7,8 @@ A könyvben sok sok minden van, amire nem jut majd időnk.
 Ezért egy szűkített változat és a gyakorlatokon használt feladatgyűjtemény Puskás tanárúr [honlapjáról](http://web.uni-corvinus.hu/puskas) letölthető.\
 Egy még tovább szűkített én is írok, amely [innen is letölthető](/linearalgebra).
 
-<!--
-Az eredmények a kis dolgozatok után: [Eredmények](http://web.uni-corvinus.hu/magyarkuti/Algebra1Eredmenyek.pdf).
+Az eredmények a kis dolgozatok után: [Eredmények](http://web.uni-corvinus.hu/magyarkuti/Algebra21-22.pdf).
 
--->
 ## Órarend a 2020-21 tanév őszi félévében
     Előadás: Szerda 8-9.30.
     Gyakorlat: Szerda  9.50-11.20. (G1)
@@ -58,7 +56,7 @@ de itt összefoglalom legfontosabbakat:
 * Prim és irreducibilis polinomok
 * A polinom faktorizáció egyértelműsége
 
-1. [Mátrixok](http://web.uni-corvinus.hu/magyarkuti/4-Algebra1.pdf)
+1. Mátrixok
 * Mátrixok összege, és számmal való szorzata
 * Mátrixok szorzata
 * A mátrixszorzat értékelése mint sorok vagy oszlopok lineáris kombinációja
@@ -83,14 +81,14 @@ de itt összefoglalom legfontosabbakat:
 * Valódi komplex gyökökből páros sok van.
 * Páratlan fokú polinomnak van valós gyöke.
 
-1. [Vektorterek bevezetése](http://web.uni-corvinus.hu/magyarkuti/6-Algebra1.pdf)
+1. [Vektortér fogalma](http://web.uni-corvinus.hu/magyarkuti/7-Algebra1.pdf)
 * Vektortér mint algebrai struktúra
 * Példák vektorterekre
-
-1. [Vektortér alterei](http://web.uni-corvinus.hu/magyarkuti/7-Algebra1.pdf)
-* Generátorrendszer
+* Alterek
+* Generátorrendszer, Generált altér
 * Lineáris burok
 * Generátorcsere-lemma
+* Elimináció
 
 1. [Lineáris függetlenség](http://web.uni-corvinus.hu/magyarkuti/8-Algebra1.pdf)
 * Lineáris összefüggőség
@@ -100,21 +98,48 @@ de itt összefoglalom legfontosabbakat:
 * Ekvivalens megfogalmazások
 * Maximális független rendszerek
 * Minimális generátorrendszerek
+* Függetlenrendszercsere-lemma
 
 1. [Független és generátorrendszer elemszáma](http://web.uni-corvinus.hu/magyarkuti/9-Algebra1.pdf)
 * Steinitz-lemma
+* Feszítőrang
 * Rang-tétel
 * Bázis
+* Végesen generált vektortér
+* Bázis létezése
 * Dimenzió fogalma
+* Báziscsere-lemma
+* Altér dimenziója
 
-1. Koordinátázás, Izomorf vektorterek 
+1. [Lineáris operátor fogalma](http://web.uni-corvinus.hu/magyarkuti/10-Algebra1.pdf)
+* Magtér, képtér, inverz jellemzése
+* Független rendszer képe, generátor rendszer képe
+* Izomorf vektorterek
+* Koordinátázás
+* Végesen generált vektorterek izomorfiája
+* Elemi bázistranszformáció
+
+1. [Direktösszeg](http://web.uni-corvinus.hu/magyarkuti/11-Algebra1.pdf)
+* Minkowski-összeg
+* Tulajdonságok
+* Az összeg dimenziója
+* Direkt összeg értelmes
+* Direkt kiegészítő
+
+1. [Faktortér](http://web.uni-corvinus.hu/magyarkuti/12-Algebra1.pdf)
+* Ekvivalencia reláció
+* Oekvivalencia osztály
+* Műveletek az ekvivalencia osztályok halmazán
+* A faktortér definíciója
+* 3 izomorfia tétel
+* Rang-defeketus tétel
 
 1. Mátrixok 
 * Mátrixok vektorterének dimenziója
 * Mátrixszorzás
 * Transzponált
 * Bázisfaktorizáció
-* Rangtétel
+* Oszlopvektortér bázisa, sorvektortér bázisa
 * Homogén lineáris egyenletrendszer megoldása
 * Inhomogén lineáris egyenletrendszer megoldása
 * Magtér és képtér
