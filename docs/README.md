@@ -9,7 +9,7 @@ Egy még tovább szűkített én is írok, amely [innen is letölthető](/linear
 
 Az eredmények a kis dolgozatok után: [Eredmények](http://web.uni-corvinus.hu/magyarkuti/Algebra21-22.pdf).
 
-## Órarend a 2020-21 tanév őszi félévében
+## Órarend a 2021-22 tanév őszi félévében
     Előadás: Szerda 8-9.30.
     Gyakorlat: Szerda  9.50-11.20. (G1)
                Szerda 11.40-13.10. (G3)
