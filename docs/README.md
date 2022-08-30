@@ -7,12 +7,11 @@ A könyvben sok sok minden van, amire nem jut majd időnk.
 Ezért egy szűkített változat és a gyakorlatokon használt feladatgyűjtemény Puskás tanárúr [honlapjáról](http://web.uni-corvinus.hu/puskas) letölthető.\
 Egy még tovább szűkített én is írok, amely [innen is letölthető](/linearalgebra).
 
-Az eredmények a kis dolgozatok után: [Eredmények](http://web.uni-corvinus.hu/magyarkuti/Algebra21-22.pdf).
-
-## Órarend a 2021-22 tanév őszi félévében
-    Előadás: Szerda 8-9.30.
-    Gyakorlat: Szerda  9.50-11.20. (G1)
-               Szerda 11.40-13.10. (G3)
+## Órarend a 2022-23 tanév őszi félévében
+    Előadás: Szerda 8-9.30.-- E238
+    Gyakorlat: Szerda  9.50-11.20.-- S3 (G1)
+               Csütörtök 8-9.30.-- E395 (G2)
+               Csütörtök 13.40-15.10.-- S3 (G3)
 
 ## Követemények
 A kurzus szillabusza [letölthető](https://www.uni-corvinus.hu/tantargyak/4MA12NAK02O/),
