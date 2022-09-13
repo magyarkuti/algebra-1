@@ -24,31 +24,31 @@ de itt összefoglalom legfontosabbakat:
    - A vizsgaidőszakban szóbeli vizsga, a szóbeli és az írásbeli vizsga átlagaként kapják a végső jegyet.
 
 ## Az órákon használt anyagok és tételjegyzék
-1. [Algebrai struktúrák](http://web.uni-corvinus.hu/magyarkuti/1-Algebra1.pdf)
-* Félcsoport
-* Neutrális elemes félcsoport
-* Additív multiplikatív írásmód
-* Csoport
-* Példák csoportokra
-* Csoportban egyszerűsítési szabály
-* Ábel csoport
-* Gyűrű, egységelemes gyűrű, kommutatív egységelemes gyűrű, nullosztómentes gyűrű
-* Test
-* Test nullosztómentessége
+1. Algebrai struktúrák
+  * Félcsoport
+  * Neutrális elemes félcsoport
+  * Additív multiplikatív írásmód
+  * Csoport
+  * Példák csoportokra
+  * Csoportban egyszerűsítési szabály
+  * Ábel csoport
+  * Gyűrű, egységelemes gyűrű, kommutatív egységelemes gyűrű, nullosztómentes gyűrű
+  * Test
+  * Test nullosztómentessége
 
-1. [Polinomok](http://web.uni-corvinus.hu/magyarkuti/2-Algebra1.pdf)
-* Egy test feletti polinomok, kummutatív egységelemes, nullosztómentes gyűrűt alkotnak
-* Polinomok fokszáma
-* Polinomok oszthatósága
-* Maradékos osztás
-* Test feletti polinomgyűrű főideál-gyűrű
+1. Polinomok
+  * Egy test feletti polinomok, kummutatív egységelemes, nullosztómentes gyűrűt alkotnak
+  * Polinomok fokszáma
+  * Polinomok oszthatósága
+  * Maradékos osztás
+  * Test feletti polinomgyűrű főideál-gyűrű
 
-1. [Legnagyobb közös osztó és legkisebb közös többszörös](http://web.uni-corvinus.hu/magyarkuti/3-Algebra1.pdf)
-* Legkisebb közös törbbszörös és legnagyobb közös osztó létezése
-* Euklideszi algoritmus
-* Bézout-formula
+1. Legnagyobb közös osztó és legkisebb közös többszörös
+  * Legkisebb közös törbbszörös és legnagyobb közös osztó létezése
+  * Euklideszi algoritmus
+  * Bézout-formula
 
-1. [Polinomok faktorizációja](http://web.uni-corvinus.hu/magyarkuti/4-Algebra1.pdf)
+1. Polinomok faktorizációja
 * A gyöktényező faktorizálható
 * Irreducibilis polinom fogalma
 * Minden legalább elsőfokú polinom előáll irreducibilis polinomok szorzataként
@@ -62,7 +62,7 @@ de itt összefoglalom legfontosabbakat:
 * A mátrixok szorzás asszociativitása
 * Az inverz mátrix két oldalúsága
 
-3. [Komplex számok](http://web.uni-corvinus.hu/magyarkuti/5-Algebra1.pdf)
+1. Komplex számok
 * Komplex számtest mint a sík pontjain definiált test
 * Algebrai struktúrák izomorfiája
 * A valós test beágyazása a komplex testbe
@@ -72,7 +72,7 @@ de itt összefoglalom legfontosabbakat:
 * Moivre-formula
 * Egységgyökök
 
-1. [Az algebra alaptételének következményei](http://web.uni-corvinus.hu/magyarkuti/6-Algebra1.pdf)
+1. Az algebra alaptételének következményei
 * Irreducibilis polinom a komplex számtest felett
 * Polinomfaktorizáció a komplex számtest felett
 * Polinomfaktorizáció a valós számtest felett
@@ -80,7 +80,7 @@ de itt összefoglalom legfontosabbakat:
 * Valódi komplex gyökökből páros sok van.
 * Páratlan fokú polinomnak van valós gyöke.
 
-1. [Vektortér fogalma](http://web.uni-corvinus.hu/magyarkuti/7-Algebra1.pdf)
+1. Vektortér fogalma
 * Vektortér mint algebrai struktúra
 * Példák vektorterekre
 * Alterek
@@ -89,7 +89,7 @@ de itt összefoglalom legfontosabbakat:
 * Generátorcsere-lemma
 * Elimináció
 
-1. [Lineáris függetlenség](http://web.uni-corvinus.hu/magyarkuti/8-Algebra1.pdf)
+1. Lineáris függetlenség
 * Lineáris összefüggőség
 * Ekvivalens megfogalmazások
 * Nem véges rendszer lineáris függetlensége
@@ -99,7 +99,7 @@ de itt összefoglalom legfontosabbakat:
 * Minimális generátorrendszerek
 * Függetlenrendszercsere-lemma
 
-1. [Független és generátorrendszer elemszáma](http://web.uni-corvinus.hu/magyarkuti/9-Algebra1.pdf)
+1. Független és generátorrendszer elemszáma
 * Steinitz-lemma
 * Feszítőrang
 * Rang-tétel
@@ -110,7 +110,7 @@ de itt összefoglalom legfontosabbakat:
 * Báziscsere-lemma
 * Altér dimenziója
 
-1. [Lineáris operátor fogalma](http://web.uni-corvinus.hu/magyarkuti/10-Algebra1.pdf)
+1. Lineáris operátor fogalma
 * Magtér, képtér, inverz jellemzése
 * Független rendszer képe, generátor rendszer képe
 * Izomorf vektorterek
@@ -118,14 +118,14 @@ de itt összefoglalom legfontosabbakat:
 * Végesen generált vektorterek izomorfiája
 * Elemi bázistranszformáció
 
-1. [Direktösszeg](http://web.uni-corvinus.hu/magyarkuti/11-Algebra1.pdf)
+1. Direktösszeg
 * Minkowski-összeg
 * Tulajdonságok
 * Az összeg dimenziója
 * Direkt összeg értelmes
 * Direkt kiegészítő
 
-1. [Faktortér](http://web.uni-corvinus.hu/magyarkuti/12-Algebra1.pdf)
+1. Faktortér
 * Ekvivalencia reláció
 * Oekvivalencia osztály
 * Műveletek az ekvivalencia osztályok halmazán
