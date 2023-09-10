@@ -8,18 +8,17 @@ Ezért egy szűkített változat és a gyakorlatokon használt feladatgyűjtemé
 Egy még tovább szűkített én is írok, amely [innen is letölthető](/linearalgebra).
 
 ## Órarend a 2022-23 tanév őszi félévében
-    Előadás: Szerda 8-9.30.-- E238
-    Gyakorlat: Szerda  9.50-11.20.-- S3 (G1)
-               Csütörtök 8-9.30.-- E395 (G2)
-               Csütörtök 13.40-15.10.-- S3 (G3)
+    Előadás: Hétfő 15-30-17.00.-- E236
+    Gyakorlat: Hétfő  17.20-18.50.-- E307 (G1)
+               Kedd 13.40-15.10.-- E391 (G2)
 
 ## Követemények
 A kurzus szillabusza [letölthető](https://www.uni-corvinus.hu/tantargyak/4MA12NAK02O/),
 de itt összefoglalom legfontosabbakat:
- * Fogadó órám: Hétfő 17 óra, S208/B. Kérem előtte lévő nap este 8 óráig jelezzék részvételi szándékukat.
+ * Fogadó órám: szerda 13.40, S208/B. Kérem előtte lévő nap este 7 óráig jelezzék részvételi szándékukat.
  * Az órákon és a gyakorlatokon a megjelenés kötelező;
  * Osztályzás: 
-   - A 4.,7.,10.,13, héten dolgozatot írunk 5-5 pontért. 
+   - A 3.,6.,10.,13, héten dolgozatot írunk 5-5 pontért. 
    - A téli vizsgaidőszakban esedékes dolgozat 30 pontért. Az így megszerezhető 50 pont képezi az írásbeli jegyet.
    - A vizsgaidőszakban szóbeli vizsga, a szóbeli és az írásbeli vizsga átlagaként kapják a végső jegyet.
 
@@ -31,7 +30,7 @@ de itt összefoglalom legfontosabbakat:
   * Csoport
   * Példák csoportokra
   * Csoportban egyszerűsítési szabály
-  * Ábel csoport
+  * Ábel-csoport
   * Gyűrű, egységelemes gyűrű, kommutatív egységelemes gyűrű, nullosztómentes gyűrű
   * Test
   * Test nullosztómentessége
