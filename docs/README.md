@@ -23,7 +23,7 @@ de itt összefoglalom legfontosabbakat:
    - A vizsgaidőszakban szóbeli vizsga, a szóbeli és az írásbeli vizsga átlagaként kapják a végső jegyet.
 
 ## Az órákon használt anyagok és tételjegyzék
-1. Algebrai struktúrák
+1. [Algebrai struktúrák](http://web.uni-corvinus.hu/magyarkuti/1-Algebra1.pdf)
   * Félcsoport
   * Neutrális elemes félcsoport
   * Additív multiplikatív írásmód
@@ -35,33 +35,34 @@ de itt összefoglalom legfontosabbakat:
   * Test
   * Test nullosztómentessége
 
-1. Polinomok
+1. [Polinomok](http://web.uni-corvinus.hu/magyarkuti/2-Algebra1.pdf)
   * Egy test feletti polinomok, kummutatív egységelemes, nullosztómentes gyűrűt alkotnak
   * Polinomok fokszáma
   * Polinomok oszthatósága
   * Maradékos osztás
   * Test feletti polinomgyűrű főideál-gyűrű
 
-1. Legnagyobb közös osztó és legkisebb közös többszörös
+1. [Legnagyobb közös osztó és legkisebb közös többszörös](http://web.uni-corvinus.hu/magyarkuti/3-Algebra1.pdf)
+  * Polinomok gyökei
+  * Két polinom egyenlőségének algebrai és analízis beli megközelítése
   * Legkisebb közös törbbszörös és legnagyobb közös osztó létezése
   * Euklideszi algoritmus
   * Bézout-formula
 
-1. Polinomok faktorizációja
+1. [Polinomok faktorizációja](http://web.uni-corvinus.hu/magyarkuti/4-Algebra1.pdf
 * A gyöktényező faktorizálható
 * Irreducibilis polinom fogalma
 * Minden legalább elsőfokú polinom előáll irreducibilis polinomok szorzataként
 * Prim és irreducibilis polinomok
 * A polinom faktorizáció egyértelműsége
 
-1. Mátrixok
+1. [Mátrixok](http://web.uni-corvinus.hu/magyarkuti/5-Algebra1.pdf)
 * Mátrixok összege, és számmal való szorzata
 * Mátrixok szorzata
 * A mátrixszorzat értékelése mint sorok vagy oszlopok lineáris kombinációja
 * A mátrixok szorzás asszociativitása
-* Az inverz mátrix két oldalúsága
 
-1. Komplex számok
+1. [Komplex számok](http://web.uni-corvinus.hu/magyarkuti/5-Algebra1.pdf)
 * Komplex számtest mint a sík pontjain definiált test
 * Algebrai struktúrák izomorfiája
 * A valós test beágyazása a komplex testbe
