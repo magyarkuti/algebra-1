@@ -72,7 +72,7 @@ de itt összefoglalom legfontosabbakat:
 * Moivre-formula
 * Egységgyökök
 
-1. Az algebra alaptételének következményei
+1. [Az algebra alaptételének következményei](http://web.uni-corvinus.hu/magyarkuti/6-Algebra1.pdf)
 * Irreducibilis polinom a komplex számtest felett
 * Polinomfaktorizáció a komplex számtest felett
 * Polinomfaktorizáció a valós számtest felett
