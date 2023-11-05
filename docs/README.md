@@ -80,7 +80,7 @@ de itt összefoglalom legfontosabbakat:
 * Valódi komplex gyökökből páros sok van.
 * Páratlan fokú polinomnak van valós gyöke.
 
-1. Vektortér fogalma
+1. [Vektortér fogalma](http://web.uni-corvinus.hu/magyarkuti/7-Algebra1.pdf)
 * Vektortér mint algebrai struktúra
 * Példák vektorterekre
 * Alterek
@@ -89,7 +89,7 @@ de itt összefoglalom legfontosabbakat:
 * Generátorcsere-lemma
 * Elimináció
 
-1. Lineáris függetlenség
+1. [Lineáris függetlenség](http://web.uni-corvinus.hu/magyarkuti/8-Algebra1.pdf)
 * Lineáris összefüggőség
 * Ekvivalens megfogalmazások
 * Nem véges rendszer lineáris függetlensége
