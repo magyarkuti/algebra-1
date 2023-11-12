@@ -99,7 +99,7 @@ de itt összefoglalom legfontosabbakat:
 * Minimális generátorrendszerek
 * Függetlenrendszercsere-lemma
 
-1. Független és generátorrendszer elemszáma
+1. [Független és generátorrendszer elemszáma](http://web.uni-corvinus.hu/magyarkuti/9-Algebra1.pdf)
 * Steinitz-lemma
 * Feszítőrang
 * Rang-tétel
