@@ -110,7 +110,7 @@ de itt összefoglalom legfontosabbakat:
 * Báziscsere-lemma
 * Altér dimenziója
 
-1. Lineáris operátor fogalma
+1. [Lineáris operátor fogalma](http://web.uni-corvinus.hu/magyarkuti/10-Algebra1.pdf)
 * Magtér, képtér, inverz jellemzése
 * Független rendszer képe, generátor rendszer képe
 * Izomorf vektorterek
