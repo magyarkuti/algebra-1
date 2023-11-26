@@ -118,7 +118,7 @@ de itt összefoglalom legfontosabbakat:
 * Végesen generált vektorterek izomorfiája
 * Elemi bázistranszformáció
 
-1. Direktösszeg
+1. [Direktösszeg](http://web.uni-corvinus.hu/magyarkuti/11-Algebra1.pdf)
 * Minkowski-összeg
 * Tulajdonságok
 * Az összeg dimenziója
