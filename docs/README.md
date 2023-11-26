@@ -1,5 +1,5 @@
 A Corvinus Egyetem Matematika Tanszéke Algebra 1. kurzusának weblapja. 
-A kurzus közvetlen folytatása: [Algebra-2](/algebra-2).
+A kurzus közvetlen folytatása: [Lineáris Algebra-2](/algebra-2).
 
 ## Jegyzetek
 A tankönyv: [Puskás Csaba, Dancs István: Vektorterek](http://hunteka.uni-corvinus.hu/record/-/record/BCEKK379187).
