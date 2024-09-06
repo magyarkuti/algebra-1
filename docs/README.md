@@ -1,4 +1,4 @@
-A Corvinus Egyetem Matematika Tanszéke Lineáris Algebra 1.(ADIN082NMOB) kurzusának weblapja. 
+A Corvinus Egyetem Matematika Tanszéke Lineáris Algebra 1. (ADIN082NMOB) kurzusának weblapja. 
 A kurzus közvetlen folytatása: [Lineáris Algebra-2](/algebra-2).
 
 ## Jegyzetek
@@ -22,8 +22,8 @@ de itt összefoglalom legfontosabbakat:
    - A téli vizsgaidőszakban esedékes dolgozat 30 pontért. Az így megszerezhető 50 pont képezi az írásbeli jegyet.
    - A vizsgaidőszakban szóbeli vizsga, a szóbeli és az írásbeli vizsga átlagaként kapják a végső jegyet.
 
-## Az órákon használt anyagok és tételjegyzék
-1. [Algebrai struktúrák]
+## Tételjegyzék
+1. Algebrai struktúrák
   * Félcsoport
   * Neutrális elemes félcsoport
   * Additív multiplikatív írásmód
@@ -35,34 +35,34 @@ de itt összefoglalom legfontosabbakat:
   * Test
   * Test nullosztómentessége
 
-1. [Polinomok]
+1. Polinomok
   * Egy test feletti polinomok, kummutatív egységelemes, nullosztómentes gyűrűt alkotnak
   * Polinomok fokszáma
   * Polinomok oszthatósága
   * Maradékos osztás
   * Test feletti polinomgyűrű főideál-gyűrű
 
-1. [Legnagyobb közös osztó és legkisebb közös többszörös]
+1. Legnagyobb közös osztó és legkisebb közös többszörös
   * Polinomok gyökei
   * Két polinom egyenlőségének algebrai és analízis beli megközelítése
   * Legkisebb közös törbbszörös és legnagyobb közös osztó létezése
   * Euklideszi algoritmus
   * Bézout-formula
 
-1. [Polinomok faktorizációja]
+1. Polinomok faktorizációja
 * A gyöktényező faktorizálható
 * Irreducibilis polinom fogalma
 * Minden legalább elsőfokú polinom előáll irreducibilis polinomok szorzataként
 * Prim és irreducibilis polinomok
 * A polinom faktorizáció egyértelműsége
 
-1. [Mátrixok]
+1. Mátrixok
 * Mátrixok összege, és számmal való szorzata
 * Mátrixok szorzata
 * A mátrixszorzat értékelése mint sorok vagy oszlopok lineáris kombinációja
 * A mátrixok szorzás asszociativitása
 
-1. [Komplex számok]
+1. Komplex számok
 * Komplex számtest mint a sík pontjain definiált test
 * Algebrai struktúrák izomorfiája
 * A valós test beágyazása a komplex testbe
@@ -72,7 +72,7 @@ de itt összefoglalom legfontosabbakat:
 * Moivre-formula
 * Egységgyökök
 
-1. [Az algebra alaptételének következményei]
+1. Az algebra alaptételének következményei]
 * Irreducibilis polinom a komplex számtest felett
 * Polinomfaktorizáció a komplex számtest felett
 * Polinomfaktorizáció a valós számtest felett
@@ -80,7 +80,7 @@ de itt összefoglalom legfontosabbakat:
 * Valódi komplex gyökökből páros sok van.
 * Páratlan fokú polinomnak van valós gyöke.
 
-1. [Vektortér fogalma]
+1. Vektortér fogalma
 * Vektortér mint algebrai struktúra
 * Példák vektorterekre
 * Alterek
@@ -89,7 +89,7 @@ de itt összefoglalom legfontosabbakat:
 * Generátorcsere-lemma
 * Elimináció
 
-1. [Lineáris függetlenség]
+1. Lineáris függetlenség
 * Lineáris összefüggőség
 * Ekvivalens megfogalmazások
 * Nem véges rendszer lineáris függetlensége
@@ -99,7 +99,7 @@ de itt összefoglalom legfontosabbakat:
 * Minimális generátorrendszerek
 * Függetlenrendszercsere-lemma
 
-1. [Független és generátorrendszer elemszáma]
+1. Független és generátorrendszer elemszáma
 * Steinitz-lemma
 * Feszítőrang
 * Rang-tétel
@@ -110,7 +110,7 @@ de itt összefoglalom legfontosabbakat:
 * Báziscsere-lemma
 * Altér dimenziója
 
-1. [Lineáris operátor fogalma]
+1. Lineáris operátor fogalma
 * Magtér, képtér, inverz jellemzése
 * Független rendszer képe, generátor rendszer képe
 * Izomorf vektorterek
@@ -118,7 +118,7 @@ de itt összefoglalom legfontosabbakat:
 * Végesen generált vektorterek izomorfiája
 * Elemi bázistranszformáció
 
-1. [Direktösszeg]
+1. Direktösszeg
 * Minkowski-összeg
 * Tulajdonságok
 * Az összeg dimenziója
