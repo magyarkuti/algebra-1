@@ -7,23 +7,23 @@ A könyvben sok sok minden van, amire nem jut majd időnk.
 Ezért egy szűkített változat és a gyakorlatokon használt feladatgyűjtemény Puskás tanárúr [honlapjáról](http://web.uni-corvinus.hu/puskas) letölthető.\
 Egy még tovább szűkített én is írok, amely [innen is letölthető](/linearalgebra).
 
-## Órarend a 2022-23 tanév őszi félévében
-    Előadás: Hétfő 15-30-17.00.-- E236
-    Gyakorlat: Hétfő  17.20-18.50.-- E307 (G1)
-               Kedd 13.40-15.10.-- E391 (G2)
+## Órarend a 2024-25 tanév őszi félévében
+    Előadás: Kedd 9-50-11.20.-- E330
+    Gyakorlat: Kedd 15.30-17.00.-- S2 (G1)
+               Kedd 17.20-18.50.-- S2 (G3)
 
 ## Követemények
 A kurzus szillabusza [letölthető](https://www.uni-corvinus.hu/tantargyak/4MA12NAK02O/),
 de itt összefoglalom legfontosabbakat:
- * Fogadó órám: szerda 13.40, S208/B. Kérem előtte lévő nap este 7 óráig jelezzék részvételi szándékukat.
+ * Fogadó órám: hétfő 17.10, S208/B. Kérem előtte lévő nap este 7 óráig jelezzék részvételi szándékukat.
  * Az órákon és a gyakorlatokon a megjelenés kötelező;
  * Osztályzás: 
-   - A 3.,6.,10.,13, héten dolgozatot írunk 5-5 pontért. 
+   - A 4.,7.,10.,13, héten dolgozatot írunk 5-5 pontért. 
    - A téli vizsgaidőszakban esedékes dolgozat 30 pontért. Az így megszerezhető 50 pont képezi az írásbeli jegyet.
    - A vizsgaidőszakban szóbeli vizsga, a szóbeli és az írásbeli vizsga átlagaként kapják a végső jegyet.
 
 ## Az órákon használt anyagok és tételjegyzék
-1. [Algebrai struktúrák](http://web.uni-corvinus.hu/magyarkuti/1-Algebra1.pdf)
+1. [Algebrai struktúrák]
   * Félcsoport
   * Neutrális elemes félcsoport
   * Additív multiplikatív írásmód
@@ -35,34 +35,34 @@ de itt összefoglalom legfontosabbakat:
   * Test
   * Test nullosztómentessége
 
-1. [Polinomok](http://web.uni-corvinus.hu/magyarkuti/2-Algebra1.pdf)
+1. [Polinomok]
   * Egy test feletti polinomok, kummutatív egységelemes, nullosztómentes gyűrűt alkotnak
   * Polinomok fokszáma
   * Polinomok oszthatósága
   * Maradékos osztás
   * Test feletti polinomgyűrű főideál-gyűrű
 
-1. [Legnagyobb közös osztó és legkisebb közös többszörös](http://web.uni-corvinus.hu/magyarkuti/3-Algebra1.pdf)
+1. [Legnagyobb közös osztó és legkisebb közös többszörös]
   * Polinomok gyökei
   * Két polinom egyenlőségének algebrai és analízis beli megközelítése
   * Legkisebb közös törbbszörös és legnagyobb közös osztó létezése
   * Euklideszi algoritmus
   * Bézout-formula
 
-1. [Polinomok faktorizációja](http://web.uni-corvinus.hu/magyarkuti/4-Algebra1.pdf)
+1. [Polinomok faktorizációja]
 * A gyöktényező faktorizálható
 * Irreducibilis polinom fogalma
 * Minden legalább elsőfokú polinom előáll irreducibilis polinomok szorzataként
 * Prim és irreducibilis polinomok
 * A polinom faktorizáció egyértelműsége
 
-1. [Mátrixok](http://web.uni-corvinus.hu/magyarkuti/5-Algebra1.pdf)
+1. [Mátrixok]
 * Mátrixok összege, és számmal való szorzata
 * Mátrixok szorzata
 * A mátrixszorzat értékelése mint sorok vagy oszlopok lineáris kombinációja
 * A mátrixok szorzás asszociativitása
 
-1. [Komplex számok](http://web.uni-corvinus.hu/magyarkuti/5-Algebra1.pdf)
+1. [Komplex számok]
 * Komplex számtest mint a sík pontjain definiált test
 * Algebrai struktúrák izomorfiája
 * A valós test beágyazása a komplex testbe
@@ -72,7 +72,7 @@ de itt összefoglalom legfontosabbakat:
 * Moivre-formula
 * Egységgyökök
 
-1. [Az algebra alaptételének következményei](http://web.uni-corvinus.hu/magyarkuti/6-Algebra1.pdf)
+1. [Az algebra alaptételének következményei]
 * Irreducibilis polinom a komplex számtest felett
 * Polinomfaktorizáció a komplex számtest felett
 * Polinomfaktorizáció a valós számtest felett
@@ -80,7 +80,7 @@ de itt összefoglalom legfontosabbakat:
 * Valódi komplex gyökökből páros sok van.
 * Páratlan fokú polinomnak van valós gyöke.
 
-1. [Vektortér fogalma](http://web.uni-corvinus.hu/magyarkuti/7-Algebra1.pdf)
+1. [Vektortér fogalma]
 * Vektortér mint algebrai struktúra
 * Példák vektorterekre
 * Alterek
@@ -89,7 +89,7 @@ de itt összefoglalom legfontosabbakat:
 * Generátorcsere-lemma
 * Elimináció
 
-1. [Lineáris függetlenség](http://web.uni-corvinus.hu/magyarkuti/8-Algebra1.pdf)
+1. [Lineáris függetlenség]
 * Lineáris összefüggőség
 * Ekvivalens megfogalmazások
 * Nem véges rendszer lineáris függetlensége
@@ -99,7 +99,7 @@ de itt összefoglalom legfontosabbakat:
 * Minimális generátorrendszerek
 * Függetlenrendszercsere-lemma
 
-1. [Független és generátorrendszer elemszáma](http://web.uni-corvinus.hu/magyarkuti/9-Algebra1.pdf)
+1. [Független és generátorrendszer elemszáma]
 * Steinitz-lemma
 * Feszítőrang
 * Rang-tétel
@@ -110,7 +110,7 @@ de itt összefoglalom legfontosabbakat:
 * Báziscsere-lemma
 * Altér dimenziója
 
-1. [Lineáris operátor fogalma](http://web.uni-corvinus.hu/magyarkuti/10-Algebra1.pdf)
+1. [Lineáris operátor fogalma]
 * Magtér, képtér, inverz jellemzése
 * Független rendszer képe, generátor rendszer képe
 * Izomorf vektorterek
@@ -118,7 +118,7 @@ de itt összefoglalom legfontosabbakat:
 * Végesen generált vektorterek izomorfiája
 * Elemi bázistranszformáció
 
-1. [Direktösszeg](http://web.uni-corvinus.hu/magyarkuti/11-Algebra1.pdf)
+1. [Direktösszeg]
 * Minkowski-összeg
 * Tulajdonságok
 * Az összeg dimenziója
