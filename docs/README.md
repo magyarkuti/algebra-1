@@ -13,7 +13,7 @@ Egy még tovább szűkített én is írok, amely [innen is letölthető](/linear
                Kedd 17.20-18.50.-- S2 (G3)
 
 ## Követemények
-A kurzus szillabusza [letölthető](https://www.uni-corvinus.hu/tantargyak/4MA12NAK02O/),
+A kurzus szillabusza [letölthető](https://www.uni-corvinus.hu/tantargyak/ADIN082NMOB/),
 de itt összefoglalom legfontosabbakat:
  * Fogadó órám: hétfő 17.10, S208/B. Kérem előtte lévő nap este 7 óráig jelezzék részvételi szándékukat.
  * Az órákon és a gyakorlatokon a megjelenés kötelező;
@@ -21,6 +21,7 @@ de itt összefoglalom legfontosabbakat:
    - A 4.,7.,10.,13, héten dolgozatot írunk 5-5 pontért. 
    - A téli vizsgaidőszakban esedékes dolgozat 30 pontért. Az így megszerezhető 50 pont képezi az írásbeli jegyet.
    - A vizsgaidőszakban szóbeli vizsga, a szóbeli és az írásbeli vizsga átlagaként kapják a végső jegyet.
+   - Az írásbeli dolgozatok pótlására nincs lehetőség.
 
 ## Tételjegyzék
 1. Algebrai struktúrák
