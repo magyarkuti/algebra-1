@@ -1,4 +1,4 @@
-A Corvinus Egyetem Matematika Tanszéke Algebra 1. kurzusának weblapja. 
+A Corvinus Egyetem Matematika Tanszéke Lineáris Algebra 1.(ADIN082NMOB) kurzusának weblapja. 
 A kurzus közvetlen folytatása: [Lineáris Algebra-2](/algebra-2).
 
 ## Jegyzetek
