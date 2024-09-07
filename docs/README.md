@@ -24,7 +24,7 @@ de itt összefoglalom legfontosabbakat:
    - Az írásbeli dolgozatok pótlására nincs lehetőség.
 
 ## Tételjegyzék
-1. Algebrai struktúrák
+1. [Algebrai struktúrák](http://web.uni-corvinus.hu/magyarkuti/1-Algebra1.pdf)
   * Félcsoport
   * Neutrális elemes félcsoport
   * Additív multiplikatív írásmód
