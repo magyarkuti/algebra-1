@@ -36,7 +36,7 @@ de itt összefoglalom legfontosabbakat:
   * Test
   * Test nullosztómentessége
 
-1. Polinomok
+1. [Polinomok](http://web.uni-corvinus.hu/magyarkuti/2-Algebra1.pdf)
   * Egy test feletti polinomok, kummutatív egységelemes, nullosztómentes gyűrűt alkotnak
   * Polinomok fokszáma
   * Polinomok oszthatósága
