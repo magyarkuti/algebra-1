@@ -43,12 +43,13 @@ de itt összefoglalom legfontosabbakat:
   * Maradékos osztás
   * Test feletti polinomgyűrű főideál-gyűrű
 
-1. Legnagyobb közös osztó és legkisebb közös többszörös
+1. [Legnagyobb közös osztó és legkisebb közös többszörös](http://web.uni-corvinus.hu/magyarkuti/3-Algebra1.pdf
   * Polinomok gyökei
   * Két polinom egyenlőségének algebrai és analízis beli megközelítése
-  * Legkisebb közös törbbszörös és legnagyobb közös osztó létezése
+  * Legkisebb közös többszörös és legnagyobb közös osztó mint ideálok generátora
   * Euklideszi algoritmus
   * Bézout-formula
+  * A legkisebb közös többszörös meghatározása
 
 1. Polinomok faktorizációja
 * A gyöktényező faktorizálható
