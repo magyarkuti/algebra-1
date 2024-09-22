@@ -43,7 +43,7 @@ de itt összefoglalom legfontosabbakat:
   * Maradékos osztás
   * Test feletti polinomgyűrű főideál-gyűrű
 
-1. [Legnagyobb közös osztó és legkisebb közös többszörös](http://web.uni-corvinus.hu/magyarkuti/3-Algebra1.pdf
+1. [Legnagyobb közös osztó és legkisebb közös többszörös](http://web.uni-corvinus.hu/magyarkuti/3-Algebra1.pdf)
   * Polinomok gyökei
   * Két polinom egyenlőségének algebrai és analízis beli megközelítése
   * Legkisebb közös többszörös és legnagyobb közös osztó mint ideálok generátora
