@@ -51,14 +51,14 @@ de itt összefoglalom legfontosabbakat:
   * Bézout-formula
   * A legkisebb közös többszörös meghatározása
 
-1. Polinomok faktorizációja
+1. [Polinomok faktorizációja](http://web.uni-corvinus.hu/magyarkuti/3-Algebra1.pdf)
 * A gyöktényező faktorizálható
 * Irreducibilis polinom fogalma
 * Minden legalább elsőfokú polinom előáll irreducibilis polinomok szorzataként
 * Prim és irreducibilis polinomok
 * A polinom faktorizáció egyértelműsége
 
-1. Mátrixok
+1. [Mátrixok](http://web.uni-corvinus.hu/magyarkuti/5-Algebra1.pdf)
 * Mátrixok összege, és számmal való szorzata
 * Mátrixok szorzata
 * A mátrixszorzat értékelése mint sorok vagy oszlopok lineáris kombinációja
