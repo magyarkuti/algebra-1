@@ -51,7 +51,7 @@ de itt összefoglalom legfontosabbakat:
   * Bézout-formula
   * A legkisebb közös többszörös meghatározása
 
-1. [Polinomok faktorizációja](http://web.uni-corvinus.hu/magyarkuti/3-Algebra1.pdf)
+1. [Polinomok faktorizációja](http://web.uni-corvinus.hu/magyarkuti/4-Algebra1.pdf)
 * A gyöktényező faktorizálható
 * Irreducibilis polinom fogalma
 * Minden legalább elsőfokú polinom előáll irreducibilis polinomok szorzataként
