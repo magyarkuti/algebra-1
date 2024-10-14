@@ -64,7 +64,7 @@ de itt összefoglalom legfontosabbakat:
 * A mátrixszorzat értékelése mint sorok vagy oszlopok lineáris kombinációja
 * A mátrixok szorzás asszociativitása
 
-1. Komplex számok
+1. [Komplex számok](http://web.uni-corvinus.hu/magyarkuti/5-Algebra1.pdf)
 * Komplex számtest mint a sík pontjain definiált test
 * Algebrai struktúrák izomorfiája
 * A valós test beágyazása a komplex testbe
@@ -74,7 +74,7 @@ de itt összefoglalom legfontosabbakat:
 * Moivre-formula
 * Egységgyökök
 
-1. Az algebra alaptételének következményei]
+1. [Az algebra alaptételének következményei](http://web.uni-corvinus.hu/magyarkuti/6-Algebra1.pdf)
 * Irreducibilis polinom a komplex számtest felett
 * Polinomfaktorizáció a komplex számtest felett
 * Polinomfaktorizáció a valós számtest felett
