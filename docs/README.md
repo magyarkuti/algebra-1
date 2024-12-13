@@ -82,7 +82,7 @@ de itt összefoglalom legfontosabbakat:
 * Valódi komplex gyökökből páros sok van.
 * Páratlan fokú polinomnak van valós gyöke.
 
-1. Vektortér fogalma
+1. [Vektortér fogalma](http://web.uni-corvinus.hu/magyarkuti/7-Algebra1.pdf)
 * Vektortér mint algebrai struktúra
 * Példák vektorterekre
 * Alterek
@@ -91,7 +91,7 @@ de itt összefoglalom legfontosabbakat:
 * Generátorcsere-lemma
 * Elimináció
 
-1. Lineáris függetlenség
+1. [Lineáris függetlenség](http://web.uni-corvinus.hu/magyarkuti/8-Algebra1.pdf)
 * Lineáris összefüggőség
 * Ekvivalens megfogalmazások
 * Nem véges rendszer lineáris függetlensége
@@ -101,7 +101,7 @@ de itt összefoglalom legfontosabbakat:
 * Minimális generátorrendszerek
 * Függetlenrendszercsere-lemma
 
-1. Független és generátorrendszer elemszáma
+1. [Független és generátorrendszer elemszáma](http://web.uni-corvinus.hu/magyarkuti/9-Algebra1.pdf)
 * Steinitz-lemma
 * Feszítőrang
 * Rang-tétel
@@ -112,7 +112,7 @@ de itt összefoglalom legfontosabbakat:
 * Báziscsere-lemma
 * Altér dimenziója
 
-1. Lineáris operátor fogalma
+1. [Lineáris operátor fogalma](http://web.uni-corvinus.hu/magyarkuti/10-Algebra1.pdf)
 * Magtér, képtér, inverz jellemzése
 * Független rendszer képe, generátor rendszer képe
 * Izomorf vektorterek
@@ -120,14 +120,14 @@ de itt összefoglalom legfontosabbakat:
 * Végesen generált vektorterek izomorfiája
 * Elemi bázistranszformáció
 
-1. Direktösszeg
+1. [Direktösszeg](http://web.uni-corvinus.hu/magyarkuti/11-Algebra1.pdf)
 * Minkowski-összeg
 * Tulajdonságok
 * Az összeg dimenziója
 * Direkt összeg értelmes
 * Direkt kiegészítő
 
-1. Faktortér
+1. [Faktortér](http://web.uni-corvinus.hu/magyarkuti/12-Algebra1.pdf)
 * Ekvivalencia reláció
 * Oekvivalencia osztály
 * Műveletek az ekvivalencia osztályok halmazán
@@ -154,6 +154,11 @@ de itt összefoglalom legfontosabbakat:
 * Homogén lineáris egyenletrendszernek, amelyben az ismeretlenek száma több mint az egyenletek száma, mindig van nem triviális megoldása
 * Gauss-Jordan elimináció táblázattal
 
+1. Mátrix inverze
+* Mátrix kétoldali szorzat tétel
+* Regularitás és ekvivalens megfogalmazásai
+* Inverz kiszámítása
+  
 1. Kvadratikus alakok
 * Kvadratikus alakok és szimmetrikus mátrixok kapcsolata
 * Szimmetrikus mátrixok diádfelbontása eliminációval
