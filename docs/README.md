@@ -5,7 +5,7 @@ A kurzus közvetlen folytatása: [Lineáris Algebra-2](/algebra-2).
 A tankönyv: [Puskás Csaba, Dancs István: Vektorterek](http://hunteka.uni-corvinus.hu/record/-/record/BCEKK379187).
 A könyvben sok sok minden van, amire nem jut majd időnk. 
 Ezért egy szűkített változat és a gyakorlatokon használt feladatgyűjtemény Puskás tanárúr [honlapjáról](http://web.uni-corvinus.hu/puskas) letölthető.\
-Egy még tovább szűkített én is írok, amely [innen is letölthető](/linearalgebra).
+Egy még tovább szűkített jegyzetet én is írok, amely [itt elérhető](/linearalgebra).
 
 ## Órarend a 2024-25 tanév őszi félévében
     Előadás: Kedd 9-50-11.20.-- E330
