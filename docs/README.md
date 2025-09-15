@@ -7,18 +7,19 @@ A könyvben sok sok minden van, amire nem jut majd időnk.
 Ezért egy szűkített változat és a gyakorlatokon használt feladatgyűjtemény Puskás tanárúr [honlapjáról](http://web.uni-corvinus.hu/puskas) letölthető.\
 Egy még tovább szűkített jegyzetet én is írok, amely [itt elérhető](/linearalgebra).
 
-## Órarend a 2024-25 tanév őszi félévében
-    Előadás: Kedd 9-50-11.20.-- E330
-    Gyakorlat: Kedd 15.30-17.00.-- S2 (G1)
-               Kedd 17.20-18.50.-- S2 (G3)
+## Órarend a 2025-26 tanév őszi félévében
+    Előadás: Kedd 9-50-11.20.-- S.A.EA2
+    Gyakorlat: Kedd 15.30-17.00.-- S.A.EA1 (G01)
+               Kedd 17.20-18.50.-- S.A.EA1 (G02)
+               Kedd 13.40-15.10.-- C209 (G03)
 
 ## Követemények
-A kurzus szillabusza [letölthető](https://www.uni-corvinus.hu/tantargyak/ADIN082NMOB/),
+Egyszer majd az egyetemi IT [elérhetővé](https://www.uni-corvinus.hu/tantargyak/ADIN082NMOB/) teszi a kurzus szillabuszát,
 de itt összefoglalom legfontosabbakat:
- * Fogadó órám: hétfő 17.10, S208/B. Kérem előtte lévő nap este 7 óráig jelezzék részvételi szándékukat.
+ * Fogadó órám: hétfő 15.30, S208/B. Kérem előtte lévő nap este 7 óráig jelezzék részvételi szándékukat.
  * Az órákon és a gyakorlatokon a megjelenés kötelező;
  * Osztályzás: 
-   - A 4.,7.,10.,13, héten dolgozatot írunk 5-5 pontért. 
+   - A 3.,6.,9.,12, héten dolgozatot írunk 5-5 pontért. 
    - A téli vizsgaidőszakban esedékes dolgozat 30 pontért. Az így megszerezhető 50 pont képezi az írásbeli jegyet.
    - A vizsgaidőszakban szóbeli vizsga, a szóbeli és az írásbeli vizsga átlagaként kapják a végső jegyet.
    - Az írásbeli dolgozatok pótlására nincs lehetőség.
