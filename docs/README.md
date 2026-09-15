@@ -13,7 +13,7 @@ Egy még tovább szűkített jegyzetet én is írok, amely [itt elérhető](/lin
                Szerda 8.00-9.30.-- S.A.EA2 (G03)
 
 ## Követemények
-A kurzus sillabusz itt [elérhető]([https://www.uni-corvinus.hu/tantargyak/ADIN082NMOB/](https://unicorvinus.sharepoint.com/sites/syllabuses/Megosztott%20dokumentumok/Forms/AllItems.aspx?id=%2Fsites%2Fsyllabuses%2FMegosztott%20dokumentumok%2F2026%2D27%2D1%2FADIN082NMOB%5FLine%C3%A1ris%5Falgebra%5FI%2Epdf&parent=%2Fsites%2Fsyllabuses%2FMegosztott%20dokumentumok%2F2026%2D27%2D1)) ,
+A kurzus sillabusz itt [elérhető](https://unicorvinus-my.sharepoint.com/:b:/g/personal/magyarkuti_uni-corvinus_hu/IQBsjRBooiW_TZYZIl9MZyEsAaKVwYBdN_GwJOJJkVz4iVw?e=0RX2oO),
 de összefoglalom legfontosabbakat:
  * Fogadó órám: hétfő 19.00, S208/B. Kérem előtte lévő nap este 7 óráig jelezzék részvételi szándékukat.
  * Az órákon és a gyakorlatokon a megjelenés kötelező;
@@ -24,7 +24,7 @@ de összefoglalom legfontosabbakat:
    - Az írásbeli dolgozatok pótlására nincs lehetőség.
 
 ## Tételjegyzék
-1. [Algebrai struktúrák](http://web.uni-corvinus.hu/magyarkuti/1-Algebra1.pdf)
+1. [Algebrai struktúrák](https://unicorvinus-my.sharepoint.com/:b:/g/personal/magyarkuti_uni-corvinus_hu/IQBsjRBooiW_TZYZIl9MZyEsAeoTc-WVm0YYooYIVCg03Zo?e=TxoRWm)
   * Félcsoport
   * Neutrális elemes félcsoport
   * Additív multiplikatív írásmód
