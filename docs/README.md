@@ -13,7 +13,7 @@ Egy még tovább szűkített jegyzetet én is írok, amely [itt elérhető](/lin
                Szerda 8.00-9.30. -- S.A.EA2 (G03)
 
 ## Követemények
-A [kurzus sillabusz](https://unicorvinus-my.sharepoint.com/:b:/g/personal/magyarkuti_uni-corvinus_hu/IQBsjRBooiW_TZYZIl9MZyEsAaKVwYBdN_GwJOJJkVz4iVw?e=0RX2oO),
+A [kurzus sillabusz](https://unicorvinus-my.sharepoint.com/:b:/g/personal/magyarkuti_uni-corvinus_hu/IQBsjRBooiW_TZYZIl9MZyEsAaKVwYBdN_GwJOJJkVz4iVw?e=0RX2oO)
 tartalmazza az összes információt, de összefoglalom azokat, amelyek szerintem a legfontosabbak:
  * Fogadó órám: hétfő 19.00, S208/B. Kérem előtte lévő nap este 7 óráig jelezzék részvételi szándékukat.
  * Az órákon és a gyakorlatokon a megjelenés kötelező;
