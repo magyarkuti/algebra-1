@@ -8,23 +8,23 @@ Ezért egy szűkített változat és a gyakorlatokon használt feladatgyűjtemé
 Egy még tovább szűkített jegyzetet én is írok, amely [itt elérhető](/linearalgebra).
 
 ## Órarend a 2026-27 tanév őszi félévében
-    Előadás: Hétfő 8-00-9.30.-- C.X.
-    Gyakorlat: Csütörtök 9.50-11.20.-- C.205 (G01)
-               Szerda 8.00-9.30.-- S.A.EA2 (G03)
+    Előadás: Hétfő 8-00-9.30. -- C.X.
+    Gyakorlat: Csütörtök 9.50-11.20. -- C.205 (G01)
+               Szerda 8.00-9.30. -- S.A.EA2 (G03)
 
 ## Követemények
-A kurzus sillabusz itt [elérhető](https://unicorvinus-my.sharepoint.com/:b:/g/personal/magyarkuti_uni-corvinus_hu/IQBsjRBooiW_TZYZIl9MZyEsAaKVwYBdN_GwJOJJkVz4iVw?e=0RX2oO),
-de összefoglalom legfontosabbakat:
+A [kurzus sillabusz](https://unicorvinus-my.sharepoint.com/:b:/g/personal/magyarkuti_uni-corvinus_hu/IQBsjRBooiW_TZYZIl9MZyEsAaKVwYBdN_GwJOJJkVz4iVw?e=0RX2oO),
+tartalmazza az összes információt, de összefoglalom azokat, amelyek szerintem a legfontosabbak:
  * Fogadó órám: hétfő 19.00, S208/B. Kérem előtte lévő nap este 7 óráig jelezzék részvételi szándékukat.
  * Az órákon és a gyakorlatokon a megjelenés kötelező;
  * Osztályzás: 
-   - A 3.,6.,9.,12, héten dolgozatot írunk 5-5 pontért. 
+   - A 3., 6., 9., 12., héten dolgozatot írunk 5-5 pontért. 
    - A téli vizsgaidőszakban esedékes dolgozat 30 pontért. Az így megszerezhető 50 pont képezi az írásbeli jegyet.
    - A vizsgaidőszakban szóbeli vizsga, a szóbeli és az írásbeli vizsga átlagaként kapják a végső jegyet.
    - Az írásbeli dolgozatok pótlására nincs lehetőség.
 
 ## Tételjegyzék
-1. [Algebrai struktúrák](https://unicorvinus-my.sharepoint.com/:b:/g/personal/magyarkuti_uni-corvinus_hu/IQBsjRBooiW_TZYZIl9MZyEsAeoTc-WVm0YYooYIVCg03Zo?e=TxoRWm)
+1. [Algebrai struktúrák](https://unicorvinus-my.sharepoint.com/:b:/g/personal/magyarkuti_uni-corvinus_hu/IQD7TnGKOzmGQ5tffdyeNylgAVInmQgHMls5LDdg4BUJ6kc?e=w6vy4j)
   * Félcsoport
   * Neutrális elemes félcsoport
   * Additív multiplikatív írásmód
