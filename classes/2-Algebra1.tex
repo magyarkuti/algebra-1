@@ -1,0 +1,364 @@
+\input{algebra.tex}
+\title[Algebra1.]{Polinomok}
+\subtitle{Oszthatóság és maradékos osztás polinomgyűrűben}
+\date[2. hét]{2026.~szeptember 20-án}
+\begin{document}
+\openingframes{Tartalom}
+\section{Polinomgyűrűk}
+\frame{
+\begin{definition}[polinom]\index{polinom}
+	Legyen $\mathbb{F}$ egy test.
+	E test feletti polinomokon az összes
+	\[
+		p\left( t \right)=
+		\alpha_0+\alpha_1t+\alpha_2t^2+\dots+\alpha_nt^n
+	\]
+	alakú formális algebrai kifejezést értjük.
+	Itt $n$ tetszőleges nem negatív egész
+	és $\alpha_0,\dots,\alpha_n$ tetszőleges, az $\mathbb{F}$ testbeli elemek.
+	Az $\mathbb{F}$ test feletti összes polinomok halmazát $\mathbb{F}\left[ t \right]$ módon jelöljük.
+\end{definition}
+A fenti definícióban az \emph{algebrai kifejezés} szó arra utal,  hogy az
+\begin{math}
+	\alpha_0+\alpha_1t+\alpha_2t^2+\dots+\alpha_nt^n
+\end{math}
+műveletek minden $t\in\mathbb{F}$ mellett értelmesek,
+és eredményük egy újabb $\mathbb{F}$ testbeli elem.
+Ha $t\in\mathbb{F}$ konkrétan meg van adva,
+akkor a behelyettesítés után kapott elemet mondjuk a $p$ polinom helyettesítési értékének.
+}
+\frame{
+A \emph{formális algebrai kifejezés}\index{formális algebrai kifejezés} arra utal,
+hogy egy polinomot az együtthatói határozzák meg,
+azaz két polinom akkor és csak akkor azonos,
+ha az megfelelő együtthatói azonosak.
+Ez szemben áll avval, hogy ha a polinomokra mint függvényekre tekintenénk,
+akkor a helyettesítési értékek egyenlősége jelentené a két polinom azonos voltát.
+A formális szó tehát azt jelenti, hogy nem mint függvényre gondolunk,
+hanem egyszerűen az adott $\alpha_0,\dots,\alpha_n$ rögzített elemek -- ezeket mondjuk együtthatóknak --,
+által előírt műveletekre.
+Az az előírás ugyanis, hogy tetszőleges $t\in\mathbb{F}$ mellett hajtsuk végre az
+\[
+	\alpha_0+\alpha_1t+\alpha_2t^2+\dots+\alpha_nt^n
+\]
+műveletsort.
+A műveletsorról és nem annak eredményéről van szó.
+
+
+Két műveletsor akkor azonos, ha ugyanazok a műveletsort meghatározó
+$\left( \alpha_0,\alpha_1,\dots,\alpha_n \right)$
+együtthatók.
+}
+\frame{
+A jelölések megértése is fontos.
+$p\left( t \right)\in\mathbb{F}\left[ t \right]$ semmi mást nem jelent,
+minthogy $p\left( t \right)$ egy polinom.
+Persze a polinom nem keverendő össze a helyettesítési értékével,
+hiszen az egyik egy algebrai kifejezés-együttes, a másik egy az adott testbeli elem.
+Szokásos viszont, hogy ha nincs konkrét $t$ a szövegkörnyezetben, akkor is $p\left( t \right)$ jelöli a polinomot.
+Néha egyszerűbben csak $p$-vel jelöljük, főleg akkor ha nincs szó behelyettesítésről,
+emiatt érdektelen a változó jele.
+Ritkábban, de előfordul, hogy egy konkrét értékre, mondjuk $s\in\mathbb{F}$-re kell kiértékelnünk a polinomot ilyenkor $p\left( s \right)$ jelöli azt a testbeli elemet,
+amelyet $t$ helyett $s$-et téve az előírt műveletek kiértékelése után kapunk.
+A szövegkörnyezetben mindig világosnak kell lennie, hogy $p\left( t \right)$ a polinomot jelenti,
+vagy egy konkrét $t$-re kiértékelt testbeli elemet.
+}
+\frame{\frametitle{Polinom fokszáma}
+\begin{definition}\index{polinom foka}
+	Legyen $p\left( t \right)\in\mathbb{F}\left[ t \right]$ egy polinom.
+	Azt mondjuk, hogy az $n$ nem negatív egész szám e \emph{polinom fokszáma},
+	ha $n$ a legnagyobb nemzérus együttható indexe.
+	A legnagyobb nemzérus együtthatót \emph{főegyütthatónak}\index{főegyüttható} nevezzük.
+	Azt mondjuk, hogy egy nemzérus polinom \emph{normált}\index{normált polinom}, ha $1$ a főegyütthatója.
+
+	A $p\left( t \right)=0$ konstans zérus polinom foka megállapodás szerint legyen $-\infty$.
+	A $p$ polinom fokszámát $\deg p$ módon jelöljük.
+\end{definition}
+Látni fogjuk, hogy a konstans zérus polinomra $\deg p=-\infty$ csak egy kényelmes jelölés.
+Időnként a polinom fokszámával műveleteket is végzünk.
+Megegyezés szerint ilyenkor $-\infty+a=-\infty$ minden $a$ nem negatív egész számra,
+és $\left( -\infty \right)+\left( -\infty \right)=-\infty.$
+A $-\infty$ szimbólumot minden egész számnál határozottan kisebbnek gondoljuk.
+}
+
+\frame{\frametitle{Polinomok műveletei}
+Két polinom összegét és szorzatát a szokásos módon definiáljuk:
+\begin{definition}\label{def:polmuveletek}
+    Legyen $p,q\in\mathbb{F}[t]$, két polinom.
+	\(
+		p\left( t \right)
+		=
+		\sum_{j=0}^n\alpha_jt^j
+		\text{ és }
+		q\left( t \right)
+		=
+		\sum_{j=0}^m\beta_jt^j,
+        \text{ itt }
+		\alpha_j,\beta_j\in\mathbb{F},
+		0\leq n,m\in\mathbb{Z}.
+	\)
+
+	Ekkor a $p$ és $q$ összegének és szorzatának definíciója:
+	\[
+		\left( p+q \right)\left( t \right)
+		=
+		\sum_{j=0}^{\max{\left\{ m,n \right\}}}\left( \alpha_j+\beta_j \right)t^j;
+        \qquad
+		\left( pq \right)\left( t \right)
+		=
+		\sum_{j=0}^{n+m}c_jt^j,
+		\text{ ahol }
+		c_j
+		=
+		\sum_{k=0}^j\alpha_k\beta_{j-k}.
+		\qedhere
+    \]
+\end{definition}
+Mind az összeadás, mind a szorzás definíciójában úgy kell a formulát érteni,
+hogy amikor a hivatkozott együtthatók nem léteznek,
+akkor értékük legyen zérus.
+Például a szorzat legmagasabb indexű együtthatójára
+$c_{n+m}=\alpha_n\beta_m$, hiszen az $\alpha_k,\beta_{n+m-k}$ számok
+csak egyetlen $k$ mellett értelmezettek közösen, mikor $k=n$.
+}
+\frame{
+	Ha már követjük a konvenciót,
+	amely szerint a nem definiált együtthatókat zérusnak tekintjük,
+	akkor persze
+	\[
+	\left( p+q \right)\left( t \right)
+	=
+	\sum_{j=0}^\infty\left( \alpha_j+\beta_j \right)t^j
+    \text{ és }
+	\left( pq \right)\left( t \right)
+	=
+	\sum_{j=0}^\infty\left( \sum_{k=0}^\infty\alpha_k\beta_{j-k} \right)t^j
+    \]
+	is írható.
+
+	Itt a fenti összegek nem végtelen összegek, hiszen a két polinom együtthatói
+	csak véges sok esetben különböznek zérustól.
+	Így ebben az esetben a formálisan végtelen összeg definíciója
+	egyszerűen a véges sok nem zérus elem összege.
+}
+\frame{
+Fontos azt értenünk, hogy a $p$ és a $q$ polinom összegét és szorzatát úgy definiáltuk, hogy minden $s\in\mathbb{F}$ elemre a
+\[
+    \left( p+q \right)\left( s \right)
+    =
+    p\left( s \right)+q\left( s \right)
+    \text{ valamint a }
+    \left( p\cdot q \right)\left( s \right)
+    =
+    p\left( s \right)\cdot q\left( s \right)
+\]
+kiértékelések fennálljanak.
+}
+\frame{
+\begin{proposition}
+	Legyenek $p,q\in\mathbb{F}[t]$ polinomok az $\mathbb{F}$ test felett.
+	Ekkor
+	\begin{enumerate}
+		\item $\deg \left( pq \right)=\deg p+\deg q$;
+		\item $\deg \left( p+q \right)\leq\max\left\{ \deg p,\deg q \right\}$.\qedhere
+	\end{enumerate}
+\end{proposition}
+%begin{proof}
+%   Figyeljünk arra, hogy a konstans zérus polinom esetében is működik a tétel,
+%   és vegyük észre, hogy az szorzat polinomra vonatkozó állítás azért igaz,
+%   mert a test nullosztómentes.
+%end{proof}
+A következő állítás igazolása házi feladat.
+Aprólékosan igazoljuk a test axiómák gyakorlásaként.
+Vigyázat: a szorzás asszociativitása nem is olyan egyszerű.
+\begin{proposition}
+	Egy $\mathbb{F}$ test feletti $\mathbb{F}\left[ t \right]$ formális polinomok
+	a fent bevezetett összeadás és szorzás műveletekkel,
+	nullosztómentes,
+	kommutatív, egységelemes gyűrűt alkotnak.
+\end{proposition}
+}
+\section{Polinomok oszthatósága és a maradékos osztás}
+\frame{\frametitle{Oszthatóság}
+\begin{definition}\index{polinom osztója}
+	Azt mondjuk, hogy a $p\in\mathbb{F}\left[ t \right]$ \emph{osztója} az $f\in\mathbb{F}\left[ t \right]$ nem zérus polinomnak,
+	ha létezik $h\in\mathbb{F}\left[ t \right]$, hogy $f\left( t \right)=p\left( t \right)h\left( t \right)$.
+	Ilyenkor $f$-et a $p$ egy \emph{többszörösének}\index{polinom többszöröse} is mondjuk.
+	Jelölés: $p|f$.
+\end{definition}
+Világos, hogy egy $p$ polinom összes többszörösei -- tehát azok, amelyeknek $p$ osztója --
+ideált alkotnak.
+Ez a $p$ generálta legszűkebb ideál, azaz  a $J(p)=\left\{ fp:f\in\mathbb{F}\left[ t \right] \right\}$ főideál.
+Ha $q\in J\left( p \right)$, akkor $J\left( q \right)\subseteq J\left( p \right)$, azaz ha $q$ egy többszöröse $p$-nek,
+akkor $q$ minden többszöröse $p$-nek is többszöröse.
+}
+
+\metroset{block=fill}
+\frame{
+    \begin{block}{}
+    Ha $p,q$ nem zérus polinomok,
+    amelyekre $p|q$ és $q|p$ akkor a két polinom csak konstans szorzóban különbözik egymástól.
+    \end{block}
+
+Ha például a két polinom még normált is, akkor $p|q$ és $q|p$ csak $p=q$ esetben lehetséges.
+
+A polinomgyűrű ideáljaira fokuszálva, azt gondoltuk éppen meg,
+hogy \emph{$J\left( p \right)=J\left( q \right)$ normált $p,q$ polinomokra csak úgy teljesülhet, ha $p=q$},
+azaz a polinomok gyűrűjében minden főideálnak csak egy generáló eleme van a normált polinomok körében.
+}
+\metroset{block=transparent}
+\frame{
+A következő állítás szerint a polinomok közt is működik a maradékos osztás,
+ahogyan azt az egész számok közt megszoktuk.
+\begin{proposition}[maradékos osztás]
+	Legyenek $p,q\in\mathbb{F}\left[ t \right]$ polinomok, $q\neq 0$.
+	Ekkor létezik egyetlen $h,r\in\mathbb{F}\left[ t \right]$ polinom, amelyre
+	\[
+		p
+		=
+		hq+r;
+		\quad
+		\deg r < \deg q.\qedhere
+	\]
+\end{proposition}
+%begin{proof}
+%   Először is azt vegyük észre, hogy $\deg p<\deg q$ esetben $r=p$,
+%   $h=0$ szereposztással készen is vagyunk.
+%
+%   Tegyük fel tehát, hogy $n=\deg p\geq \deg q=m$, és lássuk be az állítást $n$ szerinti indukcióval.
+%   Ha $n=0$, akkor $p\left( t \right)=\alpha_0$ és $q\left( t \right)=\beta_0\neq 0$.
+%   Ekkor persze
+%   \[
+%   	\alpha_0=\frac{\alpha_0}{\beta_0}\beta_0+0,
+%   \]
+%   ami azt jelenti, hogy $h\left( t \right)=\frac{\alpha_0}{\beta_0}$ és $r\left( t \right)=0$ szereposztás
+%   megfelelő.
+%
+%   Most tegyük fel,
+%   hogy igaz az állítás $n+1$-nél kisebb fokú $p$ polinomokra ($n\geq 0$),
+%   és lássuk be egy pontosan $n+1$-ed fokú polinomra.
+%   Legyen tehát
+%   \[
+%   	p\left( t \right)=\alpha_{n+1}t^{n+1}+\dots+\alpha_0
+%   	\quad\text{ és }\quad
+%   	q\left( t \right)=\beta_{m}t^m+\dots+\beta_0,
+%   \]
+%   ahol $m\leq n+1$.
+%   Tekintsük a következő polinomot:
+%   \[
+%   	\frac{\alpha_{n+1}}{\beta_m}t^{n+1-m}q\left( t \right).
+%   \]
+%   Világos, hogy ennek főegyütthatója éppen $\alpha_{n+1}$ és foka éppen $n+1=\deg p$.
+%   Így a
+%   \[
+%   	p_1\left( t \right)
+%   	=
+%   	p\left( t \right)-
+%   	\frac{\alpha_{n+1}}{\beta_m}t^{n+1-m}q\left( t \right).
+%   \]
+%   polinomra $\deg p_1<\deg p$.
+%   Na most, ha $\deg p_1<\deg q$, akkor a bizonyítás első mondatában említett helyzetben vagyunk,
+%   tehát nyilvánvaló szereposztással az állítás igaz $p_1$-re és $q$-ra.
+%   Ha viszont $\deg p_1\geq \deg q$ még mindig igaz, akkor az indukciós feltétel szerint található
+%   $h,r\in\mathbb{F}\left[ t \right]$ polinom, amelyre igaz az állítás.
+%   Mindkét esetben találtunk tehát $h,r$ polinomokat, amelyre
+%   \[
+%   	p\left( t \right)-
+%   	\frac{\alpha_{n+1}}{\beta_m}t^{n+1-m}q\left( t \right)
+%   	=
+%   	p_1\left( t \right)
+%   	=
+%   	h\left( t \right)q\left( t \right)+r\left( t \right);
+%   	\quad
+%   	\deg r < \deg q
+%   \]
+%   teljesül.
+%   Ekkor persze
+%   \[
+%   	p\left( t \right)
+%   	=
+%   	\left( h\left( t \right)
+%   	+
+%   	\frac{\alpha_{n+1}}{\beta_m}t^{n+1-m}
+%   	\right)
+%   	q\left( t \right)
+%   	+
+%   	r\left( t \right);
+%   	\quad
+%   	\deg r < \deg q
+%   \]
+%   is fennáll. Ezt kellett belátni az állítás egzisztencia részéhez.
+%
+%   Az unicitás részhez tegyük fel, hogy valamely $h,h_1,r,r_1$ polinomokra
+%   \[
+%   	h\left( t \right)q\left( t \right)+r\left( t \right)
+%   	=
+%   	p\left( t \right)
+%   	=
+%   	h_1\left( t \right)q\left( t \right)+r_1\left( t \right)
+%   \]
+%   teljesül, ahol $\deg r<\deg q$ és $\deg r_1<\deg q$.
+%   Persze átrendezve ekkor
+%   \[
+%   	\left( h\left( t \right)-h_1\left( t \right) \right)q\left( t \right)
+%   	=
+%   	r_1\left( t \right)-r\left( t \right)
+%   \]
+%   is fennáll.
+%   Ekkor a fokszámokra figyelve
+%   \[
+%   	\deg\left( h-h_1 \right)+\deg q
+%   	=
+%   	\deg\left( r_1-r \right)
+%   	\leq
+%   	\max\left\{ \deg r_1,\deg (-r) \right\}
+%   	<
+%   	\deg q.
+%   \]
+%   Ez csak akkor lehetséges, ha $\deg\left( h-h_1 \right)=-\infty$,
+%   ami azt jelenti, hogy $h=h_1$,
+%   amiből persze $r_1=r$ már látszik is.
+%end{proof}
+}
+\frame{
+\begin{proposition}[a polinomgyűrű egy főideál-gyűrű]\label{pr:pgyurufoidealgyuru}
+	A polinomok $\mathbb{F}\left[ t \right]$ kommutatív, egységelemes, nullosztómentes gyűrűjében
+	minden a $\left\{ 0 \right\}$-tól különböző ideált generál az ideálban lévő egyetlen normált minimális fokszámú polinom.
+	Így $\mathbb{F}\left[ t \right]$ egy főideál-gyűrű.
+\end{proposition}
+%begin{proof}
+%   Legyen a $J$ egy ideálja $\mathbb{F}\left[ t \right]$-nek,
+%   amely nem csak a zérus elemből áll.
+%   Vegyünk egy minimális fokszámú de nem zérus polinomot $J$-ben,
+%   tehát olyat,
+%   amely maga sem zérus és nála kisebb fokszámú polinom már nincs $J$-ben a $0$ elemen kívül.
+%   Legyen ez $d$.
+%   Most megmutatjuk, hogy minden $p\in J$-re $d|p$.
+%   A maradékos osztás szerint
+%   valamely $h,r$ polinomokra
+%   \[
+%   	p\left( t \right)=
+%   	h\left( t \right)d\left( t \right)+r\left( t \right);
+%   	\text{ ahol }
+%   	\deg r<\deg d.
+%   \]
+%   Mivel $p,d\in J$, és $J$ egy ideál, ezért $r\in J$.
+%   No de, $d$ konstrukciója szerint ilyen csak a zérus polinom van,
+%   ezért valóban $d|p$.
+%   Ez éppen azt jelenti, hogy
+%   \(
+%   J=\left\{ dh:h\in\mathbb{F}\left[ t \right] \right\}
+%   \)
+%   azaz $d$ generálja a $J$ ideált.
+%   Azt viszont már korábban is meggondoltuk,
+%   hogy egy főideált csak egyetlen normált polinom generál.
+%
+%   Megmutattuk tehát,
+%   hogy egyetlen normált, minimális fokszámú polinom van $J$-ben,
+%   és minden $J$-beli polinom ennek többszöröse.
+%end{proof}
+Érdemes eltenni magunknak, hogy az ideál generáló eleme, tehát az ideálbeli elemek közös osztója
+éppen az ideál minimális fokszámú nem zérus polinomja.
+Ilyenből a normált polinomok közül csak egy van.
+}
+\end{document}

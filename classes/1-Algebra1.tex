@@ -1,0 +1,1065 @@
+\input{algebra.tex}
+
+\title[Algebra 1.]{Struktúrák}
+\subtitle{Monoid, félcsoport, csoport, gyűrű, test}
+\date[1. hét]{2026.~szeptember 14-én}
+\begin{document}
+\openingframes{Tartalom}
+\section{Algebrai struktúrák}
+\frame{\frametitle{$n$-változós művelet}
+\begin{definition}\index{művelet}\index{algebrai struktúra}
+	Legyen $H$ egy halmaz. Egy
+	\[
+		\varphi\colon H^n\to H
+	\]
+	függvényt $n$-változós \emph{műveletnek} nevezünk.
+	Egy halmazt és rajta véges sok műveletet együtt \emph{algebrai struktúrának} mondunk.
+	Jelölés:
+	$$\left(H,\varphi_1,\dots,\varphi_n  \right),$$
+	ahol $H$ a halmaz és
+	$\varphi_1,\dots,\varphi_n$ a $H$ halmazon értelmezett műveletek.
+\end{definition}
+}
+\frame{\frametitle{Félcsoport}
+\begin{definition}\index{félcsoport}
+	Egy $\left( S,\ast \right)$ algebrai struktúrát \emph{félcsoportnak} mondjuk,
+	ha $\ast$ egy kétváltozós \emph{asszociatív}\index{asszociatív}
+	művelete az $S$ halmaznak,
+	azaz minden $a,b,c\in S$ mellett
+	\[
+		a\ast\left( b\ast c \right)=\left( a\ast b\right)\ast c.\qedhere
+	\]
+\end{definition}
+Lefordítva ez azt jelenti, hogy
+\begin{enumerate}
+	\item minden $a,b\in S$ mellett $a\ast b\in S$, és
+	\item minden $a,b,c\in S$ esetén $a\ast\left( b\ast c \right)=\left(a\ast b\right)\ast c $
+\end{enumerate}
+}
+
+\frame{
+\begin{definition}[neutrális elem]\index{neutrális elem}\index{neutrális elemes félcsoport}
+	Az $\left( S,\ast \right)$ félcsoportban az $s\in S$ elem \emph{balról (jobbról) neutrális},
+	ha $s\ast t=t$ ($t\ast s=t$) minden $t\in S$ mellett.
+	Ha $s\in S$ balról is és jobbról is neutrális, akkor $s$-et egy \emph{neutrális elemnek}
+	mondjuk.
+	A félcsoportot \emph{neutrális elemes félcsoportnak} nevezzük, ha van benne neutrális elem.
+\end{definition}
+\begin{proposition}
+	Ha egy félcsoportban, van egy balról neutrális elem és egy jobbról neutrális elem,
+	akkor ezek megegyeznek.
+	Emiatt egy neutrális elemes félcsoportban neutrális elem csak egy van.
+\end{proposition}
+%begin{proof}
+%   Legyen $s_1$ balról-- és $s_2$ jobbról neutrális elem.
+%   Ekkor
+%   \(
+%   s_1=s_1\ast s_2=s_2.
+%   \)
+%end{proof}
+A félcsoport additív írásmódja esetén természetes a neutrális elemet \emph{zérusnak},
+míg multiplikatív írásmód esetén \emph{egységnek} nevezni.
+}
+
+\frame{\frametitle{Csoport}
+\begin{definition}\index{inverz}\index{bal inverz}\index{jobb inverz}
+    Egy $\left( S,\ast \right)$ egységelemes félcsoportnak rögzítsük egy $s\in S$ elemét.
+    Azt mondjuk, hogy az $s$ elemnek az $s'\in S$ elem a \emph{bal (jobb) inverze},
+    ha $s'\ast s=e$ ($s\ast s'=e$) teljesül,
+    ahol $e\in S$ a félcsoport neutrális eleme.
+    Ha $s'$ bal és jobb inverze is $s$-nek, akkor azt mondjuk, hogy $s'$ az $s$ \emph{inverze}.
+    
+    Egy algebrai struktúrát \emph{csoportnak}\index{csoport} nevezünk,
+    ha 
+    \begin{enumerate}
+        \item 
+        olyan neutrális elemes félcsoport, 
+        \item
+        amelyben minden elemnek van inverze.
+    \end{enumerate}
+\end{definition}
+}
+\frame{
+Formálisabban: ha $e\in G$ jelöli a $G$ félcsoport neutrális elemét,
+    akkor azt követeljük meg újabb axiómaként, 
+    hogy miden $g\in G$-hez létezzen $g'\in G$, amelyre
+	\[
+		g\ast g'=e=g'\ast g.\tag{\dag}
+	\]
+    Ha ez fennáll, akkor a $(G,\ast)$ egységelemes félcsoportot csoportnak mondjuk.
+}
+\frame{\frametitle{Az inverz egyértelműsége}
+\begin{proposition}
+    Egy neutrális elemes félcsoportban, 
+    ha egy elemnek van egy bal és egy jobb inverze,
+    akkor ezek megegyeznek.
+
+    Emiatt egy csoportban minden elemnek csak egy inverze van.
+\end{proposition}
+}
+\frame{
+Példaként gondoljuk meg, hogy az összes $H\to H$ függvények halmaza a kompozíció művelettel
+neutrális elemes félcsoportot,
+és az összes $H\to H$ kölcsönösen egyértelmű függvények halmaza a kompozíció művelettel csoportot alkotnak.
+Ez utóbbi csoportot mondjuk \emph{permutáció csoportnak}\index{permutációk}.
+
+\begin{proposition}[egyszerűsítési szabály]\index{egyszerűsítési szabály}
+	Csoportban igaz az egyszerűsítési szabály, azaz
+	\[
+		a\ast c=b\ast c\implies a=b.\qedhere
+	\]
+\end{proposition}
+%begin{proof}
+%   \begin{math}
+%   	a=a\ast e
+%   	=
+%   	a\ast \left( c\ast c'\right)=
+%   	\left( a\ast c \right)\ast c'=
+%   	\left( b\ast c \right)\ast c'=
+%   	b\ast\left( c\ast c' \right)=
+%   	b\ast e=
+%   	b.
+%   \end{math}
+%end{proof}
+\begin{definition}[Abel-csoport]\index{Abel-csoport}
+	Egy $\left( G,\ast \right)$ csoportot \emph{Abel-csoportnak} nevezünk,
+	ha a művelete \emph{kommutatív}\index{kommutatív} is,
+	azaz minden $s,t\in G$ mellett $s\ast t=t\ast s$.
+\end{definition}
+}
+\frame{\frametitle{Gyűrű}
+\begin{definition}\index{gyűrű}
+	A kétműveletes $\left( R,+,\cdot \right)$ algebrai struktúrát \emph{gyűrűnek} nevezzük,
+	ha
+	\begin{enumerate}
+		\item $\left( R,+ \right)$ Abel-csoport;
+		\item $\left( R,\cdot \right)$ félcsoport;
+		\item és a két műveletet összeköti a következő két disztributivitás:\index{disztributív}
+		      \[
+			      a\cdot\left( b+c \right)=a\cdot b + a\cdot c\qquad
+			      \left( a + b \right)\cdot c=a\cdot c+b\cdot c.
+		      \]
+	\end{enumerate}
+	Ha $\left( R,\cdot \right)$ neutrális elemes félcsoport, akkor azt mondjuk, hogy $R$ egy
+	\emph{egységelemes gyűrű}, és ha $\left( R,\cdot \right)$ kommutatív félcsoport, akkor
+	azt mondjuk, hogy $R$ egy \emph{kommutatív gyűrű}.
+\end{definition}
+}
+
+\frame{\frametitle{Test}
+
+\begin{definition}
+	Egy $\left( \mathbb{F},+,\cdot \right)$ kétműveletes algebrai struktúrát \emph{testnek}
+	nevezünk,
+	ha 
+    \begin{enumerate}
+        \item 
+        olyan kommutatív, egységelemes gyűrű;
+    \item
+        amelyben minden nemzérus elemnek van inverze;
+    \item
+        és $0\neq 1$.
+    \end{enumerate}
+\end{definition}
+A test az algebrai struktúra, ahol a az összeadás és szorzás műveletekkel úgy számolhatunk, mint amit a valós számok során megszoktuk.
+}\frame{
+Példaként két tulajdonság.
+\begin{proposition}
+	Az $\left( R,+,\cdot \right)$ gyűrűben minden $a\in R$ mellett
+	\begin{equation*}
+		a\cdot 0=0\text{ és }
+		\left( -1 \right)\cdot a=-a.\qedhere
+	\end{equation*}
+\end{proposition}
+%begin{proof}
+%   \begin{math}
+%   	0+a\cdot 0=
+%   	a\cdot 0=
+%   	a\left( 0+0 \right)=
+%   	a\cdot 0+a\cdot 0.
+%   \end{math}
+%   A jobboldali $a\cdot 0$-val való egyszerűsítés után kapjuk,
+%   hogy $0=a\cdot 0$.
+%   A második azonosságot az első felhasználásával kapjuk:
+%   \begin{math}
+%   	0
+%   	=
+%   	0a
+%   	=
+%   	\left( 1+\left( -1 \right) \right)\cdot a
+%   	=
+%   	1\cdot a + \left( -1 \right)\cdot a
+%   	=
+%   	a +\left( -1 \right)\cdot a.
+%   \end{math}
+%   Az additív inverz definíciója szerint ez éppen azt jelenti, hogy $-a=\left( -1 \right)\cdot a$.
+%end{proof}
+
+Ami nagyon fontos, hogy egy gyűrűben nem feltétlen teljesül,
+hogy elemek szorzata csak úgy lehet zérus, ha legalább az egyik elem zérus.
+Számunkra a legfontosabb példa  a mátrixok gyűrűje,
+ahol pont ennek a hiánya jelenti nehézséget.
+}
+\frame{\frametitle{Nullosztómentesség}
+\begin{definition}[nullosztómentes gyűrű]
+	Egy gyűrűt \emph{nullosztómentesnek} nevezzük,
+	ha két elem szorzata csak úgy lehet nulla,
+	ha legalább az egyik elem nulla.
+\end{definition}
+\begin{proposition}
+	Nullosztómentes gyűrűben nem zérus elemmel való szorzatot egyszerűsíteni lehet
+	azaz, ha $a,b,c\in R,b\neq 0$ esetén
+	\[
+		ab=cb\implies a=c.\qedhere
+	\]
+\end{proposition}
+%begin{proof}
+%   \begin{math}
+%   	\left( a-c \right)b=ab-cb=0\implies a-c=0.
+%   \end{math}
+%end{proof}
+\begin{proposition}
+	Egy test egyben nullosztómentes gyűrű, azaz
+	ha $\mathbb{F}$ egy test, és $a,b\in\mathbb{F}$.
+	Akkor
+	\[
+		ab=0\implies a=0\text{ vagy }b=0.\qedhere
+	\]
+\end{proposition}
+%begin{proof}
+%   Tegyük fel, hogy $ab=0$.
+%   Ha $b\neq 0$, akkor létezik $b'\in\mathbb{F}$, hogy $bb'=1$.
+%   Így
+%   \[
+%   	0= 0b'=\left( ab \right)b'=a\left( bb' \right)=a1=a.\qedhere
+%   \]
+%end{proof}
+}
+\frame{\frametitle{Ideál}
+\begin{definition}[ideál]\index{ideál}\index{főideál}\index{főideál-gyűrű}
+	Egy $\left( R,+,\cdot \right)$ kommutatív gyűrű egy $J\subseteq R$ nem üres részhalmazát
+	\emph{ideálnak} nevezzük,
+	ha
+	\begin{enumerate}
+		\item
+		      minden $a,b\in J$ mellett $a+b\in J$;
+		\item
+		      minden $c\in R$ és minden $a\in J$ mellett $ca\in J$.
+	\end{enumerate}
+	Ha egy $d\in R$ adott, akkor a
+	\[
+		\left\{ da:a\in R \right\}
+	\]
+	halmaz egy ideálja $R$-nek.
+	Ez a $d$ elem többszöröseiből álló ideál, amelyet \emph{főideálnak}\index{főideál} is nevezünk.
+	Ha egy gyűrűben minden ideál egy főideál, akkor a gyűrűt \emph{főideál-gyűrűnek}\index{főideál-gyűrű} mondjuk.
+\end{definition}
+Világos, hogy $\left\{ 0 \right\}$ és maga az egész $R$ ideálok.
+}
+
+\frame{\frametitle{Generált ideál}
+\begin{defprop}\index{generált ideál}
+	Legyen adott a  kommutatív, egységelemes $\left( R,+,\cdot \right)$ gyűrűben véges sok $a_1,\dots,a_r$ elem.
+	Az e véges sok elemet tartalmazó ideálok közös része maga is ideál,
+	és e metszet az eredeti véges halmazt
+	tartalmazó \emph{legszűkebb ideál}.
+	Jelöljük ezt $J\left( a_1,a_2,\dots,a_r \right)$ módon.
+
+	Tekintsük a
+	$
+		\left\{ \sum_{j=1}^ra_jb_j:b_1,\dots,b_r\in R \right\}
+	$
+	halmazt.
+	Világos,
+	hogy ez egy ideál az $R$ gyűrűben.
+	Másrészt minden az $\left\{ a_1,\dots,a_r \right\}$ elemeket tartalmazó ideál,
+	egyben tartalmazza a
+	$
+		\left\{ \sum_{j=1}^ra_jb_j:b_1,\dots,b_r\in R \right\}
+	$
+	halmazt is,
+	ami azt jelenti, hogy
+	\[
+		J\left( a_1,\dots,a_r \right)=
+		\left\{ \sum_{j=1}^ra_jb_j:b_1,\dots,b_r\in R \right\}
+	\]
+	az $a_1,\dots,a_r$ elemeket tartalmazó legszűkebb ideál.
+	Nevezzük ezt az ideált az $a_1,\dots,a_r$ elemek \emph{generálta ideálnak} is.
+\end{defprop}
+}
+
+\frame{
+A legfontosabb struktúrák számunkra a következők:
+\begin{itemize}
+	\item
+	      Egységelemes gyűrű, amelyben a nullosztómentesség nem teljesül: mátrixok.
+	\item
+	      Kommutatív egységelemes gyűrű, amely nullosztómentes de mégsem test: polinomok.
+	\item
+	      Test:
+	      a valós vagy a komplex számok.
+\end{itemize}
+}
+\end{document}
+\section{Polinomgyűrűk}
+\frame{
+\begin{definition}[polinom]\index{polinom}
+	Legyen $\mathbb{F}$ egy test.
+	E test feletti polinomokon az összes
+	\[
+		p\left( t \right)=
+		\alpha_0+\alpha_1t+\alpha_2t^2+\dots+\alpha_nt^n
+	\]
+	alakú formális algebrai kifejezést értjük.
+	Itt $n$ tetszőleges nem negatív egész
+	és $\alpha_0,\dots,\alpha_n$ tetszőleges, az $\mathbb{F}$ testbeli elemek.
+	Az $\mathbb{F}$ test feletti összes polinomok halmazát $\mathbb{F}\left[ t \right]$ módon jelöljük.
+\end{definition}
+A fenti definícióban az \emph{algebrai kifejezés} szó arra utal,  hogy az
+\begin{math}
+	\alpha_0+\alpha_1t+\alpha_2t^2+\dots+\alpha_nt^n
+\end{math}
+műveletek minden $t\in\mathbb{F}$ mellett értelmesek,
+és eredményük egy újabb $\mathbb{F}$ testbeli elem.
+Ha $t\in\mathbb{F}$ konkrétan meg van adva,
+akkor a behelyettesítés után kapott elemet mondjuk a $p$ polinom helyettesítési értékének.
+}
+\frame{
+A \emph{formális algebrai kifejezés}\index{formális algebrai kifejezés} arra utal,
+hogy egy polinomot az együtthatói határozzák meg,
+azaz két polinom akkor és csak akkor azonos,
+ha az megfelelő együtthatói azonosak.
+Ez szemben áll avval, hogy ha a polinomokra mint függvényekre tekintenénk,
+akkor a helyettesítési értékek egyenlősége jelentené a két polinom azonos voltát.
+A formális szó tehát azt jelenti, hogy nem mint függvényre gondolunk,
+hanem egyszerűen az adott $\alpha_0,\dots,\alpha_n$ rögzített elemek -- ezeket mondjuk együtthatóknak --,
+által előírt műveletekre.
+Az az előírás ugyanis, hogy tetszőleges $t\in\mathbb{F}$ mellett hajtsuk végre az
+\[
+	\alpha_0+\alpha_1t+\alpha_2t^2+\dots+\alpha_nt^n
+\]
+műveletsort.
+A műveletsorról és nem annak eredményéről van szó.
+
+
+Két műveletsor akkor azonos, ha ugyanazok a műveletsort meghatározó
+$\left( \alpha_0,\alpha_1,\dots,\alpha_n \right)$
+együtthatók.
+}
+\frame{
+A jelölések megértése is fontos.
+$p\left( t \right)\in\mathbb{F}\left[ t \right]$ semmi mást nem jelent,
+minthogy $p\left( t \right)$ egy polinom.
+Persze a polinom nem keverendő össze a helyettesítési értékével,
+hiszen az egyik egy algebrai kifejezés-együttes, a másik egy az adott testbeli elem.
+Szokásos viszont, hogy ha nincs konkrét $t$ a szövegkörnyezetben, akkor is $p\left( t \right)$ jelöli a polinomot.
+Néha egyszerűbben csak $p$-vel jelöljük, főleg akkor ha nincs szó behelyettesítésről,
+emiatt érdektelen a változó jele.
+Ritkábban, de előfordul, hogy egy konkrét értékre, mondjuk $s\in\mathbb{F}$-re kell kiértékelnünk a polinomot ilyenkor $p\left( s \right)$ jelöli azt a testbeli elemet,
+amelyet $t$ helyett $s$-et téve az előírt műveletek kiértékelése után kapunk.
+A szövegkörnyezetben mindig világosnak kell lennie, hogy $p\left( t \right)$ a polinomot jelenti,
+vagy egy konkrét $t$-re kiértékelt testbeli elemet.
+}
+\frame{\frametitle{Polinom fokszáma}
+\begin{definition}\index{polinom foka}
+	Legyen $p\left( t \right)\in\mathbb{F}\left[ t \right]$ egy polinom.
+	Azt mondjuk, hogy az $n$ nem negatív egész szám e \emph{polinom fokszáma},
+	ha $n$ a legnagyobb nemzérus együttható indexe.
+	A legnagyobb nemzérus együtthatót \emph{főegyütthatónak}\index{főegyüttható} nevezzük.
+	Azt mondjuk, hogy egy nemzérus polinom \emph{normált}\index{normált polinom}, ha $1$ a főegyütthatója.
+
+	A $p\left( t \right)=0$ konstans zérus polinom foka megállapodás szerint legyen $-\infty$.
+	A $p$ polinom fokszámát $\deg p$ módon jelöljük.
+\end{definition}
+Látni fogjuk, hogy a konstans zérus polinomra $\deg p=-\infty$ csak egy kényelmes jelölés.
+Időnként a polinom fokszámával műveleteket is végzünk.
+Megegyezés szerint ilyenkor $-\infty+a=-\infty$ minden $a$ nem negatív egész számra,
+és $\left( -\infty \right)+\left( -\infty \right)=-\infty.$
+A $-\infty$ szimbólumot minden egész számnál határozottan kisebbnek gondoljuk.
+}
+
+\frame{\frametitle{Polinomok műveletei}
+Két polinom összegét és szorzatát a szokásos módon definiáljuk:
+\begin{definition}\label{def:polmuveletek}
+    Legyen $p,q\in\mathbb{F}[t]$, két polinom.
+	\(
+		p\left( t \right)
+		=
+		\sum_{j=0}^n\alpha_jt^j
+		\text{ és }
+		q\left( t \right)
+		=
+		\sum_{j=0}^m\beta_jt^j,
+        \text{ itt }
+		\alpha_j,\beta_j\in\mathbb{F},
+		0\leq n,m\in\mathbb{Z}.
+	\)
+
+	Ekkor a $p$ és $q$ összegének és szorzatának definíciója:
+	\[
+		\left( p+q \right)\left( t \right)
+		=
+		\sum_{j=0}^{\max{\left\{ m,n \right\}}}\left( \alpha_j+\beta_j \right)t^j;
+        \qquad
+		\left( pq \right)\left( t \right)
+		=
+		\sum_{j=0}^{n+m}c_jt^j,
+		\text{ ahol }
+		c_j
+		=
+		\sum_{k=0}^j\alpha_k\beta_{j-k}.
+		\qedhere
+    \]
+\end{definition}
+Mind az összeadás, mind a szorzás definíciójában úgy kell a formulát érteni,
+hogy amikor a hivatkozott együtthatók nem léteznek,
+akkor értékük legyen zérus.
+Például a szorzat legmagasabb indexű együtthatójára
+$c_{n+m}=\alpha_n\beta_m$, hiszen az $\alpha_k,\beta_{n+m-k}$ számok
+csak egyetlen $k$ mellett értelmezettek közösen, mikor $k=n$.
+}
+\frame{
+	Ha már követjük a konvenciót,
+	amely szerint a nem definiált együtthatókat zérusnak tekintjük,
+	akkor persze
+	\[
+	\left( p+q \right)\left( t \right)
+	=
+	\sum_{j=0}^\infty\left( \alpha_j+\beta_j \right)t^j
+    \text{ és }
+	\left( pq \right)\left( t \right)
+	=
+	\sum_{j=0}^\infty\left( \sum_{k=0}^\infty\alpha_k\beta_{j-k} \right)t^j
+    \]
+	is írható.
+
+	Itt a fenti összegek nem végtelen összegek, hiszen a két polinom együtthatói
+	csak véges sok esetben különböznek zérustól.
+	Így ebben az esetben a formálisan végtelen összeg definíciója
+	egyszerűen a véges sok nem zérus elem összege.
+}
+\frame{
+Fontos azt értenünk, hogy a $p$ és a $q$ polinom összegét és szorzatát úgy definiáltuk, hogy minden $s\in\mathbb{F}$ elemre a
+\[
+    \left( p+q \right)\left( s \right)
+    =
+    p\left( s \right)+q\left( s \right)
+    \text{ valamint a }
+    \left( p\cdot q \right)\left( s \right)
+    =
+    p\left( s \right)\cdot q\left( s \right)
+\]
+kiértékelések fennálljanak.
+}
+\frame{
+\begin{proposition}
+	Legyenek $p,q\in\mathbb{F}[t]$ polinomok az $\mathbb{F}$ test felett.
+	Ekkor
+	\begin{enumerate}
+		\item $\deg \left( pq \right)=\deg p+\deg q$;
+		\item $\deg \left( p+q \right)\leq\max\left\{ \deg p,\deg q \right\}$.\qedhere
+	\end{enumerate}
+\end{proposition}
+%begin{proof}
+%   Figyeljünk arra, hogy a konstans zérus polinom esetében is működik a tétel,
+%   és vegyük észre, hogy az szorzat polinomra vonatkozó állítás azért igaz,
+%   mert a test nullosztómentes.
+%end{proof}
+A következő állítás igazolása házi feladat.
+Aprólékosan igazoljuk a test axiómák gyakorlásaként.
+Vigyázat: a szorzás asszociativitása nem is olyan egyszerű.
+\begin{proposition}
+	Egy $\mathbb{F}$ test feletti $\mathbb{F}\left[ t \right]$ formális polinomok
+	a fent bevezetett összeadás és szorzás műveletekkel,
+	nullosztómentes,
+	kommutatív, egységelemes gyűrűt alkotnak.
+\end{proposition}
+}
+\section{Polinomok oszthatósága és a maradékos osztás}
+\frame{\frametitle{Oszthatóság}
+\begin{definition}\index{polinom osztója}
+	Azt mondjuk, hogy a $p\in\mathbb{F}\left[ t \right]$ \emph{osztója} az $f\in\mathbb{F}\left[ t \right]$ nem zérus polinomnak,
+	ha létezik $h\in\mathbb{F}\left[ t \right]$, hogy $f\left( t \right)=p\left( t \right)h\left( t \right)$.
+	Ilyenkor $f$-et a $p$ egy \emph{többszörösének}\index{polinom többszöröse} is mondjuk.
+	Jelölés: $p|f$.
+\end{definition}
+Világos, hogy egy $p$ polinom összes többszörösei -- tehát azok, amelyeknek $p$ osztója --
+ideált alkotnak.
+Ez a $p$ generálta legszűkebb ideál, azaz  a $J(p)=\left\{ fp:f\in\mathbb{F}\left[ t \right] \right\}$ főideál.
+Ha $q\in J\left( p \right)$, akkor $J\left( q \right)\subseteq J\left( p \right)$, azaz ha $q$ egy többszöröse $p$-nek,
+akkor $q$ minden többszöröse $p$-nek is többszöröse.
+}
+\frame{
+Ha $p,q$ nem zérus polinomok,
+amelyekre $p|q$ és $q|p$ akkor a két polinom csak konstans szorzóban különbözik egymástól.
+
+Ha például a két polinom még normált is, akkor $p|q$ és $q|p$ csak $p=q$ esetben lehetséges.
+
+A polinomgyűrű ideáljaira fokuszálva, azt gondoltuk éppen meg,
+hogy \emph{$J\left( p \right)=J\left( q \right)$ normált $p,q$ polinomokra csak úgy teljesülhet, ha $p=q$},
+azaz a polinomok gyűrűjében minden főideálnak csak egy generáló eleme van a normált polinomok körében.
+}
+\frame{
+A következő állítás szerint a polinomok közt is működik a maradékos osztás,
+ahogyan azt az egész számok közt megszoktuk.
+\begin{proposition}[maradékos osztás]
+	Legyenek $p,q\in\mathbb{F}\left[ t \right]$ polinomok, $q\neq 0$.
+	Ekkor létezik egyetlen $h,r\in\mathbb{F}\left[ t \right]$ polinom, amelyre
+	\[
+		p
+		=
+		hq+r;
+		\quad
+		\deg r < \deg q.\qedhere
+	\]
+\end{proposition}
+%begin{proof}
+%   Először is azt vegyük észre, hogy $\deg p<\deg q$ esetben $r=p$,
+%   $h=0$ szereposztással készen is vagyunk.
+%
+%   Tegyük fel tehát, hogy $n=\deg p\geq \deg q=m$, és lássuk be az állítást $n$ szerinti indukcióval.
+%   Ha $n=0$, akkor $p\left( t \right)=\alpha_0$ és $q\left( t \right)=\beta_0\neq 0$.
+%   Ekkor persze
+%   \[
+%   	\alpha_0=\frac{\alpha_0}{\beta_0}\beta_0+0,
+%   \]
+%   ami azt jelenti, hogy $h\left( t \right)=\frac{\alpha_0}{\beta_0}$ és $r\left( t \right)=0$ szereposztás
+%   megfelelő.
+%
+%   Most tegyük fel,
+%   hogy igaz az állítás $n+1$-nél kisebb fokú $p$ polinomokra ($n\geq 0$),
+%   és lássuk be egy pontosan $n+1$-ed fokú polinomra.
+%   Legyen tehát
+%   \[
+%   	p\left( t \right)=\alpha_{n+1}t^{n+1}+\dots+\alpha_0
+%   	\quad\text{ és }\quad
+%   	q\left( t \right)=\beta_{m}t^m+\dots+\beta_0,
+%   \]
+%   ahol $m\leq n+1$.
+%   Tekintsük a következő polinomot:
+%   \[
+%   	\frac{\alpha_{n+1}}{\beta_m}t^{n+1-m}q\left( t \right).
+%   \]
+%   Világos, hogy ennek főegyütthatója éppen $\alpha_{n+1}$ és foka éppen $n+1=\deg p$.
+%   Így a
+%   \[
+%   	p_1\left( t \right)
+%   	=
+%   	p\left( t \right)-
+%   	\frac{\alpha_{n+1}}{\beta_m}t^{n+1-m}q\left( t \right).
+%   \]
+%   polinomra $\deg p_1<\deg p$.
+%   Na most, ha $\deg p_1<\deg q$, akkor a bizonyítás első mondatában említett helyzetben vagyunk,
+%   tehát nyilvánvaló szereposztással az állítás igaz $p_1$-re és $q$-ra.
+%   Ha viszont $\deg p_1\geq \deg q$ még mindig igaz, akkor az indukciós feltétel szerint található
+%   $h,r\in\mathbb{F}\left[ t \right]$ polinom, amelyre igaz az állítás.
+%   Mindkét esetben találtunk tehát $h,r$ polinomokat, amelyre
+%   \[
+%   	p\left( t \right)-
+%   	\frac{\alpha_{n+1}}{\beta_m}t^{n+1-m}q\left( t \right)
+%   	=
+%   	p_1\left( t \right)
+%   	=
+%   	h\left( t \right)q\left( t \right)+r\left( t \right);
+%   	\quad
+%   	\deg r < \deg q
+%   \]
+%   teljesül.
+%   Ekkor persze
+%   \[
+%   	p\left( t \right)
+%   	=
+%   	\left( h\left( t \right)
+%   	+
+%   	\frac{\alpha_{n+1}}{\beta_m}t^{n+1-m}
+%   	\right)
+%   	q\left( t \right)
+%   	+
+%   	r\left( t \right);
+%   	\quad
+%   	\deg r < \deg q
+%   \]
+%   is fennáll. Ezt kellett belátni az állítás egzisztencia részéhez.
+%
+%   Az unicitás részhez tegyük fel, hogy valamely $h,h_1,r,r_1$ polinomokra
+%   \[
+%   	h\left( t \right)q\left( t \right)+r\left( t \right)
+%   	=
+%   	p\left( t \right)
+%   	=
+%   	h_1\left( t \right)q\left( t \right)+r_1\left( t \right)
+%   \]
+%   teljesül, ahol $\deg r<\deg q$ és $\deg r_1<\deg q$.
+%   Persze átrendezve ekkor
+%   \[
+%   	\left( h\left( t \right)-h_1\left( t \right) \right)q\left( t \right)
+%   	=
+%   	r_1\left( t \right)-r\left( t \right)
+%   \]
+%   is fennáll.
+%   Ekkor a fokszámokra figyelve
+%   \[
+%   	\deg\left( h-h_1 \right)+\deg q
+%   	=
+%   	\deg\left( r_1-r \right)
+%   	\leq
+%   	\max\left\{ \deg r_1,\deg (-r) \right\}
+%   	<
+%   	\deg q.
+%   \]
+%   Ez csak akkor lehetséges, ha $\deg\left( h-h_1 \right)=-\infty$,
+%   ami azt jelenti, hogy $h=h_1$,
+%   amiből persze $r_1=r$ már látszik is.
+%end{proof}
+}
+\frame{
+\begin{proposition}[a polinomgyűrű egy főideál-gyűrű]\label{pr:pgyurufoidealgyuru}
+	A polinomok $\mathbb{F}\left[ t \right]$ kommutatív, egységelemes, nullosztómentes gyűrűjében
+	minden a $\left\{ 0 \right\}$-tól különböző ideált generál az ideálban lévő egyetlen normált minimális fokszámú polinom.
+	Így $\mathbb{F}\left[ t \right]$ egy főideál-gyűrű.
+\end{proposition}
+%begin{proof}
+%   Legyen a $J$ egy ideálja $\mathbb{F}\left[ t \right]$-nek,
+%   amely nem csak a zérus elemből áll.
+%   Vegyünk egy minimális fokszámú de nem zérus polinomot $J$-ben,
+%   tehát olyat,
+%   amely maga sem zérus és nála kisebb fokszámú polinom már nincs $J$-ben a $0$ elemen kívül.
+%   Legyen ez $d$.
+%   Most megmutatjuk, hogy minden $p\in J$-re $d|p$.
+%   A maradékos osztás szerint
+%   valamely $h,r$ polinomokra
+%   \[
+%   	p\left( t \right)=
+%   	h\left( t \right)d\left( t \right)+r\left( t \right);
+%   	\text{ ahol }
+%   	\deg r<\deg d.
+%   \]
+%   Mivel $p,d\in J$, és $J$ egy ideál, ezért $r\in J$.
+%   No de, $d$ konstrukciója szerint ilyen csak a zérus polinom van,
+%   ezért valóban $d|p$.
+%   Ez éppen azt jelenti, hogy
+%   \(
+%   J=\left\{ dh:h\in\mathbb{F}\left[ t \right] \right\}
+%   \)
+%   azaz $d$ generálja a $J$ ideált.
+%   Azt viszont már korábban is meggondoltuk,
+%   hogy egy főideált csak egyetlen normált polinom generál.
+%
+%   Megmutattuk tehát,
+%   hogy egyetlen normált, minimális fokszámú polinom van $J$-ben,
+%   és minden $J$-beli polinom ennek többszöröse.
+%end{proof}
+Érdemes eltenni magunknak, hogy az ideál generáló eleme, tehát az ideálbeli elemek közös osztója
+éppen az ideál minimális fokszámú nem zérus polinomja.
+Ilyenből a normált polinomok közül csak egy van.
+}
+\frame{
+\begin{definition}
+	Legyenek most $p_1,\ldots,p_k$ polinomok.
+	\begin{enumerate}
+		\item A $d$ polinom a \emph{legnagyobb közös osztója}\index{legnagyobb közös osztó} az adott polinomoknak,
+		      ha
+		      \begin{enumerate}
+			      \item $d|p_j$ minden $j=1,\ldots,k$-ra,
+			      \item ha $d_1|p_j$ minden $j=1,\ldots,k$ mellett akkor $d_1|d$ is fennáll,
+			      \item $d$ normált.
+		      \end{enumerate}
+		      A $p_1,\ldots,p_k$ polinomokat \emph{relatív prímeknek}\index{relatív prím polinomok} nevezzük,
+		      ha közös osztójuk csak a konstans polinomok,
+		      azaz a $d\left( t \right)=1$ a legnagyobb közös osztó.
+		\item A $d$ polinom a \emph{legkisebb közös többszöröse}\index{legkisebb közös többszörös} az adott polinomoknak,
+		      ha
+		      \begin{enumerate}
+			      \item $p_j|d$ minden $j=1,\ldots,k$-ra,
+			      \item ha $p_j|d_1$ minden $j=1,\ldots,k$ mellett akkor $d|d_1$ is fennáll.
+			      \item $d$ normált.\qedhere
+		      \end{enumerate}
+	\end{enumerate}
+\end{definition}
+Persze az első kérdés, hogy van-e a polinomoknak legnagyobb közös osztója vagy legkisebb közös többszöröse, és hány ilyen van?
+}
+\frame{
+\begin{proposition}\label{pr:lkkt}
+	Bármely $p_1,\ldots,p_r\in\mathbb{F}\left[ t \right]$ nem zérus polinomoknak
+	létezik egyetlen legkisebb közös többszöröse.
+
+	Jelesül, a legkisebb közös többszörös, a
+	\[
+	\cap_{j=1}^rJ\left( p_j \right)
+    \] 
+    ideálnak, mint főideálnak az egyetlen normált generátora.
+\end{proposition}
+%\begin{proof}
+%	Világos, hogy ideálok metszete is ideál, emiatt
+%	\(
+%	\cap_{j=1}^rJ\left( p_j \right)
+%	\)
+%	is ideál $\mathbb{F}\left[ t \right]$ gyűrűben.
+%	De itt minden ideál főideál, létezik tehát $d\in\mathbb{F}\left[ t \right]$ normált polinom, amelyre
+%	\[
+%		J\left( d \right)
+%		=
+%		\cap_{j=1}^rJ\left( p_j \right)
+%	\]
+%	Világos, hogy $d\in J\left( p_j \right)$ minden $j$-re,
+%	ergo $d$ többszöröse minden $p_j$-nek.
+%	Ha $p_j|d_1$ fennáll, minden $j$-re
+%	az azt jelenti, hogy $d_1\in J\left( p_j \right)$, minden $j$-re, azaz
+%	\(
+%	d_1
+%	\in
+%	\cap_{j=1}^rJ\left( p_j \right)
+%	=
+%	J\left( d \right),
+%	\)
+%	tehát $d|d_1$ valóban fennáll.
+%
+%	Ha $d$ mellett $g$ is legkisebb közös többszörös, akkor $d|g$ és $g|d$ szerint $g$ és $d$ foka azonos,
+%	így csak egymás konstans szorosai lehetnek, de mivel mindketten normáltak, ezért e konstans csak 1 lehet.
+%\end{proof}
+}
+\frame{
+\begin{proposition}
+	Bármely $p_1,\ldots,p_r\in\mathbb{F}\left[ t \right]$ nem zérus polinomoknak
+	létezik egyetlen legnagyobb közös osztója.
+
+	Jelesül,
+	a legnagyobb közös osztó a 
+    \[
+    J\left( p_1,\ldots,p_r \right)
+    \]
+    ideálnak mint főideálnak az egyetlen generáló eleme.
+
+	Ezért a $d$ legnagyobb közös osztó kifejezhető
+	\[
+		d\left( t \right)=f_1\left( t \right)p_1\left( t \right)+
+		\ldots+
+		f_r\left( t \right)p_r\left( t \right)
+	\]
+	alakban,
+	valamely $f_1,\ldots,f_r\in\mathbb{F}\left[ t \right]$ polinomok segítségével.
+\end{proposition}
+%\begin{proof}
+%	Láttuk, hogy létezik egyetlen normált $d$ polinom, amelyre $J\left( d \right)=J\left( p_1,\ldots,p_r \right)$.
+%	Világos, hogy $d|p_j$ minden $j=1,\ldots,r$ és $d\in J\left( p_1,\ldots,p_r \right)$,
+%	azaz
+%	\[
+%		d=f_1p_1+\ldots+f_rp_r
+%	\]
+%	valamely $f_1,\ldots,f_r$ polinomokra.
+%	Ha valamely $d_1$ polinomra $d_1|p_j$ minden $j=1,\ldots,r$ mellett,
+%	akkor a fenti azonosság szerint $d_1|d$ is fennáll.
+%
+%	Az egyértelműség mint a legkisebb közös többszörösnél.
+%\end{proof}
+Az előző állítás kiemelt azonosságát \emph{Bezout-azonosságnak}\index{Bezout-azonosság} mondjuk.
+}
+\frame{
+
+\begin{proposition}
+	Legyenek a $p_1,\ldots,p_r\in\mathbb{F}\left[ t \right]$ tetszőleges $\mathbb{F}$ test feletti polinomok.
+	Ezek pontosan akkor relatív prímek,
+	ha léteznek $f_1,\ldots,f_r\in\mathbb{F}\left[ t \right]$ polinomok, hogy
+	\[
+		f_1\left( t \right)p_1\left( t \right)+f_2\left( t \right)p_2\left( t \right)+\ldots+f_r\left( t \right)p_r\left( t \right)=1\qedhere
+	\]
+\end{proposition}
+}
+\frame{
+A szakaszt a maradékos osztás módszerének másik fontos következményeivel zárjuk.
+Azt gondoljuk meg,
+hogy a gyöktényező a polinomból mindig kiemelhető,
+emiatt egy akármilyen test feletti $n$-ed fokú polinom gyökeinek száma $n$-nél nagyobb nem lehet.
+\begin{proposition}
+	Legyen $p\in\mathbb{F}\left[ t \right]$ egy nem zérus polinom,
+	és $t_0$ egy gyöke, azaz $p\left( t_0 \right)=0$.
+	Ekkor létezik $h\in\mathbb{F}\left[ t \right]$ nem zérus polinom,
+	amelyre
+	\[
+		p\left( t \right)=\left( t-t_0 \right)h\left( t \right).\qedhere
+	\]
+\end{proposition}
+}
+%\begin{proof}
+%	Maradékos osztással $p$-re és az elsőfokú $t-t_0$ polinomra
+%	\[
+%		p\left( t \right)=h\left( t \right)\left( t-t_0 \right)+r\left( t \right),
+%		\text{ ahol }
+%		\deg r<1.
+%	\]
+%	No de, $t_0$ egy gyök, tehát $0=p\left( t_0 \right)=r\left( t_0 \right)$.
+%	Ez azt jelenti, hogy $\deg r=-\infty$, ami éppen az állítás.
+%\end{proof}
+\frame{
+\begin{definition}[gyök multiplicitása]\index{gyökök multiplicitása}
+	Legyen $t_0$ gyöke a $p\left( t \right)$ polinomnak.
+	Azt mondjuk, hogy a $k$ pozitív egész e $t_0$ gyök \emph{multiplicitása},
+	ha van olyan $h\left( t \right)$ polinom, hogy
+	\begin{math}
+		p\left( t \right)=\left( t-t_0 \right)^kh\left( t \right),
+	\end{math}
+	de $h\left( t_0 \right)\neq 0$.
+	Néha azt is mondjuk, hogy $t_0$ egy $k$-szoros gyöke $p$-nek.
+\end{definition}
+Teljesen világos, hogy a gyöktényező kiemelhetősége miatt minden gyök legalább egyszeres multiplicitású.
+\begin{proposition}
+	Legyen(ek) a $p\in\mathbb{F}\left[ t \right]$ nem zérus polinom különböző gyökei $t_1,\ldots,t_k$,
+	és ezen gyökök multiplicitásai rendre $m_1,\ldots,m_k$.
+	Ekkor $m_1+\ldots+m_k\leq\deg p$.
+\end{proposition}
+%\begin{proof}
+%	A test nullosztó mentessége és a gyöktényező kiemelhetősége miatt
+%	\[
+%		p\left( t \right)=
+%		\left( t-t_1 \right)^{m_1}\cdot\left( t-t_2 \right)^{m_2}\ldots\left( t-t_k \right)^{m_k}\cdot
+%		h\left( t \right),
+%	\]
+%	ahol $h$ olyan nem zérus polinom, amelynek már nincsen gyöke.
+%	A fokszámok összehasonlításából kapjuk, hogy
+%	$m_1+\ldots+m_k\leq m_1+\ldots+m_k+\deg h=\deg p$.
+%\end{proof}
+}
+\frame{
+A fenti gondolat szerint, ha egy legfeljebb $n$-ed fokú polinomnak $n+1$ különböző gyöke van,
+akkor csak úgy lehetséges, ha a polinom minden együtthatója nulla.
+Ezt úgy is szoktuk fogalmazni,
+hogy egy legfeljebb $n$-ed fokú polinomot $n+1$ helyettesítési értéke már egyértelműen meghatározza:
+\begin{proposition}\label{pr:polinomfv}
+	Tegyük fel, hogy a $p,q\in\mathbb{F}\left[ t \right]$ polinomok legfeljebb $n$-ed fokúak, ahol $n$ egy nemnegatív egész,
+	és tegyük fel,
+	hogy létezik $n+1$ különböző $t_0,t_1,\ldots,t_n$ pont a testben,
+	amelyekre $p\left( t_j \right)=q\left( t_j \right)$ minden $j=0,\ldots,n$.
+	Ekkor $p\left( t \right)=q\left( t \right)$,
+	azaz $p$ és $q$ együtthatói azonosak.
+\end{proposition}
+%\begin{proof}
+%	Legyen $h=p-q$.
+%	Világos, hogy $\deg h\leq n$ és $h$-nak van $n+1$ különböző gyöke.
+%	Az előző állítás szerint ez csak a $h=0$ polinomra igaz, ami azt jelenti,
+%	hogy $p$ és $q$ együtthatói azonosak.
+%\end{proof}
+}
+\frame{
+A maradékos osztás tételének szép következménye tehát,
+hogy ha $\mathbb{F}$ egy nem véges test, és a $p,q\in\mathbb{F}\left[ t \right]$ polinomok,
+akkor $p$-nek és $q$-nak pontosan akkor azonosak az együtthatói, ha
+\(
+p\left( t \right)=q\left( t \right)
+\)
+fennáll minden $t\in\mathbb{F}$ mellett.
+
+Itt fontos, hogy $\mathbb{F}$ nem véges test,
+hiszen például ha $\mathbb{F}=\left\{ 0,1 \right\}$ a két elemű test,
+akkor a $p\left( t \right)=t^2+t$ polinomra minden $t\in\left\{ 0,1 \right\}$ mellett $p\left( t \right)=0$,
+de a polinom együtthatói rendre a $\left\{ 0,1,1 \right\}$ számok a testből,
+tehát ez nem a összeadásra nézve neutrális eleme az $\mathbb{F}\left[ t \right]$ polinomgyűrűnek.
+}
+
+\section{Az Euklideszi-algoritmus}
+\frame{
+Algoritmust keresünk polinomok legnagyobb közös osztójának és legkisebb közös többszörösének meghatározására.
+%Ha egy pillanatra $\left( p_1,\ldots,p_n \right)$ jelöli az adott $p_1,\ldots,p_n$ polinomok legnagyobb közös osztóját,
+%akkor nem nehéz meggondolni,
+%hogy
+%\[
+%	\left( \left( p_1,\ldots,p_{n-1} \right),p_n \right)=\left( p_1,\ldots,p_{n}\right).
+%\]
+%Ezt $n=3,4,\ldots$ számokra alkalmazva azt kapjuk,
+%hogy ha módszerünk van két polinom legnagyobb közös osztójának meghatározására,
+%akkor evvel már akárhány -- persze véges sok -- polinom legnagyobb közös osztója is meghatározható.
+%Analóg módon ugyanez igaz a legkisebb közös többszörösre is.
+%Azt gondoltuk meg tehát, hogy ha meg tudnánk határozni két polinom legnagyobb közös többszörösét és legkisebb közös osztóját,
+%akkor ugyanezt már meg tudnánk tenni több polinom esetén is.
+%
+%Az Euklideszi-algoritmus két polinom legnagyobb közös osztójának meghatározására szolgál.
+%Az eddigi ismereteink szerint a $p,q$ legnagyobb közös osztója a $J\left( p,q \right)$ ideál legalacsonyabb
+%fokú, normált tagja.
+Az Euklideszi-algoritmus egy véges sok lépésben végrehajtható algoritmus,
+egy a definíciónál sokkal hatékonyabb eljárás, két polinom generálta főideál generáló elemének,
+azaz a legnagyobb közös osztónak a meghatározására.
+}
+\frame{
+
+Az algoritmus megértése előtt emlékeznünk kell arra,
+hogy ha $p,q\in\mathbb{F}\left[ t \right]$ valamely polinomok, akkor
+\(
+J\left( p,q \right)=\left\{ fp+gq:f,g\in\mathbb{F}\left[ t \right] \right\}
+\)
+jelöli a $p$ és a $q$ polinomokat tartalmazó legszűkebb ideált.
+
+Az algoritmus lényege, hogy a $J\left( p,q \right)$ ideál két generátor elemét egyre alacsonyabb fokú
+polinomokkal helyettesítjük, amíg megtaláljuk az ideál legalacsonyabb fokú polinomját.
+\begin{lemma}
+    Tegyük fel, hogy a $p,q,h,r\in\mathbb{F}[t]$ polinomokra
+    \[
+    p=hq+r.
+    \]
+    Ekkor a $p,q$ generálta $J\left( p,q \right)$ ideál egybeesik a $q,r$ generálta $J\left( q,r \right)$ ideállal, azaz 
+    \[
+        J\left( p,q \right)=J\left( q,r \right).
+    \]
+\end{lemma}
+}
+\frame{
+\begin{proposition}[Euklidesz]\index{Euklideszi-algoritmus}
+	Legyen $p,q\in\mathbb{F}\left[ t \right]$ nem zérus polinomok.
+	Definiálja $p_{-1}=p,p_{0}=q$.
+	Folytatva, ha valamely $i\geq 0$ számra $p_{i-1}$ és $p_i$ már definiált és $p_i\neq 0$,
+	akkor a maradékos osztás szerint létezik egyetlen $h_{i+1},p_{i+1}\in\mathbb{F}\left[ t \right]$ polinom,
+	amelyre
+	\[
+		p_{i-1}=h_{i+1}p_i+p_{i+1};
+		\text{ ahol }
+		\deg p_{i+1}<\deg p_i.\tag{\dag}
+	\]
+	Mivel minden egyes lépésben csökken a fokszám,
+	ezért van olyan $s\geq 0$,
+	hogy $p_s\neq 0$, de $p_{s+1}=0$.
+	\\
+	Erre a $p_s$ polinomra $J\left( p_s \right)=J\left( p,q \right)$, ezért
+	$p_s$ normáltja a $p\text{ és a }q$ polinomok legnagyobb közös osztója.
+\end{proposition}
+%\begin{proof}
+%	A fenti algoritmussal olyan
+%	$p_{-1}, p_0,p_1,\ldots,p_s,p_{s+1}$ polinomokat kapunk,
+%	amelyekre minden $i=0,\ldots,s$ mellett a (\dag) azonosság fennáll,
+%	és $\deg p_{s+1}=-\infty$,
+%	azaz $p_{s+1}=0$.
+%
+%	A (\dag) azonosság szerint,
+%	minden $i=0,1,\ldots,s$ mellett
+%	\begin{math}
+%		p_{i-1}\in J\left( p_i,p_{i+1} \right)
+%	\end{math},
+%	amiből a
+%	\begin{math}
+%		J\left( p_{i-1},p_i \right)\subseteq J\left( p_i,p_{i+1} \right)
+%	\end{math}
+%	tartalmazás adódik.
+%	Másrészt a (\dag) azonosságot értelmezhetjük úgy is, hogy
+%	\(
+%	p_{i+1}\in J\left( p_{i-1},p_i \right)
+%	\),
+%	amiből persze
+%	\begin{math}
+%		J\left( p_i,p_{i+1} \right)\subseteq J\left( p_{i-1},p_i \right)
+%	\end{math}
+%	következik.
+%	Így minden $i=0,\ldots,s$-re végül is
+%	\[
+%		J\left( p_{i-1},p_i \right)
+%		=
+%		J\left( p_i,p_{i+1} \right).
+%	\]
+%	Alkalmazva ezt minden $i=0,\ldots,s$ mellett
+%	\[
+%		J\left( p,q \right)
+%		=
+%		J\left( p_{-1},p_0 \right)
+%		=
+%		J\left( p_0,p_1 \right)
+%		=
+%		J\left( p_1,p_2 \right)
+%		=\ldots=
+%		J\left( p_s,p_{s+1} \right)
+%		=J\left( p_s \right).\qedhere
+%	\]
+%\end{proof}
+}
+\frame{
+Most a legkisebb közös többszörös algoritmikus meghatározására törekszünk.
+\begin{proposition}\label{pr:rprim}
+	Legyenek a $p,q\in\mathbb{F}\left[ t \right]$ polinomok relatív prímek,
+	és tegyük fel, hogy
+	\begin{math}
+		p|qr.
+	\end{math}
+	Ekkor $p|r$.
+\end{proposition}
+%\begin{proof}
+%	Mivel a $p$ és a $q$ polinomok relatív prímek,
+%	ezért a Bezout-azonosság\index{Bezout-azonosság} szerint van $f$ és $g$ polinom, amelyekre
+%	\(
+%	fpr+gqr=r.
+%	\)
+%	A feltétel szerint $qr$ a $p$ többszöröse,
+%	így az iménti azonosság baloldala a $p$ többszöröse,
+%	ami éppen azt jelenti, hogy $p|r$.
+%\end{proof}
+\begin{proposition}
+	Tekintsük a $p,q\in\mathbb{F}\left[ t \right]$ normált polinomokat.
+	Jelölje $d$ a legnagyobb közös osztót,
+	és
+	$m$ a legkisebb közös többszöröst.
+	Ekkor
+	\begin{displaymath}
+		d\left( t \right)m\left( t \right)=p\left( t \right)q\left( t \right).\qedhere
+	\end{displaymath}
+\end{proposition}
+%\begin{proof}
+%	Legyen $p=dr_1$ és $q=dr_2$.
+%	Először megmutatjuk, hogy $r_1$ és $r_2$ relatív prímek.
+%	A Bezout-azonosság szerint valamely $f,g$ polinomra
+%	\(
+%	d=fdr_1+gdr_2.
+%	\)
+%	Kihasználva, hogy nullosztómentes gyűrűben nem zérus elemmel egyszerűsíteni lehet,
+%	kapjuk az
+%	\(
+%	1=fr_1+gr_2
+%	\)
+%	azonosságot.
+%	Ez azt jelenti, hogy $r_1$ és $r_2$ relatív prímek.
+%	%    Ha $s$ polinom közös osztójuk, akkor $ds$ is közös osztója $p$-nek és $q$-nak,
+%	%    amiből $ds|s$ következik.
+%	%    A fokszámokat összehasonlítva ez csak akkor lehetséges, ha $s$ konstans polinom, 
+%	%    azaz $s|1$ valóban fennáll.
+%
+%	Most megmutatjuk, hogy
+%	\[
+%		dr_1r_2\tag{\dag}
+%	\]
+%	a legkisebb közös többszörös.
+%	Világos, hogy ez egy közös többszöröse a $p,q$ polinomoknak.
+%	Tegyük fel, hogy $s$ egy másik közös többszörös, azaz
+%	$s=ps_1$ és $s=qs_2$.
+%	Ekkor
+%	\begin{math}
+%		dr_1s_1=ps_1=s=qs_2=dr_2s_2,
+%	\end{math}
+%	amiből újra a nullosztómentesség szerint
+%	\[
+%		r_1s_1=r_2s_2.
+%	\]
+%	Na most,
+%	a fent kiemelt azonosság szerint szerint $r_1|r_2s_2$, ahol $r_1$ és $r_2$ relatív prímek.
+%	Ebből azonnal kapjuk, hogy $r_1|s_2$.
+%	No de, $s=qs_2=dr_2s_2$, amiből már látszik,
+%	hogy $s$ egy többszöröse a $dr_1r_2$ polinomnak.
+%	Az is világos, hogy (\dag) normált polinom, ez az $m$ legkisebb közös többszörös.
+%	Innen
+%	$d\cdot m=d(dr_1r_2)=(dr_1)(dr_2)=p\cdot q$ már nyilvánvaló.
+%\end{proof}
+}
+\frame{
+A fenti állítás csak két polinomra igaz, többre nem,
+de nekünk csak két polinomra kell.
+Úgy interpretáljuk,
+hogy ha a szorzatot osztom maradékosan a legnagyobb közös osztóval, akkor a maradék mindig
+zérus,
+és a hányados éppen a legkisebb közös többszörös.
+Azt gondoltuk meg tehát,
+hogy az Euklideszi-algoritmus módszert ad két polinom legkisebb közös többszörösének algoritmikus meghatározására is.
+
+Ilyen módon véges sok lépésben végrehajtható algoritmust kapunk véges sok polinom legkisebb közös többszörösének meghatározására.
+}
+\frame{
+Például öt polinom legkisebb közös többszöröséhez,
+egy Euklideszi-algoritmussal meghatározzuk az első kettő polinom legnagyobb közös osztóját,
+majd egy újabb maradékos osztással az első kettő legkisebb közös többszörösét.
+Ugyanezt teszem az így kapott és a harmadik polinommal,
+az eredmény az első három polinom legkisebb közös többszöröse.
+Az így kapott polinommal és a negyedik polinommal egy újabb Euklideszi-algoritmus és egy újabb maradékos osztás után kapjuk az első négy polinom legkisebb közös többszörösét,
+majd ennek eredményével és az ötödik polinommal mint két polinomnak a legkisebb közös többszörösével kapjuk az eredeti öt polinom legkisebb közös többszörösét.
+}
+\end{document}

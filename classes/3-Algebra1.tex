@@ -1,0 +1,423 @@
+\input{algebra1.tex}
+\title[Algebra 1.]{Polinomok Euklideszi-algoritmusa}
+\subtitle{}
+\date[3. hét]{2026.~szeptember 28-án}
+\begin{document}
+\openingframes{Tartalom}
+\section{Polinomok gyökeiről}
+\frame{
+A  maradékos osztás módszerének másik fontos következménye a polinomok gyökszámáról szóló állítás.
+Azt gondoljuk meg,
+hogy a gyöktényező a polinomból mindig kiemelhető,
+emiatt egy akármilyen test feletti $n$-ed fokú polinom gyökeinek száma $n$-nél nagyobb nem lehet.
+\begin{proposition}
+	Legyen $p\in\mathbb{F}\left[ t \right]$ egy legalább első fokú polinom,
+	és $t_0$ annak egy gyöke, azaz $p\left( t_0 \right)=0$.
+	Ekkor létezik $h\in\mathbb{F}\left[ t \right]$ polinom,
+	amelyre
+	\[
+		\deg h= \deg p -1
+        \quad\text{ és }\quad
+        p\left( t \right)=\left( t-t_0 \right)h\left( t \right).\qedhere
+	\]
+\end{proposition}
+}
+%\begin{proof}
+%	Maradékos osztással $p$-re és az elsőfokú $t-t_0$ polinomra
+%	\[
+%		p\left( t \right)=h\left( t \right)\left( t-t_0 \right)+r\left( t \right),
+%		\text{ ahol }
+%		\deg r<1.
+%	\]
+%	No de, $t_0$ egy gyök, tehát $0=p\left( t_0 \right)=r\left( t_0 \right)$.
+%	Ez azt jelenti, hogy $\deg r=-\infty$, ami éppen az állítás.
+%\end{proof}
+\frame{
+\begin{definition}[gyök multiplicitása]\index{gyökök multiplicitása}
+	Legyen $t_0$ gyöke a $p\left( t \right)$ polinomnak.
+	Azt mondjuk, hogy a $k$ pozitív egész e $t_0$ gyök \emph{multiplicitása},
+	ha van olyan $h\left( t \right)$ polinom, hogy
+	\[
+		p\left( t \right)=\left( t-t_0 \right)^kh\left( t \right),
+        \text{ de }
+        h\left( t_0 \right)\neq 0.
+    \]
+	Néha azt is mondjuk, hogy $t_0$ egy $k$-szoros gyöke $p$-nek.
+\end{definition}
+Világos, hogy a gyöktényező kiemelhetősége miatt egy nem zérus polinom minden gyökének van multiplicitása, és az legalább $1$.
+\begin{proposition}
+	Legyen(ek) a $p\in\mathbb{F}\left[ t \right]$ nem zérus polinom különböző gyökei $t_1,\ldots,t_k$,
+	és ezen gyökök multiplicitásai rendre $m_1,\ldots,m_k$.
+	Ekkor 
+    $$m_1+\ldots+m_k\leq\deg p.$$
+\end{proposition}
+%\begin{proof}
+%	A test nullosztó mentessége és a gyöktényező kiemelhetősége miatt
+%	\[
+%		p\left( t \right)=
+%		\left( t-t_1 \right)^{m_1}\cdot\left( t-t_2 \right)^{m_2}\ldots\left( t-t_k \right)^{m_k}\cdot
+%		h\left( t \right),
+%	\]
+%	ahol $h$ olyan nem zérus polinom, amelynek már nincsen gyöke.
+%	A fokszámok összehasonlításából kapjuk, hogy
+%	$m_1+\ldots+m_k\leq m_1+\ldots+m_k+\deg h=\deg p$.
+%\end{proof}
+}
+\frame{
+A fenti gondolat szerint, ha egy legfeljebb $n$-ed fokú polinomnak $n+1$ különböző gyöke van,
+akkor csak úgy lehetséges, ha a polinom minden együtthatója nulla.
+Ezt úgy is szoktuk fogalmazni,
+hogy egy legfeljebb $n$-ed fokú polinomot $n+1$ helyettesítési értéke már egyértelműen meghatározza:
+\begin{proposition}
+	Tegyük fel, hogy a $p,q\in\mathbb{F}\left[ t \right]$ polinomok legfeljebb $n$-ed fokúak, ahol $n$ egy nemnegatív egész,
+	és tegyük fel,
+	hogy létezik $n+1$ különböző $t_0,t_1,\ldots,t_n$ pont a testben,
+	amelyekre $p\left( t_j \right)=q\left( t_j \right)$ minden $j=0,\ldots,n$.
+	Ekkor $p\left( t \right)=q\left( t \right)$,
+	azaz $p$ és $q$ együtthatói azonosak.
+    \label{pr:polinomfv}
+\end{proposition}
+%\begin{proof}
+%	Legyen $h=p-q$.
+%	Világos, hogy $\deg h\leq n$ és $h$-nak van $n+1$ különböző gyöke.
+%	Az előző állítás szerint ez csak a $h=0$ polinomra igaz, ami azt jelenti,
+%	hogy $p$ és $q$ együtthatói azonosak.
+%\end{proof}
+}
+\frame{
+A maradékos osztás tételének szép következménye tehát,
+hogy ha $\mathbb{F}$ egy nem véges test, és a $p,q\in\mathbb{F}\left[ t \right]$ polinomok,
+akkor $p$-nek és $q$-nak pontosan akkor azonosak az együtthatói, ha
+\(
+p\left( t \right)=q\left( t \right)
+\)
+fennáll minden $t\in\mathbb{F}$ mellett.
+
+Itt fontos, hogy $\mathbb{F}$ nem véges test,
+hiszen például ha $\mathbb{F}=\left\{ 0,1 \right\}$ a két elemű test,
+akkor a $p\left( t \right)=t^2+t$ polinomra minden $t\in\left\{ 0,1 \right\}$ mellett $p\left( t \right)=0$,
+de a polinom együtthatói rendre a $\left\{ 0,1,1 \right\}$ számok a testből,
+tehát ez nem a összeadásra nézve neutrális eleme az $\mathbb{F}\left[ t \right]$ polinomgyűrűnek.
+}
+
+\section{Polinomok legnagyobb közös osztója és legkisebb közös többszöröse}
+\frame{
+\begin{definition}
+	Legyenek most $p_1,\ldots,p_k$ polinomok.
+	\begin{enumerate}
+		\item A $d$ polinom a \emph{legnagyobb közös osztója}\index{legnagyobb közös osztó} az adott polinomoknak,
+		      ha
+		      \begin{enumerate}
+			      \item $d|p_j$ minden $j=1,\ldots,k$-ra,
+			      \item ha $d_1|p_j$ minden $j=1,\ldots,k$ mellett akkor $d_1|d$ is fennáll,
+			      \item $d$ normált.
+		      \end{enumerate}
+		      A $p_1,\ldots,p_k$ polinomokat \emph{relatív prímeknek}\index{relatív prím polinomok} nevezzük,
+		      ha közös osztójuk csak a konstans polinomok,
+		      azaz a $d\left( t \right)=1$ a legnagyobb közös osztó.
+		\item A $d$ polinom a \emph{legkisebb közös többszöröse}\index{legkisebb közös többszörös} az adott polinomoknak,
+		      ha
+		      \begin{enumerate}
+			      \item $p_j|d$ minden $j=1,\ldots,k$-ra,
+			      \item ha $p_j|d_1$ minden $j=1,\ldots,k$ mellett akkor $d|d_1$ is fennáll.
+			      \item $d$ normált.\qedhere
+		      \end{enumerate}
+	\end{enumerate}
+\end{definition}
+Persze az első kérdés, hogy van-e a polinomoknak legnagyobb közös osztója vagy legkisebb közös többszöröse, és hány ilyen van?
+}
+\frame{
+\begin{proposition}
+	Bármely $p_1,\ldots,p_r\in\mathbb{F}\left[ t \right]$ nem zérus polinomoknak
+	létezik egyetlen legkisebb közös többszöröse.
+
+	Jelesül, a legkisebb közös többszörös, a
+	\[
+	\cap_{j=1}^rJ\left( p_j \right)
+    \]
+    ideálnak, mint főideálnak az egyetlen normált generátora.
+    \label{pr:lkkt}%
+\end{proposition}
+%\begin{proof}
+%	Világos, hogy ideálok metszete is ideál, emiatt
+%	\(
+%	\cap_{j=1}^rJ\left( p_j \right)
+%	\)
+%	is ideál $\mathbb{F}\left[ t \right]$ gyűrűben.
+%	De itt minden ideál főideál, létezik tehát $d\in\mathbb{F}\left[ t \right]$ normált polinom, amelyre
+%	\[
+%		J\left( d \right)
+%		=
+%		\cap_{j=1}^rJ\left( p_j \right)
+%	\]
+%	Világos, hogy $d\in J\left( p_j \right)$ minden $j$-re,
+%	ergo $d$ többszöröse minden $p_j$-nek.
+%	Ha $p_j|d_1$ fennáll, minden $j$-re
+%	az azt jelenti, hogy $d_1\in J\left( p_j \right)$, minden $j$-re, azaz
+%	\(
+%	d_1
+%	\in
+%	\cap_{j=1}^rJ\left( p_j \right)
+%	=
+%	J\left( d \right),
+%	\)
+%	tehát $d|d_1$ valóban fennáll.
+%
+%	Ha $d$ mellett $g$ is legkisebb közös többszörös, akkor $d|g$ és $g|d$ szerint $g$ és $d$ foka azonos,
+%	így csak egymás konstans szorosai lehetnek, de mivel mindketten normáltak, ezért e konstans csak 1 lehet.
+%\end{proof}
+}
+\frame{
+\begin{proposition}
+	Bármely $p_1,\ldots,p_r\in\mathbb{F}\left[ t \right]$ nem zérus polinomoknak
+	létezik egyetlen legnagyobb közös osztója.
+
+	Jelesül,
+	a legnagyobb közös osztó a $J\left( p_1,\ldots,p_r \right)$ ideálnak mint főideálnak az egyetlen generáló eleme.
+	Ezért a $d$ legnagyobb közös osztó kifejezhető
+	\[
+		d\left( t \right)=f_1\left( t \right)p_1\left( t \right)+
+		\ldots+
+		f_r\left( t \right)p_r\left( t \right)
+	\]
+	alakban,
+	valamely $f_1,\ldots,f_r\in\mathbb{F}\left[ t \right]$ polinomok segítségével.
+\end{proposition}
+%\begin{proof}
+%	Láttuk, hogy létezik egyetlen normált $d$ polinom, amelyre $J\left( d \right)=J\left( p_1,\ldots,p_r \right)$.
+%	Világos, hogy $d|p_j$ minden $j=1,\ldots,r$ és $d\in J\left( p_1,\ldots,p_r \right)$,
+%	azaz
+%	\[
+%		d=f_1p_1+\ldots+f_rp_r
+%	\]
+%	valamely $f_1,\ldots,f_r$ polinomokra.
+%	Ha valamely $d_1$ polinomra $d_1|p_j$ minden $j=1,\ldots,r$ mellett,
+%	akkor a fenti azonosság szerint $d_1|d$ is fennáll.
+%
+%	Az egyértelműség mint a legkisebb közös többszörösnél.
+%\end{proof}
+Az előző állítás kiemelt azonosságát \emph{Bezout-azonosságnak}\index{Bezout-azonosság}
+mondjuk.
+}
+\frame{
+\begin{proposition}
+	Legyenek a $p_1,\ldots,p_r\in\mathbb{F}\left[ t \right]$ tetszőleges $\mathbb{F}$ test feletti polinomok.
+	Ezek pontosan akkor relatív prímek,
+	ha léteznek $f_1,\ldots,f_r\in\mathbb{F}\left[ t \right]$ polinomok, hogy
+	\[
+		f_1\left( t \right)p_1\left( t \right)+f_2\left( t \right)p_2\left( t \right)+\ldots+f_r\left( t \right)p_r\left( t \right)=1\qedhere
+	\]
+\end{proposition}
+}
+\frame{
+\begin{proposition}
+	Legyenek a $p,q\in\mathbb{F}\left[ t \right]$ polinomok relatív prímek,
+	és tegyük fel, hogy
+	\begin{math}
+		p|qr.
+	\end{math}
+	Ekkor $p|r$.
+    \label{pr:rprim}
+\end{proposition}
+%\begin{proof}
+%	Mivel a $p$ és a $q$ polinomok relatív prímek,
+%	ezért a Bezout-azonosság\index{Bezout-azonosság} szerint van $f$ és $g$ polinom, amelyekre
+%	\(
+%	fpr+gqr=r.
+%	\)
+%	A feltétel szerint $qr$ a $p$ többszöröse,
+%	így az iménti azonosság baloldala a $p$ többszöröse,
+%	ami éppen azt jelenti, hogy $p|r$.
+%\end{proof}
+\begin{proposition}
+	Tekintsük a $p,q\in\mathbb{F}\left[ t \right]$ normált polinomokat.
+	Jelölje $d$ a legnagyobb közös osztót,
+	és
+	$m$ a legkisebb közös többszöröst.
+	Ekkor
+	\begin{displaymath}
+		d\left( t \right)m\left( t \right)=p\left( t \right)q\left( t \right).\qedhere
+	\end{displaymath}
+\end{proposition}
+%\begin{proof}
+%	Legyen $p=dr_1$ és $q=dr_2$.
+%	Először megmutatjuk, hogy $r_1$ és $r_2$ relatív prímek.
+%	A Bezout-azonosság szerint valamely $f,g$ polinomra
+%	\(
+%	d=fdr_1+gdr_2.
+%	\)
+%	Kihasználva, hogy nullosztómentes gyűrűben nem zérus elemmel egyszerűsíteni lehet,
+%	kapjuk az
+%	\(
+%	1=fr_1+gr_2
+%	\)
+%	azonosságot.
+%	Ez azt jelenti, hogy $r_1$ és $r_2$ relatív prímek.
+%	%    Ha $s$ polinom közös osztójuk, akkor $ds$ is közös osztója $p$-nek és $q$-nak,
+%	%    amiből $ds|s$ következik.
+%	%    A fokszámokat összehasonlítva ez csak akkor lehetséges, ha $s$ konstans polinom, 
+%	%    azaz $s|1$ valóban fennáll.
+%
+%	Most megmutatjuk, hogy
+%	\[
+%		dr_1r_2\tag{\dag}
+%	\]
+%	a legkisebb közös többszörös.
+%	Világos, hogy ez egy közös többszöröse a $p,q$ polinomoknak.
+%	Tegyük fel, hogy $s$ egy másik közös többszörös, azaz
+%	$s=ps_1$ és $s=qs_2$.
+%	Ekkor
+%	\begin{math}
+%		dr_1s_1=ps_1=s=qs_2=dr_2s_2,
+%	\end{math}
+%	amiből újra a nullosztómentesség szerint
+%	\[
+%		r_1s_1=r_2s_2.
+%	\]
+%	Na most,
+%	a fent kiemelt azonosság szerint szerint $r_1|r_2s_2$, ahol $r_1$ és $r_2$ relatív prímek.
+%	Ebből azonnal kapjuk, hogy $r_1|s_2$.
+%	No de, $s=qs_2=dr_2s_2$, amiből már látszik,
+%	hogy $s$ egy többszöröse a $dr_1r_2$ polinomnak.
+%	Az is világos, hogy (\dag) normált polinom, ez az $m$ legkisebb közös többszörös.
+%	Innen
+%	$d\cdot m=d(dr_1r_2)=(dr_1)(dr_2)=p\cdot q$ már nyilvánvaló.
+%\end{proof}
+}
+\section{Az Euklideszi-algoritmus}
+\frame{
+Algoritmust keresünk polinomok legnagyobb közös osztójának és legkisebb közös többszörösének meghatározására.
+%Ha egy pillanatra $\left( p_1,\ldots,p_n \right)$ jelöli az adott $p_1,\ldots,p_n$ polinomok legnagyobb közös osztóját,
+%akkor nem nehéz meggondolni,
+%hogy
+%\[
+%	\left( \left( p_1,\ldots,p_{n-1} \right),p_n \right)=\left( p_1,\ldots,p_{n}\right).
+%\]
+%Ezt $n=3,4,\ldots$ számokra alkalmazva azt kapjuk,
+%hogy ha módszerünk van két polinom legnagyobb közös osztójának meghatározására,
+%akkor evvel már akárhány -- persze véges sok -- polinom legnagyobb közös osztója is meghatározható.
+%Analóg módon ugyanez igaz a legkisebb közös többszörösre is.
+%Azt gondoltuk meg tehát, hogy ha meg tudnánk határozni két polinom legnagyobb közös többszörösét és legkisebb közös osztóját,
+%akkor ugyanezt már meg tudnánk tenni több polinom esetén is.
+%
+%Az Euklideszi-algoritmus két polinom legnagyobb közös osztójának meghatározására szolgál.
+%Az eddigi ismereteink szerint a $p,q$ legnagyobb közös osztója a $J\left( p,q \right)$ ideál legalacsonyabb
+%fokú, normált tagja.
+Az Euklideszi-algoritmus egy véges sok lépésben végrehajtható algoritmus,
+egy a definíciónál sokkal hatékonyabb eljárás, két polinom generálta főideál generáló elemének,
+azaz a legnagyobb közös osztónak a meghatározására.
+}
+\frame{
+
+Az algoritmus megértése előtt emlékeznünk kell arra,
+hogy ha $p,q\in\mathbb{F}\left[ t \right]$ valamely polinomok, akkor
+\(
+J\left( p,q \right)=\left\{ fp+gq:f,g\in\mathbb{F}\left[ t \right] \right\}
+\)
+jelöli a $p$ és a $q$ polinomokat tartalmazó legszűkebb ideált.
+
+Az algoritmus lényege, hogy a $J\left( p,q \right)$ ideál két generátor elemét egyre alacsonyabb fokú
+polinomokkal helyettesítjük, amíg megtaláljuk az ideál legalacsonyabb fokú polinomját.
+\begin{lemma}
+    Tegyük fel, hogy a $p,q,h,r\in\mathbb{F}[t]$ polinomokra
+    \[
+    p=hq+r.
+    \]
+    Ekkor a $p,q$ generálta $J\left( p,q \right)$ ideál egybeesik a $q,r$ generálta $J\left( q,r \right)$ ideállal, azaz 
+    \[
+        J\left( p,q \right)=J\left( q,r \right).
+    \]
+\end{lemma}
+}
+\frame{
+\begin{proposition}[Euklidesz]\index{Euklideszi-algoritmus}
+	Legyen $p,q\in\mathbb{F}\left[ t \right]$ nem zérus polinomok.
+	Definiálja $p_{-1}=p,p_{0}=q$.
+	Folytatva, ha valamely $i\geq 0$ számra $p_{i-1}$ és $p_i$ már definiált és $p_i\neq 0$,
+	akkor a maradékos osztás szerint létezik egyetlen $h_{i+1},p_{i+1}\in\mathbb{F}\left[ t \right]$ polinom,
+	amelyre
+	\[
+		p_{i-1}=h_{i+1}p_i+p_{i+1};
+		\text{ ahol }
+		\deg p_{i+1}<\deg p_i.\tag{\dag}
+	\]
+	Mivel minden egyes lépésben csökken a fokszám,
+	ezért van olyan $s\geq 0$,
+	hogy $p_s\neq 0$, de $p_{s+1}=0$.
+	\\
+	Erre a $p_s$ polinomra $J\left( p_s \right)=J\left( p,q \right)$, ezért
+	$p_s$ normáltja a $p\text{ és a }q$ polinomok legnagyobb közös osztója.
+\end{proposition}
+%\begin{proof}
+%	A fenti algoritmussal olyan
+%	$p_{-1}, p_0,p_1,\ldots,p_s,p_{s+1}$ polinomokat kapunk,
+%	amelyekre minden $i=0,\ldots,s$ mellett a (\dag) azonosság fennáll,
+%	és $\deg p_{s+1}=-\infty$,
+%	azaz $p_{s+1}=0$.
+%
+%	A (\dag) azonosság szerint,
+%	minden $i=0,1,\ldots,s$ mellett
+%	\begin{math}
+%		p_{i-1}\in J\left( p_i,p_{i+1} \right)
+%	\end{math},
+%	amiből a
+%	\begin{math}
+%		J\left( p_{i-1},p_i \right)\subseteq J\left( p_i,p_{i+1} \right)
+%	\end{math}
+%	tartalmazás adódik.
+%	Másrészt a (\dag) azonosságot értelmezhetjük úgy is, hogy
+%	\(
+%	p_{i+1}\in J\left( p_{i-1},p_i \right)
+%	\),
+%	amiből persze
+%	\begin{math}
+%		J\left( p_i,p_{i+1} \right)\subseteq J\left( p_{i-1},p_i \right)
+%	\end{math}
+%	következik.
+%	Így minden $i=0,\ldots,s$-re végül is
+%	\[
+%		J\left( p_{i-1},p_i \right)
+%		=
+%		J\left( p_i,p_{i+1} \right).
+%	\]
+%	Alkalmazva ezt minden $i=0,\ldots,s$ mellett
+%	\[
+%		J\left( p,q \right)
+%		=
+%		J\left( p_{-1},p_0 \right)
+%		=
+%		J\left( p_0,p_1 \right)
+%		=
+%		J\left( p_1,p_2 \right)
+%		=\ldots=
+%		J\left( p_s,p_{s+1} \right)
+%		=J\left( p_s \right).\qedhere
+%	\]
+%\end{proof}
+}
+\frame{
+    Emlékezzünk arra, hogy két polinom szorzata a legangyobb közös osztó és a legkisebb közös többszörös szorzata:
+    \[
+        dm=pq.
+    \]
+Úgy interpretáljuk,
+hogy ha a $pq$ szorzatot osztom maradékosan a legnagyobb közös osztóval, akkor a maradék mindig
+zérus,
+és a hányados éppen a legkisebb közös többszörös.
+
+Azt gondoltuk meg tehát,
+hogy az Euklideszi-algoritmus módszert ad két polinom legkisebb közös többszörösének algoritmikus meghatározására is.
+}
+\frame{
+Ilyen módon véges sok lépésben végrehajtható algoritmust kapunk véges sok polinom legkisebb közös többszörösének meghatározására.
+
+Például öt polinom legkisebb közös többszöröséhez,
+egy Euklideszi-algoritmussal meghatározzuk az első kettő polinom legnagyobb közös osztóját,
+majd egy újabb maradékos osztással az első kettő legkisebb közös többszörösét.
+Ugyanezt teszem az így kapott és a harmadik polinommal,
+az eredmény az első három polinom legkisebb közös többszöröse.
+Az így kapott polinommal és a negyedik polinommal egy újabb Euklideszi-algoritmus és egy újabb maradékos osztás után kapjuk az első négy polinom legkisebb közös többszörösét,
+majd ennek eredményével és az ötödik polinommal mint két polinomnak a legkisebb közös többszörösével kapjuk az eredeti öt polinom legkisebb közös többszörösét.
+}
+
+\end{document}
