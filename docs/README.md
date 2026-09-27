@@ -24,7 +24,7 @@ tartalmazza az összes információt, de összefoglalom azokat, amelyek szerinte
    - Az írásbeli dolgozatok pótlására nincs lehetőség.
 
 ## Tételjegyzék
-1. [Algebrai struktúrák](https://unicorvinus-my.sharepoint.com/:b:/g/personal/magyarkuti_uni-corvinus_hu/IQD7TnGKOzmGQ5tffdyeNylgAVInmQgHMls5LDdg4BUJ6kc?e=w6vy4j)
+1. [Algebrai struktúrák](https://raw.githubusercontent.com/magyarkuti/algebra-1/master/classes/1-Algebra1.pdf)
   * Félcsoport
   * Neutrális elemes félcsoport
   * Additív multiplikatív írásmód
@@ -36,14 +36,14 @@ tartalmazza az összes információt, de összefoglalom azokat, amelyek szerinte
   * Test
   * Test nullosztómentessége
 
-1. [Polinomok](http://web.uni-corvinus.hu/magyarkuti/2-Algebra1.pdf)
+1. [Polinomok](https://raw.githubusercontent.com/magyarkuti/algebra-1/master/classes/2-Algebra1.pdf)
   * Egy test feletti polinomok, kummutatív egységelemes, nullosztómentes gyűrűt alkotnak
   * Polinomok fokszáma
   * Polinomok oszthatósága
   * Maradékos osztás
   * Test feletti polinomgyűrű főideál-gyűrű
 
-1. [Legnagyobb közös osztó és legkisebb közös többszörös](http://web.uni-corvinus.hu/magyarkuti/3-Algebra1.pdf)
+1. [Legnagyobb közös osztó és legkisebb közös többszörös](https://raw.githubusercontent.com/magyarkuti/algebra-1/master/classes/3-Algebra1.pdf)
   * Polinomok gyökei
   * Két polinom egyenlőségének algebrai és analízis beli megközelítése
   * Legkisebb közös többszörös és legnagyobb közös osztó mint ideálok generátora
@@ -51,20 +51,20 @@ tartalmazza az összes információt, de összefoglalom azokat, amelyek szerinte
   * Bézout-formula
   * A legkisebb közös többszörös meghatározása
 
-1. [Polinomok faktorizációja](http://web.uni-corvinus.hu/magyarkuti/4-Algebra1.pdf)
+1. [Polinomok faktorizációja](https://raw.githubusercontent.com/magyarkuti/algebra-1/master/classes/4-Algebra1.pdf)
 * A gyöktényező faktorizálható
 * Irreducibilis polinom fogalma
 * Minden legalább elsőfokú polinom előáll irreducibilis polinomok szorzataként
 * Prim és irreducibilis polinomok
 * A polinom faktorizáció egyértelműsége
 
-1. [Mátrixok](http://web.uni-corvinus.hu/magyarkuti/5-Algebra1.pdf)
+1. [Mátrixok](https://raw.githubusercontent.com/magyarkuti/algebra-1/master/classes/5-Algebra1.pdf)
 * Mátrixok összege, és számmal való szorzata
 * Mátrixok szorzata
 * A mátrixszorzat értékelése mint sorok vagy oszlopok lineáris kombinációja
 * A mátrixok szorzás asszociativitása
 
-1. [Komplex számok](http://web.uni-corvinus.hu/magyarkuti/5-Algebra1.pdf)
+1. [Komplex számok](https://raw.githubusercontent.com/magyarkuti/algebra-1/master/classes/6-Algebra1.pdf)
 * Komplex számtest mint a sík pontjain definiált test
 * Algebrai struktúrák izomorfiája
 * A valós test beágyazása a komplex testbe
@@ -74,7 +74,7 @@ tartalmazza az összes információt, de összefoglalom azokat, amelyek szerinte
 * Moivre-formula
 * Egységgyökök
 
-1. [Az algebra alaptételének következményei](http://web.uni-corvinus.hu/magyarkuti/6-Algebra1.pdf)
+1. [Az algebra alaptételének következményei](https://raw.githubusercontent.com/magyarkuti/algebra-1/master/classes/7-Algebra1.pdf)
 * Irreducibilis polinom a komplex számtest felett
 * Polinomfaktorizáció a komplex számtest felett
 * Polinomfaktorizáció a valós számtest felett
@@ -82,7 +82,7 @@ tartalmazza az összes információt, de összefoglalom azokat, amelyek szerinte
 * Valódi komplex gyökökből páros sok van.
 * Páratlan fokú polinomnak van valós gyöke.
 
-1. [Vektortér fogalma](http://web.uni-corvinus.hu/magyarkuti/7-Algebra1.pdf)
+1. [Vektortér fogalma](https://raw.githubusercontent.com/magyarkuti/algebra-1/master/classes/8-Algebra1.pdf)
 * Vektortér mint algebrai struktúra
 * Példák vektorterekre
 * Alterek
@@ -91,7 +91,7 @@ tartalmazza az összes információt, de összefoglalom azokat, amelyek szerinte
 * Generátorcsere-lemma
 * Elimináció
 
-1. [Lineáris függetlenség](http://web.uni-corvinus.hu/magyarkuti/8-Algebra1.pdf)
+1. [Lineáris függetlenség](https://raw.githubusercontent.com/magyarkuti/algebra-1/master/classes/9-Algebra1.pdf)
 * Lineáris összefüggőség
 * Ekvivalens megfogalmazások
 * Nem véges rendszer lineáris függetlensége
@@ -101,7 +101,7 @@ tartalmazza az összes információt, de összefoglalom azokat, amelyek szerinte
 * Minimális generátorrendszerek
 * Függetlenrendszercsere-lemma
 
-1. [Független és generátorrendszer elemszáma](http://web.uni-corvinus.hu/magyarkuti/9-Algebra1.pdf)
+1. [Független és generátorrendszer elemszáma](https://raw.githubusercontent.com/magyarkuti/algebra-1/master/classes/10-Algebra1.pdf)
 * Steinitz-lemma
 * Feszítőrang
 * Rang-tétel
@@ -112,7 +112,7 @@ tartalmazza az összes információt, de összefoglalom azokat, amelyek szerinte
 * Báziscsere-lemma
 * Altér dimenziója
 
-1. [Lineáris operátor fogalma](http://web.uni-corvinus.hu/magyarkuti/10-Algebra1.pdf)
+1. [Lineáris operátor fogalma](https://raw.githubusercontent.com/magyarkuti/algebra-1/master/classes/10-Algebra1.pdf)
 * Magtér, képtér, inverz jellemzése
 * Független rendszer képe, generátor rendszer képe
 * Izomorf vektorterek
@@ -120,14 +120,14 @@ tartalmazza az összes információt, de összefoglalom azokat, amelyek szerinte
 * Végesen generált vektorterek izomorfiája
 * Elemi bázistranszformáció
 
-1. [Direktösszeg](http://web.uni-corvinus.hu/magyarkuti/11-Algebra1.pdf)
+1. [Direktösszeg](https://raw.githubusercontent.com/magyarkuti/algebra-1/master/classes/11-Algebra1.pdf)
 * Minkowski-összeg
 * Tulajdonságok
 * Az összeg dimenziója
 * Direkt összeg értelmes
 * Direkt kiegészítő
 
-1. [Faktortér](http://web.uni-corvinus.hu/magyarkuti/12-Algebra1.pdf)
+1. [Faktortér](https://raw.githubusercontent.com/magyarkuti/algebra-1/master/classes/12-Algebra1.pdf)
 * Ekvivalencia reláció
 * Oekvivalencia osztály
 * Műveletek az ekvivalencia osztályok halmazán
