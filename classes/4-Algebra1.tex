@@ -1,0 +1,159 @@
+\input{algebra1.tex}
+\title[Algebra 1.]{Polinomok faktorizációja}
+\subtitle{}
+%\subtitle{Mátrixok bevezetése}
+\date[4. hét]{2026.~október 5-én}
+\begin{document}
+\openingframes{Tartalom}
+\section{Polinom faktorizáció}
+\frame{
+Kicsi korunk óta sulykolják belénk, hogy minden egész szám előáll, méghozzá lényegében csak egyféleképpen
+prímek szorzataként.
+Ha ismerjük két szám prímtényezős előállítását, akkor nagyon könnyű megmondani a két szám legkisebb közös többszörösét,
+vagy a legnagyobb közös osztóját.
+Evvel a probléma csak annyi,
+hogy nagyon nehéz megmondani két, esetleg jó nagy, szám prímtényezős előállítását,
+így még az egész számok gyűrűjében is az Euklideszi-algoritmus a megfelelő, véges sok lépésben,
+végrehajtható módszer a legnagyobb közös osztó és a legkisebb közös többszörös konkrét felírására.
+
+Ebben a szakaszban azt mutatjuk meg, hogy prímtényezős előállításról szóló tétel a polinomok gyűrűjében is igaz marad.
+Természetesen konkrét algoritmust nem adunk, hiszen ilyen még számokra sem igen van.%
+\begin{definition}[reducibilis polinom]\index{reducibilis polinom}\index{irreducibilis polinom}
+	Egy polinomot \emph{reducibilisnek} mondunk,
+	ha előáll mint két legalább elsőfokú polinom szorzata.
+	Egy nem reducibilis polinomot \emph{irreducibilisnek} nevezünk.
+\end{definition}
+}
+\frame{
+Világos, hogy minden legfeljebb elsőfokú polinom tetszőleges test felett irreducibilis.
+A magasabb fokú polinomok esetében a probléma nagyban függ a testtől is,
+ahonnan a polinom együtthatói származnak.
+A következő állítás viszont minden test mellett igaz.
+\begin{proposition}[polinom faktorizáció]
+	Tetszőleges test feletti polinomgyűrűben,
+	minden (normált) polinom előáll mint (normált) irreducibilis polinomok szorzata.
+    \label{pr:polfact}
+\end{proposition}
+%\begin{proof}
+%	Az előállítandó polinom foka szerinti teljes indukció.
+%	Elsőfokú polinom maga irreducibilis.
+%
+%	Most tegyük fel, hogy az állítás igaz $n$-nél alacsonyabb fokú polinomokra
+%	és lássuk be $\deg p=n$ mellett, ahol $n>1$.
+%	Ha $p$ irreducibilis, akkor megint készen vagyunk.
+%	Ha $p=f g$ valamely $\deg f\geq 1$ és $\deg g\geq 1$ mellett,
+%	akkor $\deg f<n$ és $\deg g<n$.
+%	Az indukciós feltevés szerint $f$ és $g$, emiatt $p=fg$ is előáll irreducibilis polinomok szorzataként.
+%\end{proof}
+}
+\section{Prim tulajdonság}
+\frame{
+Érdemes látni,
+hogy ha a $d$ polinom egy irreducibilis $p$ polinom osztója,
+akkor csak
+\[
+    \deg d=0, \text{ vagy } \deg d=\deg p
+\]
+lehetséges.
+
+Ezért \emph{egy tetszőleges $f$ polinomra igaz, hogy a $p$ irreducibilis polinomra
+vagy $p|f$ vagy $p$ és $f$ relatív prímek.}
+
+Ugyanis,
+ha az $f$ és $p$ polinomok $d$ legnagyobb közös osztója nem $1$,
+akkor csak $c\cdot d=p$ lehetséges valamely $c\in\mathbb{F}$ konstans mellett, 
+ergo $p|f$.
+}
+\frame{
+\begin{proposition}[prím tulajdonság]\index{prím polinom}
+	Legyen $p\in\mathbb{F}\left[ t \right]$ irreducibilis polinom, amelyre
+	$p|(f_1\cdot\ldots\cdot f_n)$, valamely $f_j\in\mathbb{F}\left[ t \right]$ polinomokra, ahol $j=1,\ldots,n\geq 1$.
+	Ekkor létezik $1\leq j\leq n$, amelyre $p|f_j$.\qedhere
+\end{proposition}
+%\begin{proof}
+%	A polinomok $n$ száma szerinti indukció.
+%	Az $n=1$ eset semmitmondó módon teljesül.
+%	Tegyük fel, hogy igaz az állítás $n$-nél kevesebb polinomra,
+%	és lássuk be $n$-re. Itt $n\geq 2$.
+%	Induljunk ki tehát abból, hogy
+%	\[
+%		p|\left( f_1\cdots f_{n-1} \right)\cdot f_n
+%	\]
+%	Ha $p$ osztója lenne az $f_1\cdots f_{n-1}$ szorzatnak,
+%	akkor az indukciós feltevés szerint készen is lennénk.
+%	Ha $p$ nem osztója a szorzatnak,
+%	akkor $p$ irreducibilis volta miatt relatív prímek.
+%	Ekkor a \ref{pr:rprim}. állítás szerint $p|f_n$.
+%\end{proof}
+Az is igaz, hogy ha egy polinom reducibilis, akkor az nem prím.
+
+Összeségében látjuk tehát,
+hogy 
+\emph{a polinomok irreducibilitása és prím tulajdonsága azonos fogalmak.}
+}
+\section{A faktorizáció egyértelműsége}
+\frame{
+Az irreducibilis polinomok prím tulajdonsága segítségével a polinomok faktorizáció egyértelműségét is igazolhatjuk.
+\begin{proposition}
+	Legyen $p \in\mathbb{F}\left[ t \right]$ egy legalább elsőfokú normált polinom.
+	Ekkor ezek sorrendjétől eltekintve egyértelműen léteznek legalább elsőfokú, normált, irreduciblis $q_1,\dots,q_s\in\mathbb{F}\left[ t \right]$ polinomok,
+	hogy $p=q_1\cdot\ldots\cdot q_s$.
+\end{proposition}
+A ,,sorrendtől eltekintés'' alatt azt értjük, hogy ha $p$ előáll
+\[
+	p_1\cdot\ldots\cdot p_s=p=q_1\cdot\ldots\cdot q_r
+\]
+legalább elsőfokú, normált, irreducibilis polinomok szorzataként,
+akkor $s=r$ és a $p_1,\ldots,p_s$ polinomok alkalmas átindexelése után $p_j=q_j$,
+minden $j=1,\ldots,s$ mellett.
+%\begin{proof}
+%	\Aref{pr:polfact}. állítás
+%	szerint $p$ előáll, mint normált, irreducibilis polinomok szorzata.
+%	Itt legalább egy polinom legalább elsőfokú, hiszen $p$ legalább elsőfokú.
+%	Ha van a szorzat tagjai közt nulladfokú, akkor az csak 1 lehet a normáltság szerint,
+%	ezért egyszerűen elhagyható.
+%	Meggondoltuk tehát, hogy $p$ legalább elsőfokú, normált, irreducibilis polinomok szorzata.
+%
+%	Az unicitást,
+%	a felbontandó polinom fokszáma szerinti indukcióval igazoljuk:
+%	Ha a polinom elsőfokú, akkor a felbontás egyértelműsége is nyilvánvaló.
+%	Tegyük fel, hogy igaz az egyértelműség $n$-nél alacsonyabb fokszámú polinomokra,
+%	és tegyük fel, hogy $\deg p=n>1$.
+%	Nézzünk két lehetséges előállítást
+%	\[
+%		p_1\cdots p_s=p=q_1\cdots q_r,
+%	\]
+%	ahol $p_1,\dots,p_s,q_1,\dots,q_r$ legalább elsőfokú, normált, irreducibilis polinomok.
+%	A $q_1$ polinom osztója a jobboldalnak, ezért a baloldalnak is.
+%	A prím tulajdonság miatt, \ref{pr:rprim}. állítás, $q_1$ osztója az egyik baloldali polinomnak.
+%	Alkalmas átindexelés után feltehető, hogy $q_1|p_1$.
+%	No de, $p_1$ is irreducibilis, és $\deg q_1\geq 1$ miatt csak $\deg q_1=\deg p_1$ lehetséges,
+%	tehát a normáltság szerint $q_1=p_1$.
+%	A polinomgyűrű nullosztó mentessége szerint az első polinomokkal egyszerűsíthetünk, ergo
+%	\[
+%		p_2\cdots p_s=q_2\cdots q_r,
+%	\]
+%	is fennáll.
+%	A fenti polinom már $n$-nél alacsonyabb fokú,
+%	így az indukciós feltevés szerint $s-1=r-1$,
+%	és alkalmas átindexelés után minden $j=2,\dots,s$ esetén is teljesül a $p_j=q_j$ egyenlőség.
+%\end{proof}
+}
+\frame{
+Az egész szakaszt összefoglalhatjuk így is:
+\begin{proposition}
+	Minden legalább elsőfokú normált polinomhoz léteznek
+	--
+	méghozzá sorrendjüktől eltekintve egyértelműen léteznek
+	--
+	olyan $q_1,\dots,q_s$ egymástól különböző, normált, irreducibilis polinomok;
+	és olyan $n_1,\dots,n_s$ pozitív egészek;
+	amelyekre
+	\[
+		p\left( t \right)
+		=
+		q_1^{n_1}\left( t \right)\cdots q_s^{n_s}\left( t \right).\qedhere
+	\]
+\end{proposition}
+}
+\end{document}
