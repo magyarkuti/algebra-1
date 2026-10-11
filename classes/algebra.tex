@@ -1,0 +1,45 @@
+\documentclass[aspectratio=169,notheorems]{corvinusmetropolis}
+\newtheorem{theorem}{{Tétel.}}
+\newtheorem{proposition}[theorem]{{Állítás.}}
+\newtheorem{lemma}[theorem]{{Lemma.}}
+\newtheorem{FA}[theorem]{{Az algebra alaptétele.}}
+\newtheorem{corollary}[theorem]{{Következmény.}}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{{Definíció.}}
+\newtheorem{defprop}[theorem]{{Definíció-Állítás.}}
+\newtheorem{notes}[theorem]{{Megjegyzés.}}
+
+\email{magyarkuti@uni-corvinus.hu}
+\author[Magyarkuti]{Gyula~Magyarkuti\,\orcidlink{0000-0003-4444-0481}}
+\institute[Corvinus Egyetem]%
+{%\inst{1}
+  Budapesti Corvinus Egyetem\\
+  Matematika Tanszék\\
+  Sóház, 208/B
+
+  \begin{minipage}[b]{0.8\linewidth}
+  email: \putemail\\
+  letölthető: \url{https://magyarkuti.github.io/algebra-1}
+  \end{minipage}
+  \hfill{\adjustbox{valign=B}{\qrcode[hyperlink]{https://magyarkuti.github.io/algebra-1}}}%% iff qrcode needed, otherwise comment this line!
+}
+\date[Tavasz]{\ontoday}%% overwrite later, if needed.
+
+\titlegraphic{\hfill{\includegraphics[width=.2\linewidth]{\myinstlogo}}}
+
+\renewcommand{\emph}{\alert}
+\renewcommand{\mathbf}{\mathbb}
+\newcommand{\lin}{\operatorname{lin}}
+\newcommand{\gen}{\operatorname{gen}}
+\newcommand{\im}{\operatorname{Im}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\codim}{\operatorname{codim}}
+%newcommand{\deg}{\operatorname{deg}}
+\newcommand{\ip}[2]{\langle#1,#2\rangle}
+\newcommand{\uj}{\text{új}}
+\newcommand{\rgi}{\text{régi}}
+\newcommand{\Star}[1]{#1\ensuremath{^*}\kern-\scriptspace}
+\newcommand{\CStar}{\Star{\ensuremath{\mathrm{C}}}}
+\endinput

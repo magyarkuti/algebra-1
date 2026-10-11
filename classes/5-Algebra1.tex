@@ -1,0 +1,1015 @@
+\input{algebra.tex}
+\title[Algebra 1.]{Mátrixok}
+\subtitle{Komplex számok mátrix reprezentációja}
+\date[5. hét]{2026.~október 12-én}
+\begin{document}
+\openingframes{Tartalom}
+\section{Mátrixok}
+\frame{
+\begin{definition}[mátrix]
+	Egy tetszőleges test feletti mátrixnak nevezzünk,
+	a test elemeiből képzett táblázatot.
+	Ha $m,n\in\mathbb{N}$ előre rögzített pozitív egészek és
+	az $A$ táblázatnak $m$ sora és $n$ oszlopa van,
+	akkor azt mondjuk, hogy $A$ egy $m\times n$ méretű mátrix.
+	Az $\mathbb{F}$ test feletti $m\times n$-es mátrixok halmazát $\mathbb{F}^{m\times n}$
+	módon jelöljük.
+
+	Ha $A\in\mathbb{F}^{m\times n}$ egy mátrix,
+	akkor $A_i$ jelöli az $i$-edik sort, ami persze egy $1\times n$-es mátrix;
+	$A^j$ jelöli a $j$-edik oszlopot, ami persze egy $m\times 1$-s mátrix;
+	$A_i^j$ jelöli az $i$-edik sor $j$-edik elemét.
+	Sokszor használjuk az $A_{i,j}=A_i^j$ jelölést is.
+
+	Időnként, azt hangsúlyozandó hogy mátrixokról van szó a mátrixot jelölő betűt kapcsos zárójelbe teszem.
+	Pl. $\left[ A \right]\in\mathbb{F}^{m\times n}$.
+
+	A mátrixot a mérete és az elemei határozzák meg.
+	Emiatt két mátrix akkor azonos, ha azonos méretűek, és a megfelelő elemeik is azonosak.
+\end{definition}
+}
+\frame{
+Az azonos típusú mátrixok közt műveleteket definiálunk:
+\begin{definition}[mátrixok összege]
+	Rögzített $m,n\in\mathbb{N}$ mellett, ha $A,B\in\mathbb{F}^{m\times n}$,
+	akkor ezek összege az a $C\in\mathbb{F}^{m\times n}$ mátrix, amelyre
+	\[
+		C_{i,j}=A_{i,j}+B_{i,j}
+	\]
+	minden $i=1,\dots,m$ és $j=1,\dots, n$.
+	Jelölés: $C=A+B$.
+    \index{matrix@mátrixok összege}
+\end{definition}
+\begin{proposition}
+	Az $m\times n$ méretű mátrixok az fent definiált összeadás művelettel
+	Abel-csoportot alkotnak.
+	A $[0]$-val jelölt neutrális elem az az $m\times n$-s mátrix,
+	amelynek minden eleme a test zérus eleme:
+	\[
+		[0]_{i,j}=0;
+	\]
+	az $[A]$ mátrix additív inverze az az $[-A]$-val jelölt $m\times n$ méretű mátrix,
+	amelyre
+	\[
+		[-A]_{i,j}=-([A]_{i,j}).\qedhere
+	\]
+    \label{pr:matrixokVS1}
+\end{proposition}
+}
+\frame{
+Most definiáljuk egy számnak és egy mátrixnak a szorzatát.
+\begin{definition}[szám és mátrix szorzata]
+	Ha $\alpha\in\mathbb{F}$ egy szám és $A\in\mathbb{F}^{m\times n}$ egy mátrix, akkor ezek szorzata
+	az $\alpha A\in\mathbb{F}^{m\times n}$ módon jelölt mátrix, melynek elemeire
+	\[
+		[\alpha A]_{i,j}=\alpha[A]_{i,j}.\qedhere
+	\]
+    \index{szám és mátrix szorzata}
+\end{definition}
+Könnyen ellenőrizhetőek a következő számolási szabályok:
+\begin{proposition}
+	Legyenek $A,B\in\mathbb{F}^{m\times n}$ mátrixok, és $\alpha,\beta\in\mathbb{F}$ tetszőleges számok.
+	Ekkor
+	\begin{enumerate}
+		\item $\alpha\left( A+B \right)=\alpha A+\alpha B$;
+		\item $\left( \alpha+\beta \right)A=\alpha A+\beta A$;
+		\item $\left( \alpha\beta \right)A=\alpha\left( \beta A \right)$;
+		\item $1 A=A$.\qedhere
+	\end{enumerate}
+    \label{pr:matrixokVS2}
+\end{proposition}
+}
+\frame{
+Az utolsó két állítást, \ref{pr:matrixokVS1}. és \ref{pr:matrixokVS2}.,
+együtt később úgy fogjuk fogalmazni,
+hogy adott test feletti tetszőleges méretű mátrixok \emph{vektorteret}\index{vektortér} alkotnak.
+Ha az $A_1,\dots,A_k$ azonos méretű mátrixok adottak,
+akkor tetszőleges $\alpha_1,\dots,\alpha_k\in\mathbb{F}$
+számok mellett értelmes az $A_1,\dots,A_k$ mátrixoknak az $\alpha_1,\dots,\alpha_k$ számokkal
+mint együtthatókkal képzett \emph{lineáris kombinációja}\index{lineáris kombináció}:
+\[
+	\alpha_1A_1+\alpha_2A_2+\ldots+\alpha_kA_k.
+\]
+Minden eddig megértett dolog persze az $m=1$ speciális esetben,
+és az $n=1$ speciális esetben is igaz.
+Ha $m=1$, akkor a mátrixot \emph{sorvektornak}\index{sorvektor};
+ha pedig $n=1$, akkor a mátrixot \emph{oszlopvektornak}\index{oszlopvektor} mondjuk.
+}
+\frame{
+Most a mátrixok között a szorzás műveletet definiáljuk.
+\begin{definition}[mátrixok szorzata]\index{matrix@mátrixok szorzata}
+	Legyen $A\in\mathbb{F}^{m\times k}$ és $B\in\mathbb{F}^{k\times n}$ mátrix.
+	Fontos, hogy $A$ oszlopainak száma azonos $B$ sorainak számával.
+	Ezek $C=AB$ szorzata egy $C\in\mathbb{F}^{m\times n}$ mátrix,
+	melynek elemeit az alábbi egyenlőség definiálja
+	\[
+		[C]_{i,j}=\sum_{s=1}^k[A]_{i,s}[B]_{s,j}.
+	\]
+	Itt persze $i=1,\dots,m$ és $j=1,\dots,n.$
+\end{definition}
+}
+\frame{
+Figyeljünk arra, hogy a fenti definícióban az $A$ és $B$ mátrixok sorrendje is fontos.
+Például, ha $n\neq m$, akkor $BA$ nem is értelmes.
+Még $m=n$ esetén is $BA$ egy $k\times k$ méretű mátrix, míg $AB$ egy $n\times n$ méretű mátrix,
+azaz az $AB$ szorzatnak általában véve semmi köze a $BA$ szorzathoz.
+
+A bevezetett összeadás és szorzás műveletekre teljesül a disztributivitás is:
+\begin{proposition}
+	Legyen $A\in\mathbb{F}^{m\times k}$, valamint a $B,C\in\mathbb{F}^{k\times n}$ mátrixok.
+	Ekkor
+	\begin{displaymath}
+		A\left( B+C \right)=AB+AC.
+	\end{displaymath}
+	Hasonlóan,
+	ha $A,B\in\mathbb{F}^{m\times k}$, valamint a $C\in\mathbb{F}^{k\times n}$ mátrixok,
+	akkor
+	\begin{displaymath}
+		\left( A+B \right)C=AC+BC.\qedhere
+	\end{displaymath}
+\end{proposition}
+
+%\begin{proof}
+%	Az első disztributivitást mutatjuk meg, a második evvel analóg.
+%	Világos, hogy mindkét oldalon azonos méretű mátrixok vannak.
+%	Minden szóba jövő $i,j$ index mellett
+%	\begin{multline*}
+%		\left[ A\left( B+C \right) \right]_{i,j}
+%		=
+%		\sum_{s=1}^k[A]_{i,s}\left[ B+C \right]_{s,j}
+%		=
+%		\sum_{s=1}^k[A]_{i,s}\left([B]_{s,j}+[C]_{s,j} \right)
+%		=
+%		\sum_{s=1}^k\left( [A]_{i,s}[B]_{s,j}\right)+\left([A]_{i,s}[C]_{s,j} \right)
+%		=
+%		\\
+%		\sum_{s=1}^k[A]_{i,s}[B]_{s,j}
+%		+
+%		\sum_{s=1}^k[A]_{i,s}[C]_{s,j}
+%		=
+%		\left[ AB \right]_{i,j}+\left[ AC \right]_{i,j}
+%		=
+%		[AB+AC]_{i,j}.
+%	\end{multline*}
+%	Ez éppen  az $A\left( B+C \right)=AB+AC$ mátrixazonosságot jelenti.
+%\end{proof}
+}
+\frame{
+Szinte banalitás,
+de egy mátrix az elemei összesége, de a sorai összesége, sőt az oszlopai összesége is.
+
+A következő ultrafontos állítás arról szól, hogy a szorzás operációt hogyan kell látnunk attól függően,
+hogy a szorzat mátrixra,
+mint elemei összeségére,
+mint oszlopai összeségére,
+vagy mint sorainak összeségére gondolunk.
+}
+\frame{
+	Legyen $A\in\mathbb{F}^{m\times k}$ és $B\in\mathbb{F}^{k\times n}$ mátrix.
+	Jelölje $C=AB$ ezek szorzatát ebben a sorrendben.
+	Ekkor
+	\begin{itemize}
+		\item A szorzat mátrix $i$-edik sorának $j$-edik eleme,
+		      az $A$ mátrix $i$-edik sorának és a $B$ mátrix $j$-edik
+		      oszlopának, mint speciális mátrixoknak a szorzata.
+              \\
+		      Magyarul: minden $1\leq i\leq m$ és $1\leq j \leq n$ mellett
+		      \[
+			      [C]_{i,j}=[A]_i\cdot [B]^j.
+		      \]
+		\item
+		      A szorzat mátrix minden oszlopa az $A$ mátrix oszlopainak a $B$ mátrix megfelelő oszlopából vett elemekkel képzett
+		      lineáris kombinációja.
+              \\
+		      Magyarul: minden $1\leq j\leq n$ mellett
+		      \[
+			      [C]^j=\sum_{s=1}^k[B]_s^j[A]^s.
+		      \]
+    \end{itemize}
+}\frame{
+\begin{itemize}
+		\item
+		      A szorzat mátrix minden sora a $B$ mátrix sorainak az $A$ mátrix megfelelő sorából vett elemekkel képzett
+		      lineáris kombinációja.
+              \\
+		      Magyarul: minden $1\leq i\leq m$ mellett
+		      \[
+			      [C]_i=\sum_{s=1}^k[A]_i^s[B]_s.
+		      \]
+		\item
+		      A szorzat mátrix az $A$ oszlopaiból, és a $B$ soraiból alkotott diádok összege.\index{diad@diád}
+              \\
+		      Magyarul:
+		      \[
+			      [C]=\sum_{s=1}^k[A]^s[B]_s.
+		      \]
+		      \emph{Diádnak}\index{diad@diád} nevezzük egy oszlop- és egy sorvektor szorzatát.
+		      Ha az oszlopnak és a sornak rendre azonosak az elemei, akkor
+		      \emph{szimmetrikus diádról} beszélünk.\index{szimmetrikus diád}
+		      \qedhere
+	\end{itemize}
+%\begin{proof}[1. bizonyítása]
+%	$[A]_i\cdot [B]^j=\sum_{s=1}^k[A]_{i,s}[B]_{s,j}=[C]_{i,j}.$
+%\end{proof}
+%\begin{proof}[2. bizonyítása]
+%	\(
+%	\left[ \sum_{s=1}^k[B]_s^j[A]^s \right]_i=
+%	\sum_{s=1}^k[B]_s^j[A]_i^s =
+%	\sum_{s=1}^k[A]_i^s[B]_s^j =
+%	[C]_{i,j}=
+%		[C]_i^j
+%	\)
+%	minden $i$-re.
+%\end{proof}
+%\begin{proof}[3. bizonyítása]
+%	\(
+%	\left[ \sum_{s=1}^k[A]_i^s[B]_s \right]^j=
+%	\sum_{s=1}^k[A]_i^s[B]_s^j=
+%	[C]_{i,j}=
+%		[C]_i^j
+%	\)
+%	minden $j$-re.
+%\end{proof}
+%\begin{proof}[4. bizonyítása]
+%	\(
+%	\left[ \sum_{s=1}^k[A]^s[B]_s \right]_{i,j}=
+%	\sum_{s=1}^k\left[ [A]^s[B]_s \right]_{i,j}=
+%	\sum_{s=1}^k [A]_i^s[B]_s^j=
+%	C_{i,j}
+%	\)
+%	minden $i$-re $j$-re.
+%\end{proof}
+}
+\frame{
+\begin{definition}[Kronecker-delta, identitás mátrix]\index{Kronceker-delta}\index{identitás mátrix}
+	\emph{Kroencker-deltának} nevezzük az alábbi egyszerű szimbólumot:
+	\[
+		\delta_{i,j}=
+		\begin{cases}
+			1,\text{ ha }i=j; \\
+			0,\text{ egyébként.}
+		\end{cases}
+	\]
+	Adott $n\geq 1$ természetes számra az $n\times n$ méretű identitás mátrix azaz $I\in\mathbb{F}^{n\times n}$ mátrix,
+	amelyre
+	\[
+		[I]_{i,j}=\delta_{i,j}.\qedhere
+	\]
+\end{definition}
+Nyilvánvaló, hogy ha $A\in\mathbb{F}^{m\times n}$ mátrix és $I\in\mathbb{F}^{n\times n}$ méretű identitás mátrix,
+akkor $A\cdot I=A$. Hasonlóan, ha most $I$ az $m\times m$ identitás mátrixot jelöli, akkor pedig $I\cdot A=A$ azonosság teljesül.
+Persze, ha $A\in\mathbb{F}^{n\times n}$ négyzetes mátrix és $I\in\mathbb{F}^{n\times n}$ az ugyanilyen méretű identitás mátrix,
+akkor
+\[
+	I\cdot A=A\cdot I=A
+\]
+is fennáll.
+}
+\frame{
+A mátrixok szorzásának legérdekesebb tulajdonsága a szorzás asszociativitása.
+\begin{proposition}
+	Legyen az $A,B,C$ mátrixok úgy megadva, hogy $AB$ is értelmes és $BC$ is értelmes legyen,
+	azaz $A\in\mathbb{F}^{m\times k},B\in\mathbb{F}^{k\times l}, C\in\mathbb{F}^{l\times n}$.
+	Ekkor
+	\[
+		A\left( BC \right)=\left( AB \right)C.\qedhere
+	\]
+\end{proposition}
+%\begin{proof}
+%	Először is azt vegyük észre,
+%	hogy ha az $A$ és a $C$ mátrixok egyike egy szám,
+%	és a másik két mátrix összeszorozható,
+%	akkor a mátrix szorzás definíciója szerint az állítás nyilvánvaló.
+%
+%	Másodszor azt vegyük észre, hogy mindkét oldalon azonos méretű
+%	konkrétan $m\times n$ méretű mátrixok szerepelnek.
+%
+%	Azt kell tehát még meggondolnunk,
+%	hogy az $i$-edik sor $j$-edik eleme mindkét oldalon ugyanaz.
+%	A jobboldalon ez
+%	\begin{multline*}
+%		[AB]_i\cdot [C]^j
+%		=
+%		\left( \sum_{s=1}^k[A]_i^s[B]_s \right)[C]^j
+%		=
+%		\sum_{s=1}^k\left([A]_i^s[B]_s\right)[C]^j
+%		=
+%		\sum_{s=1}^k[A]_i^s\left([B]_s[C]^j\right)
+%		\\
+%		=
+%		\sum_{s=1}^k[A]_i^s\left(\sum_{r=1}^l[B]_s^r[C]_r^j\right)
+%		=
+%		\sum_{s=1}^k\sum_{r=1}^l[A]_i^s([B]_s^r[C]_r^j).
+%	\end{multline*}
+%	A baloldalon
+%	az $i$-edik sor $j$-edik eleme hasonló számolgatással:
+%	\begin{multline*}
+%		[A]_i[BC]^j=
+%		[A]_i\left( \sum_{r=1}^l[B]^r[C]_r^j \right)
+%		=
+%		\sum_{r=1}^l[A]_i\left([B]^r[C]_r^j\right)
+%		=
+%		\sum_{r=1}^l\left([A]_i[B]^r\right)[C]_r^j
+%		\\
+%		\sum_{r=1}^l\left(\sum_{s=1}^k[A]_i^s[B]_s^r\right)[C]_r^j
+%		=
+%		\sum_{r=1}^l\sum_{s=1}^k\left([A]_i^s[B]_s^r\right)[C]_r^j.
+%	\end{multline*}
+%	A testben fennálló asszociativitás és kommutativitás miatt a bal- és a jobboldali kifejezés azonos.
+%\end{proof}
+}
+\frame{
+Ha tehát adottak az $A_1,A_2,\dots,A_p$ mátrixok, úgy hogy a sorban egymás után következőknek értelmes a szorzata,
+akkor ezek bármilyen zárójelezésével képzett szorzata is értelmes,
+és ugyanazt a mátrixot eredményezi.
+Mint azt a számok esetén megszoktuk,
+használhatjuk az $A_1\cdot A_2\cdot\ldots\cdot A_p$ jelölést ezen mátrixok bármelyik zárójelezésével képzett szorzatára.
+Érdemes a fenti bizonyításból megjegyezni a formulát,
+amelyet három mátrix szorzatára kapunk:
+\[
+	\left[ ABC \right]_{i,j}
+	=
+	\sum_{s=1}^k\sum_{r=1}^l\left[ A \right]_{i,s}\left[ B \right]_{s,r}\left[ C \right]_{r,j}.
+\]
+Foglaljuk össze az eddigieket négyzetes mátrixok mellett:
+\begin{proposition}
+	Legyen $n\in\mathbb{N}$ természetes szám, és tekintsük az $n\times n$ méretű mátrixok
+	halmazát, ellátva ezt a halmazt a mátrix összeadással és a mátrixszorzással.
+	Az $\left( \mathbb{F}^{n\times n},+,\cdot \right)$ algebrai struktúra egy egységelemes gyűrű.
+\end{proposition}
+}
+\frame{
+Ez a gyűrű, az $n>1$ esetben biztosan nem kommutatív.
+Például $n=2$ mellett
+\[
+	\begin{pmatrix}
+		0 & 1 \\
+		0 & 0
+	\end{pmatrix}
+	\cdot
+	\begin{pmatrix}
+		0 & 0 \\
+		1 & 0
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		1 & 0 \\
+		0 & 0
+	\end{pmatrix},
+	\text{ amíg }
+	\begin{pmatrix}
+		0 & 0 \\
+		1 & 0
+	\end{pmatrix}
+	\cdot
+	\begin{pmatrix}
+		0 & 1 \\
+		0 & 0
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		0 & 0 \\
+		0 & 1
+	\end{pmatrix}.
+\]
+Az sem igaz, hogy ez a gyűrű nullosztómentes lenne, hiszen például $n=2$ mellett az
+\[
+	A
+	=
+	\begin{pmatrix}
+		0 & 1 \\
+		0 & 0
+	\end{pmatrix}
+\]
+mátrix nyilván nem a zérus mátrix (az összeadásra nézve neutrális elem),
+de $A\cdot A=0$.
+
+Ebből persze már az is következik, hogy a fenti $A$ mátrixnak nincs a szorzásra nézve inverze.
+}
+\frame{
+A kommutativitás hiánya, az eddigiektől eltérő számolási gyakorlatot eredményez.
+A számolás közben a mátrixok sorrendjén nem változtathatunk.
+Persze előfordul, hogy két mátrix szorzata nem függ a sorrendtől.
+Ilyenkor a két mátrixot egymással \emph{felcserélhetőnek}, vagy \emph{kommutálónak} mondjuk.\index{kommutáló mátrixok}
+
+Például, az identitás mátrixszal minden más mátrix kommutál.
+A mátrix azon elemeit, ahol a sor- és az oszlopindexek azonosak
+\emph{fődiagonálisbeli}\index{fődiagonális}
+elemeknek mondjuk.
+
+Egy mátrixot
+\emph{diagonális alakúnak}\index{diagonális mátrix}
+mondunk,
+ha minden nem zérus eleme a fődiagonálisában van.
+Az is világos, hogy a diagonális mátrixok egymással kommutálnak.
+}
+\frame{
+Nagyon is triviális mégis érdemes észrevenni, hogy a fentiek $n=1$ esetben nem jelentenek problémát.
+Ilyenkor az $1\times 1$-es mátrixok tere voltaképpen azonos az $\mathbb{F}$-testtel, hiszen csak az a különbség,
+hogy egy testbeli $a$ elemet $[a]$ módon írjuk. A szorzás és az összeadás definíciója ugyanazt adja,
+ha mint a testbeli elemre, vagy az ebből képzett $1\times 1$-es mátrixra gondolunk.
+}
+\frame{
+Az $n\times n$-es négyzetes mátrixok másik érdemleges részstruktúrája az
+\[
+	\mathcal{F}=
+	\left\{ c\cdot I:c\in\mathbb{F} \right\}.
+\]
+Itt $I$ az $n\times n$ méretű identitás mátrix, tehát $\mathcal{F}$ elemei azon diagonális alakú mátrixok,
+ahol minden elem a diagonálisban azonos.
+Világos, hogy két ilyen mátrix összege és szorzata is ilyen marad:
+\[
+	aI+bI=\left( a+b \right)I\text{ és } aI\cdot bI=\left( ab \right)I.
+\]
+Ez azt jelenti, hogy az $\left( \mathcal{F},+,\cdot \right)$ struktúra egy egységelemes gyűrű.
+Világos, hogy itt bármely két elem kommutál, ergo egy kommutatív egységelemes gyűrűvel állunk szemben és
+az is teljesen nyilván való, hogy minden nem zérus elemnek van a szorzásra nézve inverze.
+Azt kaptuk tehát, hogy a fenti $\mathcal{F}$ minden $n$ mellett egy test.
+}
+%\frame{\frametitle{Az inverz mátrix kétoldalisága}
+%    Emlékezzünk arra, hogy ha egy mátrixon Gauss\,--\,Jordan-eliminációt hajtunk végre,
+%    akkor az utolsó táblázatban vagy minden sor zérus, vagy minden sor tartalmaz pontosan egy eliminált változót.
+%    \begin{proposition}
+%        Ha két négyzetes mátrix szorzata az identitás mátrix,
+%        akkor e két mátrix egymással kommutál.
+%    \end{proposition}
+%}
+\section{A komplex számok mint mátrixok}
+\frame{
+\begin{definition}[Izomorf testek]\index{izomorfizmus}
+	Legyenek $\mathbb{F}$ és $\mathbb{G}$ testek.
+	Azt mondjuk, hogy a két test \emph{izomorf} egymással,
+	ha létezik köztük \emph{művelettartó bijekció}, azaz létezik
+	\[
+		\varphi:\mathbb{F}\to\mathbb{G}
+	\]
+	bijekció, amely tartja a műveleteket is, azaz
+	\[
+		\varphi\left( a+b \right)=\varphi\left( a \right)+\varphi\left( b \right)
+		\text{ és }
+		\varphi\left( a\cdot b \right)=\varphi\left( a \right)\cdot \varphi\left( b \right).
+	\]
+	A művelettartó bijekciót \emph{izomorfizmusnak} nevezzük.
+\end{definition}
+}
+\frame{
+Az izomorf testek közt nem teszünk különbséget. Úgy tekintjük őket, hogy csak jelölésükben különböznek.
+Például, ha az $\mathbb{R}$ valós számokra gondolunk,
+akkor a $2\times 2$-es diagonális alakú valós mátrixok közül azok, ahol a diagonális mindkét eleme azonos,
+a valós testtel izomorf testet alkot.
+\[
+	\mathcal{R}=\left\{
+	\begin{pmatrix}
+		a & 0 \\
+		0 & a
+	\end{pmatrix}
+	:a\in\mathbb{R}
+	\right\}
+	\text{ és }
+	\varphi:\mathbb{R}\to\mathcal{R},
+	\text{ ahol }
+	\varphi\left( a \right)
+	=
+	\begin{pmatrix}
+		a & 0 \\
+		0 & a
+	\end{pmatrix}.
+\]
+
+A $2\times 2$-es valós mátrixok egységelemes gyűrűjében tehát $\mathcal{R}$ egy olyan részgyűrű, ami még test is,
+és izomorf az $\mathbb{R}$ valós számtesttel.
+\\
+Voltaképpen a valós számtestet beágyaztuk a $2\times 2$-es mátrixok közé,
+azaz egy $a$ valós számot az
+\begin{math}
+	\begin{pmatrix}
+		a & 0 \\
+		0 & a
+	\end{pmatrix}
+\end{math}
+mátrixszal reprezentálunk (írunk le).
+
+A $2\times 2$ méretű valós mátrixok még sok-sok más testet is tartalmaznak.
+Ezek közül számunkra a legfontosabb a következő részhalmaz.
+}
+\frame{
+\begin{defprop}[komplex számtest]
+	Jelölje két tetszőleges $a,b\in\mathbb{R}$ valós szám mellett $M_{a,b}$ az
+	$\left( a,b \right)$ valós számpárhoz tartozó
+	\(
+	M_{a,b}
+	=
+	\begin{pmatrix}
+		a & -b \\
+		b & a
+	\end{pmatrix}
+	\)
+	mátrixot.
+	Tekintsük az ilyen típusú mátrixok $\mathcal{C}$-vel jelölt halmazát:
+	\[
+		\mathcal{C}
+		=
+		\left\{
+		M_{a,b}
+		:a,b\in\mathbb{R}
+		\right\}
+	\]
+	E részhalmaz
+	\begin{enumerate}
+		\item
+		      zárt a mátrix összeadásra és a mátrix szorzásra,
+		      így a $2\times 2$-es valós mátrixok egy speciális egységelemes részgyűrűje.
+		\item
+		      E részgyűrűben a mátrix szorzás kommutatív művelet,
+		      és
+		\item
+		      és e részgyűrűben minden nem zérus mátrixnak van inverze is a mátrixszorzás műveletre nézve.
+	\end{enumerate}
+	Eszerint a $\left( \mathcal{C},+,\cdot \right)$ algebrai struktúra egy test.
+	Ezt a testet nevezzük a \emph{komplex számtestnek}\index{komplex számok},
+	vagy a \emph{komplex számtest mátrix reprezentációjának}.\index{komplex számok mátrix reprezentációja}
+\end{defprop}
+}
+%\begin{proof}
+%	Az $a,b,c,d\in\mathbb{R}$ valós számok mellett
+%	\[
+%		M_{a,b}+M_{c,d}=
+%		\begin{pmatrix}
+%			a & -b \\
+%			b & a
+%		\end{pmatrix}
+%		+
+%		\begin{pmatrix}
+%			c & -d \\
+%			d & c
+%		\end{pmatrix}
+%		=
+%		\begin{pmatrix}
+%			a+c & -b-d \\
+%			b+d & a+c
+%		\end{pmatrix}
+%		=
+%		M_{a+c,b+d}
+%	\]
+%	és hasonlóan a mátrix szorzás definíciója szerint
+%	\[
+%		M_{a,b}\cdot M_{c,d}=
+%		\begin{pmatrix}
+%			a & -b \\
+%			b & a
+%		\end{pmatrix}
+%		\cdot
+%		\begin{pmatrix}
+%			c & -d \\
+%			d & c
+%		\end{pmatrix}
+%		=
+%		\begin{pmatrix}
+%			ac-bd & -ad-bc \\
+%			bc+ad & -bd+ac
+%		\end{pmatrix}
+%		=
+%		M_{ac-bd,ad+bc}.
+%	\]
+%	Mivel $M_{1,0}$ a $2\times 2$-es identitás mátrix, ezért $\mathcal{C}$ a mátrix összeadásra és a mátrixszorzásra nézve
+%	egységelemes gyűrűt alkot.
+%
+%	A szorzás kommutativitása is látszik a fenti számolásból, hiszen
+%	\[
+%		M_{c,d}\cdot M_{a,b}=M_{ca-db,cb+da}=M_{ac-bd,ad+bc}=M_{a,b}\cdot M_{c,d}
+%	\]
+%	a valós számok összeadásának és szorzásának
+%	kommutativitása miatt.
+%
+%	Legyen most $M_{a,b}$ egy nem zérus mátrix, így $a^2+b^2\neq 0$.
+%	Világos, hogy
+%	\[
+%		M_{a,b}\cdot M_{a,-b}=M_{a^2+b^2,0}=\left( a^2+b^2 \right)M_{1,0}=\left( a^2+b^2 \right)I.
+%	\]
+%	Ebből már látszik is, hogy $M_{a,b}\cdot M_{\frac{a}{a^2+b^2},\frac{-b}{a^2+b^2}}=I$.
+%	Ez a már igazolt kommutativitással éppen azt jelenti, hogy minden nem zérus elemnek van multiplikatív inverze,
+%	ergo $\mathcal{C}$ valóban test.
+%\end{proof}
+\frame{
+Ebben a $\mathcal{C}$ testben az
+\(
+M_{0,1}=
+\begin{pmatrix}
+	0 & -1 \\
+	1 & 0
+\end{pmatrix}
+\)
+elem olyan, hogy a négyzete a szorzásra nézve reprodukáló elemnek az összeadásra nézve képzett inverze:
+\[
+	M_{0,1}\cdot M_{0,1}
+	=
+	\begin{pmatrix}
+		0 & -1 \\
+		1 & 0
+	\end{pmatrix}
+	\cdot
+	\begin{pmatrix}
+		0 & -1 \\
+		1 & 0
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		-1 & 0  \\
+		0  & -1
+	\end{pmatrix}
+	=
+	M_{-1,0}
+	=
+	-I.
+\]
+Ez a tulajdonság azért figyelemre méltó,
+mert ha a szokásoknak megfelelően a test multiplikatív neutrális elemét az $1$ szimbólummal jelöljük,
+akkor olyan elemet találtunk a komplex számtestben,
+amelynek négyzete éppen $-1$.
+Tudjuk, hogy a valós számtest esetében ez nem lenne lehetséges.
+}
+\frame{
+Tekintsük most valamely $a,b\in\mathbb{R}$ mellett az
+\[
+	M_{a,b}=
+	\begin{pmatrix}
+		a & -b \\
+		b & a
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		a & 0 \\
+		0 & a
+	\end{pmatrix}
+	+
+	\begin{pmatrix}
+		0 & -1 \\
+		1 & 0
+	\end{pmatrix}
+	\cdot
+	\begin{pmatrix}
+		b & 0 \\
+		0 & b
+	\end{pmatrix}
+\]
+felbontást.
+Ha bevezetjük az
+\(
+i=M_{0,1}=
+\begin{pmatrix}
+	0 & -1 \\
+	1 & 0
+\end{pmatrix}
+\)
+jelölést\index{i komplex szám@$i$ komplex szám}, akkor minden komplex szám
+\[
+	M_{a,b}=
+	\begin{pmatrix}
+		a & 0 \\
+		0 & a
+	\end{pmatrix}
+	+
+	i
+	\cdot
+	\begin{pmatrix}
+		b & 0 \\
+		0 & b
+	\end{pmatrix}
+\]
+alakban írható.
+}
+\frame{
+Emlékezzünk arra,
+hogy a valós számtest is részhalmaza a komplex számtestnek abban az értelemben,
+ha minden $a$ valós számot az
+\begin{math}
+	\begin{pmatrix}
+		a & 0 \\
+		0 & a
+	\end{pmatrix}
+\end{math}
+mátrixszal reprezentálunk. ($\mathcal{R}\subseteq\mathcal{C}$).
+Ha tehát megegyezünk abban, hogy az $a$ valós számra nézve mi az
+\(
+\begin{pmatrix}
+	a & 0 \\
+	0 & a
+\end{pmatrix}
+\)
+mátrixra gondolunk,
+akkor azt kapjuk, hogy minden komplex szám
+\[
+	M_{a,b}=a+ib
+\]
+alakú, ahol $i$ egy olyan komplex szám, amelyre $i^2=-1$, $a,b\in\mathbb{R}$.
+Ezt nevezzük a komplex szám \emph{normálalakjának}.\index{komplex szám normálalakja}
+}
+\frame{
+Ne felejtsük a műveleteket:
+Láttuk, hogy $M_{a,b}+M_{ c,d}=M_{a+c,b+d}$.
+Ez a normálalak reprezentáció mellett azt jelenti, hogy az összeadás definíciója csak
+\metroset{block=fill}\begin{block}{}
+\[
+	(a+ib)+(c+id)=(a+c)+i(b+d)\tag{\dag}
+\]
+\end{block}\metroset{block=transparent}
+lehet.
+Hasonlóan emlékszünk, hogy
+\begin{math}
+	M_{a,b}\cdot M_{c,d}=M_{ac-bd,ad+bc}
+\end{math},
+ami normálalak reprezentáció mellett az
+\metroset{block=fill}\begin{block}{}
+\[
+	(a+ib)\cdot (c+id)=(ac-bd)+i(ad+bc)\tag{\ddag}
+\]
+\end{block}\metroset{block=transparent}
+definíciót eredményezi.
+}
+\frame{
+A következőket gondoltuk meg:
+\begin{defprop}[komplex számtest a normálakkal]
+    Jelölje
+    \metroset{block=fill}
+    \begin{alertblock}{}
+	\[
+		\mathbb{C}
+		=
+		\left\{
+		a+ib:a,b\in\mathbb{R}
+		\right\}
+	\]
+\end{alertblock}\metroset{block=transparent}
+	a \emph{komplex számok normálalakját}.
+	Az összeadás műveletet definiálja (\dag), és a szorzás műveletet definiálja (\ddag).
+	Az így kapott algebrai struktúra test, amely izomorf a komplex számtest mátrix reprezentációjával.
+	Az izomorfizmust a
+	\[
+		\varphi:\mathcal{C}\to\mathbb{C},\quad
+		\varphi
+		\left(
+		\begin{matrix}
+				a & -b \\
+				b & a
+			\end{matrix}
+		\right)
+		=
+		a+ib
+	\]
+	művelettartó bijekció hozza létre.
+\end{defprop}
+}
+\frame{
+Ha már megértettük, hogy a komplex számok normálalak reprezentációja testet alkot,
+akkor a (\dag) és (\ddag) definíciók megjegyzése nagyon könnyű.
+Más nem is lehet:
+Az összeadáshoz (\dag) csak el kell végezni a műveletet majd kiemelni $i$-t,
+a szorzás definíciójához (\ddag)
+az $i$ kiemelése után jutunk.
+}
+
+\section{A komplex számok abszolútértéke}
+\frame{
+A valós számokra jól ismert abszolútérték függvényt terjesztjük ki komplex számtest elemeire.
+\begin{definition}[valós rész, képzetes rész]\index{komplex szám valós része}\index{komplex szám képzetes része}
+	Legyen $z\in\mathbb{C}$, $z=a+ib$.
+	Ekkor $a\in\mathbb{R}$ a $z$ komplex szám \emph{valós része},
+	és $b\in\mathbb{R}$ a $z$ komplex szám \emph{képzetes része}.
+	$\Re z$ jelöli a valós részt, és $\Im z$ a képzetes részt.
+\end{definition}
+\begin{definition}[konjugált]\index{komplex szám konjugáltja}
+	Legyen $z\in\mathbb{C}$, $z=a+ib$.
+	Ekkor $z$ \emph{konjugáltja} $\bar{z}=a-ib$.
+\end{definition}
+}
+\frame{
+A konjugált definíciója alapján, egyszerű számolgatással kapjuk az alábbi azonosságokat.
+\begin{proposition}
+	Minden $z\in\mathbb{C}$ komplex szám mellett fennállnak a konjugálás következő szabályai:
+	\[
+		\overline{\left( \bar{z} \right)}=z,\quad
+		z+\bar{z}=2\Re z,\quad
+		z-\bar{z}=2i\Im z,\quad
+		z\in\mathbb{R}\iff z=\bar{z},\quad
+		z\bar{z}=(\Re z)^2+(\Im z)^2\geq 0.
+	\]
+	Az összeadás és szorzás művelet is felcserélhető a konjugálással,
+	azaz bármely két $z,w\in\mathbb{C}$ komplex szám esetén igaz, hogy
+	\[
+		\overline{z+w}=\bar{z}+\bar{w},\quad
+		\overline{z\cdot w}=\bar{z}\cdot\bar{w},\quad
+		\overline{z-w}=\bar{z}-\bar{w},\quad
+		\overline{\left( \frac{z}{w} \right)}=\frac{\bar{z}}{\bar{w}}\quad\text{ feltéve, hogy }w\neq 0.\qedhere
+	\]
+\end{proposition}
+}
+\frame{
+Most használjuk először a valós számok rendezését.
+Az $\mathbb{R}$ testen a $\geq $ reflexív, antiszimmetrikus, tranzitív relációt az algebrai műveletekkel a következő két axióma kapcsolja össze:
+Minden $a,b,c\in\mathbb{R}$ mellett
+\[
+	a\geq b\text{ esetén }a+c\geq b+c,\qquad a,b\geq 0\text{ esetén }ab\geq 0.
+\]
+Az $a^2-b^2=\left( a+b \right)\left( a-b \right)$ azonosság szerint,
+az $a,b$ nem negatív valós számok mellett $a\geq b$ akkor és csak akkor, ha $a^2\geq b^2$.
+Speciálisan $a^2=b^2$ akkor és csak akkor, ha $a=b$.
+}
+\frame{
+\begin{definition}[komplex szám abszolútértéke]\index{abszolútérték}
+	Legyen $z\in\mathbb{C}$ egy komplex szám.
+	Láttuk, hogy
+	$z\bar{z}\in\mathbb{R}$ és
+	$z\bar{z}\geq 0$.
+	E szám négyzetgyökét nevezzük a $z$ komplex szám \emph{abszolútértékének}.
+	Jelölés: $|z|=\sqrt{z\bar{z}}$.
+\end{definition}
+Ha speciálisan $\Im z=0$,
+tehát ha $z$ egy valós szám,
+akkor e definíció szerint
+\[
+	|z|=
+	\sqrt{z^2}=
+	\begin{cases}
+		z  & \text{, ha }z\geq 0     \\
+		-z & \text{, ha }z<0\text{,}
+	\end{cases}
+\]
+ami egybeesik a valós számok abszolútértékének definíciójával.
+A fentiből azonnal látszik, hogy minden $a\in\mathbb{R}$ valós szám mellett $a\leq|a|$.
+}
+\frame{
+Mivel $z\bar{z}=\bar{z}z$, ezért $|z|=|\bar{z}|$, azaz komplex számnak és konjugáltjának azonos az abszolútértéke.
+Szokásos technika, hogy a komplex szám abszolútértékére vonatkozó állításokat, az abszolútértékek négyzetére fogalmazzuk át.
+Ez megtehető, hiszen nem negatív valós számok egyenlősége és azok négyzetének egyenlősége azonos fogalmak.
+Például $|z|=0$, akkor és csak akkor, ha $z\bar{z}=0$, ami akkor és csak akkor teljesül ha $z=0$.
+Hasonlóan, ha $z,w$ komplex számok, akkor $|zw|^2=zw(\overline{zw})=zw\bar{z}\bar{w}=z\bar{z}w\bar{w}=|z|^2|w|^2=\left( |z||w| \right)^2$,
+ergo $|zw|=|z||w|$.
+
+Világos, hogy $|\Re z|^2\leq(\Re z)^2+(\Im z)^2=z\bar{z}=|z|^2$, emiatt
+\(
+|\Re z|\leq |z|.
+\)
+Ezt alkalmazva tetszőleges $z,w$ komplex számok mellett
+\[
+	|
+	\Re (z\bar{w})
+	|
+	\leq
+	|z\bar{w}|
+	=
+	|z||w|,
+\]
+amit \emph{Cauchy\,--\,Schwartz-egyenlőtlenségnek}\index{Schwartz-egyenlőtlenség} mondunk.
+}
+\frame{\frametitle{Az abszolútérték legfontosabb tulajdonságai}
+\metroset{block=fill}
+\begin{proposition}
+	Legyen $z,w\in\mathbb{C}$ komplex szám.
+	Ekkor
+	\begin{enumerate}
+		\item $|z|=0$ akkor és csak akkor, ha $z=0$,
+		\item $|zw|=|z||w|$,
+		\item $|z+w|\leq |z|+|w|$.\qedhere
+	\end{enumerate}
+\end{proposition}
+\metroset{block=transparent}
+Az utolsó egyenlőtlenséget \emph{háromszög-egyenlőtlenségnek}\index{háromszög-egyenlőtlenség} nevezik.
+Egy kevésbé népszerű, de ekvivalens alakja
+\[
+	\left|\left( |z|-|w| \right)\right|\leq|z-w|.
+\]
+}
+%\begin{proof}
+%	Csak a háromszög-egyenlőtlenséget nem gondoltuk meg eddig:
+%	\begin{multline*}
+%		|z+w|^2=
+%		\left( z+w \right)\left( \overline{z+w} \right)
+%		=
+%		\left( z+w \right)\left( \bar{z}+\bar{w} \right)
+%		=
+%		z\bar{z}+w\bar{w}+z\bar{w}+\overline{z\bar{w}}
+%		=
+%		\\
+%		|z|^2+|w|^2+2\Re (z\bar{w})
+%		\leq
+%		|z|^2+|w|^2+2|\Re (z\bar{w})|
+%		\leq
+%		|z|^2+|w|^2+2|z||w|
+%		=
+%		\left( |z|+|w| \right)^2.
+%	\end{multline*}
+%	Az első egyenlőtlenség, hogy egy valós szám nem nagyobb az abszolútértékénél,
+%	a második egyenlőtlenség pedig a Cauchy\,--\,Schwartz-egyenlőtlenség.
+%
+%	A kevésbé populáris alakhoz használjuk a már igazolt egyenlőtlenséget:
+%	\begin{math}
+%		|z|
+%		=
+%		|(z-w)+w|
+%		\leq
+%		|z-w|+|w|,
+%	\end{math}
+%	majd ugyanezt a $z$ és a $w$ számok felcserélése után mégegyszer felírva
+%	\[
+%		|z|-|w|\leq |z-w|
+%		\quad\text{ és }\quad
+%		|w|-|z|\leq |w-z|.
+%	\]
+%	Na most, azt ugyan nem tudjuk, hogy a $||z|-|w||$ szám a baloldali számok közül melyikkel azonos,
+%	de az egyikkel biztosan egybeesik.
+%	No de, mindegy is melyikkel, hiszen a jobboldal mindkét esetben a kívánt $|z-w|$.
+%\end{proof}
+
+\section{A komplex számok trigonometrikus alakja}
+\frame{
+Láttuk, hogy $z,w\in\mathbb{C}$ komplex szám mellett
+\[
+	\Re\left( z+w \right)=\Re z+\Re w
+	\qquad
+	\text{ és }
+	\qquad
+	\Im\left( z+w \right)=\Im z+\Im w.
+\]
+Ez azt jelenti, hogy ha az $a+ib$ komplex számot azonosítjuk az $\mathbb{R}^2$ sík
+$\left( a,b \right)$ pontjával,
+akkor egyszerűen koordinátánként kell összeadni a komplex számokat, mintha a $z$ komplex szám
+az origóból az $\left( a,b \right)$ pontra mutató vektor lenne.
+
+A kérdés, hogy ha így képzeljük a komplex számokat,
+akkor \alert{\bf komplex számok szorzása mit jelent a komplex számoknak megfeleltetett vektorok körében?}
+}
+\frame{
+\begin{defprop}[komplex szám trigonometrikus alakja]\index{komplex szám trigonometrikus alakja}
+	Legyen $z\in \mathbb{C}$ egy nem zérus komplex szám.
+	Ekkor létezik $\varphi\in\mathbb{R}$ valós szám, hogy
+	\[
+		z=
+		|z|\left( \cos\varphi+i\sin\varphi \right)\tag{\dag}
+	\]
+	Egy ilyen $\varphi$ számot nevezzük a $z$ komplex szám egy \emph{argumentumának}, és néha $\arg z$ módon jelöljük.
+	\index{komplex szám argumentuma}
+	A (\dag) alak a komplex szám \emph{trigonometrikus alakja}.
+
+	Két nem zérus komplex szám egyenlősége azt jelenti, hogy az abszolútértékük azonos,
+	és az argumentumaik különbsége $2\pi$ többszöröse.
+\end{defprop}
+}
+%\begin{proof}
+%	Világos, hogy ha $z=a+ib\neq 0$, akkor $a^2+b^2>0$, így
+%	\[
+%		z=a+ib
+%		=
+%		\sqrt{a^2+b^2}\left( \frac{a}{\sqrt{a^2+b^2}}+i\frac{b}{\sqrt{a^2+b^2}} \right).
+%	\]
+%	Ha $x$ jelöli a fenti zárójelben a valós részt és $y$ a képzetes részt,
+%	akkor $x^2+y^2=1$.
+%	Így az $\left( x,y \right)$ pár a sík egységkörének egy pontja.
+%	A trigonometrikus függvények középiskolai definíciója szerint,
+%	ha $\varphi$ jelöli az $\left( 1,0 \right)$ pontot az $\left( x,y \right)$
+%	ponttal összekötő ív hosszát, -- az óramutató járásával ellentétes irányban mérve a körcikk peremén --
+%	akkor $x=\cos\varphi$ és $y=\sin\varphi$.
+%\end{proof}
+\frame{
+\begin{proposition}
+	Legyenek a $z,w\in \mathbb{C}$ nem nulla komplex számok a trigonometrikus alakjukban felírva,
+	azaz
+	\[
+		z=|z|\left( \cos\varphi+i\sin\varphi \right),\qquad
+		w=|w|\left( \cos\psi+i\sin\psi \right).
+	\]
+	Ekkor a két szám szorzatának abszolútértéke az abszolútértékek szorzata
+	és a szorzat egy argumentumát is megkapjuk mint az argumentumok összege.
+	Magyarul:
+	\[
+		zw=
+		|z||w|\left( \cos\left( \varphi+\psi \right)+i\sin\left( \varphi+\psi \right) \right).
+	\]
+	Speciálisan minden $n\in\mathbb{Z}$ egész számra\index{Moivre-formula}
+	\[
+		z^n=|z|^n\left( \cos n\varphi+i\sin n\varphi \right).\qedhere
+	\]
+\end{proposition}
+}
+\frame{
+A szakasz bevetőjében feltett kérdésre tehát a válasz,
+hogy a $z$ komplex számmal való szorzást a sík olyan geometriai transzformációjának képzelhetjük,
+amely egy $\arg z$ szöggel való forgatásból és egy $|z|$-szeres origó középpontú nyújtásból áll.
+}
+\frame{
+\begin{definition}[egységgyök]\index{komplex $n$-edik egységgyökök}
+	Legyen az $n\in\mathbb{N}$ természetes szám rögzítve.
+	Tetszőleges $k=0,1,\dots,n-1$ mellett jelölje
+	\[
+		\epsilon_k^{(n)}=\cos k\frac{2\pi}{n}+i\sin k\frac{2\pi}{n}.
+	\]
+	az úgynevezett \emph{$n$-edik komplex egységgyököket}.
+\end{definition}
+Az $n$-edik komplex egységgyökök a komplex számsík pontosan $n$ különböző pontját alkotják,
+és az $n$-edik hatványuk $1$, azaz
+$(\epsilon_k^{(n)})^n=1$.
+Emiatt minden $w\neq 0$ komplex szám mellett pontosan $n$ komplex gyöke van a $t^n-w$ polinomnak.
+Ha ugyanis $w$ trigonometrikus alakja $w=|w|\left( \cos\psi+i\sin\psi \right)$,
+akkor legyen például $z_0=\sqrt[n]{|w|}\left( \cos(\psi/n)+i\sin(\psi/n) \right)$,
+és így $(z_0\epsilon_k^{(n)})^n=w$ minden $k=0,\dots,n-1$ szám mellett.
+}
+\end{document}
