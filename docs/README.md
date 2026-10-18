@@ -64,7 +64,7 @@ tartalmazza az összes információt, de összefoglalom azokat, amelyek szerinte
 * A mátrixszorzat értékelése mint sorok vagy oszlopok lineáris kombinációja
 * A mátrixok szorzás asszociativitása
 
-1. [Komplex számok](https://raw.githubusercontent.com/magyarkuti/algebra-1/master/classes/6-Algebra1.pdf)
+1. [Komplex számok](https://raw.githubusercontent.com/magyarkuti/algebra-1/master/classes/5-Algebra1.pdf)
 * Komplex számtest mint a sík pontjain definiált test
 * Algebrai struktúrák izomorfiája
 * A valós test beágyazása a komplex testbe
@@ -74,7 +74,7 @@ tartalmazza az összes információt, de összefoglalom azokat, amelyek szerinte
 * Moivre-formula
 * Egységgyökök
 
-1. [Az algebra alaptételének következményei](https://raw.githubusercontent.com/magyarkuti/algebra-1/master/classes/7-Algebra1.pdf)
+1. [Az algebra alaptételének következményei](https://raw.githubusercontent.com/magyarkuti/algebra-1/master/classes/6-Algebra1.pdf)
 * Irreducibilis polinom a komplex számtest felett
 * Polinomfaktorizáció a komplex számtest felett
 * Polinomfaktorizáció a valós számtest felett
@@ -82,7 +82,7 @@ tartalmazza az összes információt, de összefoglalom azokat, amelyek szerinte
 * Valódi komplex gyökökből páros sok van.
 * Páratlan fokú polinomnak van valós gyöke.
 
-1. [Vektortér fogalma](https://raw.githubusercontent.com/magyarkuti/algebra-1/master/classes/8-Algebra1.pdf)
+1. [Vektortér fogalma](https://raw.githubusercontent.com/magyarkuti/algebra-1/master/classes/7-Algebra1.pdf)
 * Vektortér mint algebrai struktúra
 * Példák vektorterekre
 * Alterek
@@ -91,7 +91,7 @@ tartalmazza az összes információt, de összefoglalom azokat, amelyek szerinte
 * Generátorcsere-lemma
 * Elimináció
 
-1. [Lineáris függetlenség](https://raw.githubusercontent.com/magyarkuti/algebra-1/master/classes/9-Algebra1.pdf)
+1. [Lineáris függetlenség](https://raw.githubusercontent.com/magyarkuti/algebra-1/master/classes/8-Algebra1.pdf)
 * Lineáris összefüggőség
 * Ekvivalens megfogalmazások
 * Nem véges rendszer lineáris függetlensége
@@ -101,7 +101,7 @@ tartalmazza az összes információt, de összefoglalom azokat, amelyek szerinte
 * Minimális generátorrendszerek
 * Függetlenrendszercsere-lemma
 
-1. [Független és generátorrendszer elemszáma](https://raw.githubusercontent.com/magyarkuti/algebra-1/master/classes/10-Algebra1.pdf)
+1. [Független és generátorrendszer elemszáma](https://raw.githubusercontent.com/magyarkuti/algebra-1/master/classes/9-Algebra1.pdf)
 * Steinitz-lemma
 * Feszítőrang
 * Rang-tétel
