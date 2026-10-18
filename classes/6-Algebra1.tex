@@ -1,0 +1,190 @@
+\input{algebra.tex}
+\title[Algebra 1.]{Speciális polinom faktorizáció}
+\subtitle{Az algebra alaptételének következményei}
+\date[6. hét]{2026.~október 18-án}
+\begin{document}
+\openingframes{Tartalom}
+\section{Polinom faktorizáció a komplex- és a valós számtest felett}
+\frame{
+A komplex számtest felett minden nem konstans polinomnak van gyöke.
+Formálisabban:
+\metroset{block=fill}
+\begin{FA}
+	Minden legalább elsőfokú komplex együtthatós polinomnak van komplex gyöke.
+	Azaz
+	ha $p\left( t \right)\in\mathbb{C}[t]$ egy nem konstans polinom,
+	akkor létezik $z\in\mathbb{C}$ komplex szám,
+	amelyre $p\left( z \right)=0$.
+\end{FA}
+\metroset{block=transparent}
+Az állítást itt nem tudjuk igazolni és egyelőre érdemes bizonyítás nélkül elfogadni.
+Illusztrációként megértettük, hogy miért igaz $p\left( t \right)=\alpha_0+t^n$ alakú polinomra.
+A felépítés jelen pontján tekintsük a komplex számtest egy még nem igazolt tulajdonságának.
+}
+\frame{
+Most összefoglaljuk, hogy az algebra alaptétele mit jelent a komplex test feletti, majd a valós test feletti polinomok
+faktorizációjára nézve.
+Láttuk, hogy minden normált polinom előáll mint normált irreducibilis polinomok szorzata,
+emiatt azt kell meggondolnunk, hogy mik az irreducibilis polinomok.
+\metroset{block=fill}
+\begin{proposition}
+	A $\mathbb{C}\left[ t \right]$ polinomgyűrűben minden legalább másodfokú polinom reducibilis.
+\end{proposition}
+\metroset{block=transparent}
+}
+%\begin{proof}
+%	Legyen $p$ egy legalább másodfokú komplex polinom.
+%	Az algebra alaptétele miatt van gyöke, és
+%	tudjuk hogy a gyöktényező mindig kiemelhető.
+%	Így azt kapjuk, hogy $p(t)=\left( t-z \right)h\left( t \right)$ alakú,
+%	emiatt $2\leq\deg p=1+\deg h$, ergo
+%	$p$ valóban előállt mint két legalább elsőfokú polinom szorzata.
+%\end{proof}
+\subsection{Komplex eset}
+\frame{
+A polinomok szorzattá bontásáról szóló tételnek a komplex számtest feletti speciális esete tehát:
+\metroset{block=fill}
+\begin{proposition}\label{pr:PolFact}
+	A $\mathbb{C}[t]$ polinomgyűrű minden legalább elsőfokú normált polinomjához léteznek
+	a sorrendjüktől eltekintve egyetlen $z_1,\dots,z_s\in\mathbb{C}$ egymástól különböző komplex számok,
+	és léteznek $n_1,\dots,n_s$ pozitív egészek,
+	amelyekre
+	\[
+		p\left( t \right)=
+		\left( t-z_1 \right)^{n_1}
+		\cdots
+		\left( t-z_s\right)^{n_s}.\qedhere
+	\]
+\end{proposition}
+\metroset{block=transparent}
+Persze ez azt jelenti, hogy egy $n$-ed fokú komplex polinomnak mindig pontosan $n$ komplex gyöke van,
+ha a gyökök számát multiplicitással számoljuk.
+}
+\frame{
+Az állítást egy kicsit egyszerűbben úgy is fogalmazhatjuk,
+hogy
+\emph{
+	minden nem konstans komplex polinom előáll mint első fokú komplex polinomok szorzata.
+}
+
+Az iménti mondat nyilván nem igaz a ,,komplex'' szót a ,,valós'' szóra cserélve,
+ugyanis minden negatív diszkriminánsú másodfokú valós polinom jó is ellenpéldának.
+Ez a jelenség az oka annak,
+hogy a komplex számtest felett sokkal kényelmesebb dolgoznunk mint a valós számok felett.
+}
+\subsection{Valós eset}
+\frame{
+Most nézzük, hogy mit jelent az algebra alaptétele a valós test feletti polinomgyűrűre nézve.
+\begin{proposition}
+	Legyen $p\left( t \right)\in\mathbb{C}[t]$ a komplex polinomgyűrű egy olyan eleme,
+	amelynek minden együtthatója valós.
+	Ekkor a $z\in \mathbb{C}$ komplex szám pontosan akkor gyöke $p$-nek,
+	ha $\bar{z}$ is gyöke $p$-nek.
+	Sőt, ha $z$ egy $k$-szoros multiplicitású gyök,
+	akkor $\bar{z}$ is pontosan $k$-szoros multiplicitású gyök.
+\end{proposition}
+}
+%\begin{proof}
+%	A $p$ polinomra tehát
+%	\begin{math}
+%		p\left( t \right)
+%		=
+%		\sum_{j=0}^n\alpha_jt^j,
+%	\end{math}
+%	ahol $\alpha_0,\alpha_1,\dots,\alpha_n\in\mathbb{R}$.
+%	A konjugálás tulajdonságai szerint egy $z$ komplex számra
+%	\[
+%		p\left( z \right)=
+%		\overline{
+%			\sum_{j=0}^n\alpha_jz^j
+%		}
+%		=
+%		\sum_{j=0}^n\overline{\alpha_jz^j}
+%		=
+%		\sum_{j=0}^n\bar{\alpha_j}\bar{z}^j
+%		=
+%		\sum_{j=0}^n\alpha_j\bar{z}^j
+%		=
+%		p\left(\bar{z} \right).
+%	\]
+%	Emiatt valós együtthatós $p$ polinomra és $z$ komplex számra
+%	$p\left( z \right)=0$ akkor és csak akkor, ha $p\left( \bar{z} \right)=0.$
+%
+%	Ha a gyök speciálisan valós szám, akkor a multiplicitásra vonatkozó állítás semmit mondó.
+%	Ha most $z$ egy nem valós komplex gyök,
+%	akkor $p(t)=\left( t-z \right)\left( t-\bar{z} \right)h\left( t \right)$, ahol
+%	$h\left( z \right)=0$ pontosan akkor, ha $h\left( \bar{z} \right)=0$.
+%	Így, ha $z$ egy $k$ szoros gyök,
+%	akkor
+%	\[
+%		p\left( t \right)=\left( t-z \right)^{k}\left( t-\bar{z} \right)^{k}\cdot h\left( t \right)
+%	\]
+%	alakú, ahol $h$-nak már sem $z$ sem $\bar{z}$ nem gyöke.
+%\end{proof}
+\metroset{block=fill}
+\frame{
+Minden valós együtthatós polinom előáll mint első vagy másodfokú polinomok szorzata:
+\begin{proposition}\label{pr:RealPolFact}
+	Az $\mathbb{R}[t]$ polinomgyűrű minden legalább elsőfokú normált polinomjához
+	léteznek $x_1,\dots,x_r\in\mathbb{R}$ valós számok,
+	léteznek $\alpha_1,\beta_1,\dots,\alpha_s,\beta_s$ valós együttható párok,
+	és léteznek
+	$n_1,\dots,n_r, m_1,\dots,m_s$ pozitív egészek úgy, hogy
+	\[
+		p\left( t \right)
+		=
+		\left( t-x_1 \right)^{n_1}
+		\cdots
+		\left( t-x_r \right)^{n_r}
+		\cdot
+		\left(\alpha_1 + \beta_1t +t^2\right)^{m_1}
+		\cdots
+		\left(\alpha_s + \beta_st +t^2\right)^{m_s}.
+	\]
+	Itt $r,s\geq 0$, de $r+s>0$, és $n_1+\dots+n_r+2\left( m_1+\dots+m_s \right)=\deg p$,
+	továbbá a jobboldalon szereplő másodfokú polinomok irreducibilisek.
+\end{proposition}
+}
+\metroset{block=transparent}
+%\begin{proof}
+%	Tekintsük a $p$ polinomot mint a komplex számtest feletti polinomgyűrű egy elemét,
+%	és alkalmazzuk a komplex polinom faktorizációról szóló tételt.
+%	A $p$ így előáll mint első fokú, esetleg komplex polinomok szorzata.
+%	A gyököket osszuk két része.
+%	Legyenek $x_1,\dots,x_r$ a különböző valós gyökök, amelyek multiplicitása rendre
+%	$n_1,\dots,n_r$.
+%	Legyenek $z_1,\overline{z_1},\dots,z_s,\overline{z_s}$ a különböző nem valós de komplex gyökök,
+%	ahol $m_1,\dots,m_s$ rendre a konjugált gyökpárok multiplicitása.
+%	Így
+%	\[
+%		p\left( t \right)=
+%		\left( t-x_1 \right)^{n_1}
+%		\cdots
+%		\left( t-x_r \right)^{n_r}
+%		\cdot
+%		\left( \left( t-z_1 \right)\left( t-\bar{z_1} \right) \right)^{m_1}
+%		\cdots
+%		\left( \left( t-z_s \right)\left( t-\bar{z_s} \right) \right)^{m_s}.
+%	\]
+%	Világos, hogy $r,s\geq 0$, de $r+s>0$, és $n_1+\dots+n_r+2\left( m_1+\dots+m_s \right)=\deg p$.
+%	A komplex faktorokra végezzük el a szorzást,
+%	így
+%	$
+%		\left( t-z_k \right)\left( t-\bar{z_k} \right)
+%		=
+%		t^2-2\Re z_kt+|z_k|^2
+%	$.
+%	Így $\alpha_k=|z_k|^2$ és $\beta_k=-2\Re z_k$, választással készen is vagyunk.
+%\end{proof}
+\frame{
+A fenti állításból két dolog azonnal látszik.
+Az első,
+hogy \alert{\emph{valós számtest felett minden legalább harmadfokú polinom reducibilis}},
+a második pedig,
+hogy ha egy valós együtthatós polinomnak nincs valós gyöke,
+akkor csak páros fokú lehet, vagy ami ugyanaz:
+\alert{\emph{minden páratlan fokú valós együtthatós polinomnak van valós gyöke.}}
+}
+
+\closingframes{Köszönöm a figyelmet, a türelmet, a megértést, az empátiát!}
+\end{document}
