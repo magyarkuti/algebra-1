@@ -1,0 +1,421 @@
+\input{algebra.tex}
+
+\title[Algebra 1.]{Vektorterek bevezetése}
+\subtitle{Altér és generátorrendszer}
+\date[7. hét]{2025. november 2-án}
+
+\begin{document}
+\openingframes{Tartalom}
+\section{A vektortér fogalma}
+\frame{
+\begin{definition}[Vektortér]\index{vektortér}
+	Legyen adva egy $\mathbb{F}$ test, és egy $V$ halmaz.
+	Tegyük fel, hogy adott egy $+:V\times V\to V$ két változós művelet (ezt összeadásnak nevezzük)
+	és adott egy $\cdot:\mathbb{F}\times V\to V$ szintén kétváltozós művelet (ezt skalárral való szorzásnak, vagy számmal való szorzásnak mondjuk).
+
+    A $V$-t az $\mathbb{F}$ test feletti \alert{\emph{vektortérnek}} nevezzük,
+	ha $\left( V,+ \right)$ egy Abel-csoport,
+	és a számmal valós szorzás műveletre teljesülnek az alábbi axiómák:
+	\begin{enumerate}
+		\item Minden $\alpha\in\mathbb{F}$ és minden $u,v\in V$ mellett
+		      \begin{math}
+			      \alpha\cdot\left( u+v \right)=\alpha\cdot u+\alpha\cdot v,
+		      \end{math}
+		\item Minden $\alpha,\beta\in\mathbb{F}$ és minden $u\in V$ mellett
+		      \begin{math}
+			      \left( \alpha+\beta \right)\cdot u=\alpha\cdot u+\beta\cdot u,
+		      \end{math}
+		\item Minden $\alpha,\beta\in\mathbb{F}$ és minden $u\in V$ mellett
+		      \begin{math}
+			      \alpha\cdot\left( \beta\cdot u \right)=\left( \alpha\beta \right)\cdot u,
+		      \end{math}
+		\item Minden $u\in V$ esetén $1\cdot u=u$.\qedhere
+	\end{enumerate}
+\end{definition}
+}
+\frame{
+Nagyon hasonlóan ahhoz, ahogyan testben is meggondoltuk igazak a következő számolási szabályok.
+Minden $\alpha\in\mathbb{F}$ mellett
+\begin{enumerate}
+	\item $\alpha\cdot 0=0$,
+	\item $0\cdot v=0$,
+	\item $\left( -1 \right)\cdot v=-v$,
+	\item $\alpha\cdot v=0$ esetén $\alpha=0$ vagy $v=0$.
+\end{enumerate}
+A számmal való szorzás $\cdot:\mathbb{F}\times V\to V$ művelet eredményének szokásos rövidítése,
+hogy a kissé körülményes $\alpha\cdot v$ helyett csak $\alpha v$-t írunk.
+Az is előfordul,
+különösen amikor egy konkrét vektortér konkrét műveletéről van szó,
+hogy az $\alpha v$ és a $v\alpha$ jelölést is
+ugyanarra az $\alpha\cdot v\in \mathbb{F}$ elemre használjuk.
+}
+\frame{
+Alapvető példa vektortérre a mátrixok tere.
+Az $m\times n$ méretű mátrixok $\mathbb{F}^{m\times n}$ halmaza a mátrix összeadással és a számmal való szorzással
+vektorteret alkot az $\mathbb{F}$ test felett.
+Ha $n=1$, akkor kapjuk a az oszlopvektorok $\mathbb{F}^m$ terét, ami így szintén egy $\mathbb{F}$ feletti vektortér.
+Speciális esetként $\mathbb{R}^m$ egy $\mathbb{R}$ feletti vektortér,
+$\mathbb{C}^m$ egy $\mathbb{C}$ feletti vektortér.
+
+Fontos példa még, egy adott $X$ halmazból az $\mathbb{F}$ testbe képező összes függvények halmaza
+a függvények közt szokásos összeadás művelettel, és számmal való szorzással.
+Ezt a teret $\mathbb{F}^X$ módon szokás jelölni, és minden nehézség nélkül ellenőrizhető,
+hogy $\mathbb{F}^X$ egy $\mathbb{F}$ feletti vektortér.
+Hasonlóan látszik, hogy például az összes valós--valós folytonos függvények is egy $\mathbb{R}$
+feletti vektorteret alkotnak, vagy ha ezek közül csak a differenciálható függvényekre szorítkozunk,
+akkor ezen függvénytér is vektortér az $\mathbb{R}$ test felett.
+}
+\frame{
+Rögzítenünk kell magunkban, hogy a vektortér definíciójában a test is fontos szerepet játszik.
+Más test felett ugyanaz az Abel-csoport már egy másik vektortérhez tartozik.
+Világos például, hogy $\mathbb{R}$ az $\mathbb{R}$ test felett vektortér a szokásos műveletekkel,
+de látjuk majd, hogy egészen más tulajdonságai vannak annak a vektortérnek,
+amit akkor kapunk,
+ha az $\mathbb{R}$ valós számok Abel-csoportját,
+mint a $\mathbb{Q}$ racionális test feletti vektortérnek tekintjük.
+
+Játékos példaként gondoljuk meg,
+hogy a pozitív valós számok egy az $\mathbb{R}$ feletti vektorteret alkot a következő fura műveletekkel:
+Tetszőleges $a,b$ pozitív valós szám mellett
+\(
+a\#b=a\cdot b,
+\)
+majd tetszőleges $\alpha$ valós szám és $a$ pozitív valós számra legyen
+\(
+\alpha\ast a=a^\alpha.
+\)
+\footnote{Itt $a\ast\alpha$ mit jelent?}
+}
+\frame{
+A vektorteret sokszor csak az additív művelet alaphalmazával jelöljük.
+
+Kicsit pontosabb ha az alaphalmaz mellett a testet is konkrétan specifikáljuk,
+de sokszor feltesszük, hogy a szövegkörnyezetből nyilvánvaló, hogy mely testre gondolunk.
+
+Hasonlóan pontosabb lenne a két műveletet is mindig kijelölni, mikor egy vektortérre hivatkozunk,
+de ha világos, hogy mi a vektortérbeli elemek közt az additív művelet, és hogy mit jelent egy test elemeivel szorozni,
+akkor elhagyjuk a műveletek kijelölését.
+
+A legpontosabb, -- de persze a legkörülményesebb -- jelölés az lenne, hogy pl.
+,,tekintsünk egy $\left( V,+,\cdot \right)$ vektorteret az $\mathbb{F}$ test fölött.''
+Ehelyett sokszor csak azt mondjuk, hogy
+,,legyen $V$ egy vektortér''.
+Ilyenkor a szövegkörnyezetből világosnak kell lennie, hogy mi a test, mit jelent a számmal való szorzás, és mi az összeadás a $V$ halmazon.
+}
+
+\section{Vektortér alterei}
+\frame{
+\begin{definition}[altér]\index{vektortér altere}\index{altér}
+	Legyen $\left( V,+,\cdot \right)$ egy vektortér az $\mathbb{F}$ test felett.
+	Egy $M\subseteq V$ részhalmaz a $V$ vektortér \emph{altere},
+	ha $M$ maga is vektorteret alkot a $V$-ben definiált additív művelettel,
+	és a $V$-ben definiált számmal való szorzással.
+\end{definition}
+\begin{proposition}
+	Legyen $V$ egy vektortér, és $M\subseteq V$ egy részhalmaza.
+	Az $M$ pontosan akkor altér,
+	ha
+	\begin{enumerate}
+		\item $0\in M$,
+		\item $u,v\in M$ esetén $u+v\in M$,
+		\item $u\in M$ és $\alpha\in\mathbb{F}$ esetén $\alpha u\in M$.\qedhere
+	\end{enumerate}
+\end{proposition}
+Tetszőleges $V$ vektortérre a $\left\{ 0 \right\}$ és maga $V$ mindig alterek,
+ezeket \alert{\emph{triviális altereknek}} is szokás mondani.\index{triviális altér}
+}
+\frame{
+\begin{defprop}[generált altér]\index{generált altér}
+	Egy vektortérben, akárhány altér közös része altér.
+	Emiatt értelmes a következő definíció.
+	Ha $H\subseteq V$ egy részhalmaza a $V$ vektortérnek,
+	akkor jelölje
+	$\gen H$ a $H$ halmazt tartalmazó összes alterek metszetét.
+
+	Ezt az alteret nevezzük a $H$ halmaz által \emph{generált altérnek.}
+\end{defprop}
+\metroset{block=fill}
+\begin{proposition}
+	Legyen $V$ egy vektortér.
+	Ekkor
+	\begin{enumerate}
+		\item Minden $H\subseteq V$ halmazra $H\subseteq \gen H$,
+		\item Ha $H\subseteq K\subseteq V$, akkor $\gen H\subseteq \gen K$,
+		\item Minden $H\subseteq V$ mellett $\gen\left( \gen H \right)=\gen H$.
+	\end{enumerate}
+	A $\gen H$ a $H$ halmazt tartalmazó alterek közt a legszűkebb.
+
+	Így $H\subseteq V$ pontosan akkor altér, ha $\gen H=H$.
+\end{proposition}
+\metroset{block=transparent}
+}
+\frame{
+\begin{definition}[lineáris kombináció, lineáris burok]\index{lineáris kombináció}\index{lineáris burok}
+	Ha adott a $V$ vektortérben véges sok $v_1,\dots,v_r$ vektor,
+	akkor a vektortér minden
+\metroset{block=fill}
+\begin{block}{}
+	\[
+		\alpha_1v_1+\dots+\alpha_r v_r
+	\]
+\end{block}
+\metroset{block=transparent}
+	alakú vektorát a $v_1,\dots,v_r$ vektorok egy \emph{lineáris kombinációjának} mondjuk.
+
+	Legyen $H\subseteq V$ egy tetszőleges halmaz.
+	Ekkor $\lin H$ jelöli $H$ összes véges részhalmazának összes lineáris kombinációinak halmazát,
+	azaz
+\metroset{block=fill}
+\begin{block}{}
+	\[
+		\lin H=
+		\left\{ \sum_{j=1}^n\alpha_jv_j:n\in\mathbb{N},v_1,\dots,v_n\in H,\alpha_1,\dots,\alpha_n\in\mathbb{F} \right\}
+	\]
+\end{block}
+\metroset{block=transparent}
+	Definíció szerint nulla darab vektor lineáris kombinációja a vektortér zérus eleme,
+	tehát $\lin \emptyset=\left\{ 0 \right\}.$
+	A $\lin H$ halmazt nevezzük a $H$ halmaz \emph{lineáris burkának}.
+\end{definition}
+}
+\frame{
+\begin{proposition}
+	Egy $V$ vektortér minden $H\subseteq V$ részhalmazának lineáris burka,
+	a $H$ halmazt tartalmazó legszűkebb altér, azaz
+	\[
+		\lin H=\gen H.\qedhere
+	\]
+\end{proposition}
+
+%\begin{proof}
+%	Világos, hogy $H\subseteq \lin H$, világos hogy $\lin H$ egy altér,
+%	és az is nyilvánvaló, hogy ha $H\subseteq M$ egy tetszőleges altér,
+%	akkor $\lin H\subseteq M$.
+%
+%	A $\lin H$ egy a $H$-t tartalmazó altér,
+%	és $\gen H$ az összes ilyen alterek metszete, ezért
+%	$\gen H\subseteq\lin H$.
+%	Másoldalról, a $\lin H$ altér részhalmaza minden $H$-t tartalmazó altérnek,
+%	így azok közös részének is,
+%	ergo
+%	$\lin H\subseteq \gen H$.
+%\end{proof}
+Ha $H$ egy véges halmaz, akkor $\lin H$ kicsit egyszerűbben írható.
+Mint arról már a definícióban is szó volt $\lin \emptyset=\left\{ 0 \right\}$.
+
+Ha $H$ egy elemű, akkor $\lin (\left\{ v_1 \right\})=\left\{ \alpha v_1:\alpha\in\mathbb{F} \right\}$.
+
+Ha $H=\left\{ v_1,v_2 \right\}$ két elemű, akkor
+$\lin({v_1,v_2})=\left\{ \alpha_1v_1+\alpha_2v_2:\alpha_1,\alpha_2\in\mathbb{F} \right\}$.
+
+Hasonlóan, ha $H=\left\{ v_1,\dots,v_r \right\}$ halmaz $r$ elemből áll akkor elegendő csak az $r$ elemből álló lineáris kombinációkat képezni, azaz
+\[
+	\lin \left( \left\{ v_1,\dots,v_r \right\} \right)
+	=
+	\left\{ \sum_{j=1}^r\alpha_jv_j:\alpha_1,\dots,\alpha_r\in\mathbb{F} \right\}.
+\]
+}
+\frame{
+\begin{definition}[generátorrendszer, végesen generált vektortér]\index{generátorrendszer}\index{végesen generált vektortér}
+	Egy vektortér egy $H$ részhalmazáról azt mondjuk, hogy \emph{generálja a vektorteret}
+	vagy, hogy $H$ egy \emph{generátorrendszere} $V$-nek, ha
+	\[
+		\lin H=V.
+	\]
+	A $V$ vektorteret \emph{végesen generáltnak} mondunk, ha létezik véges generátorrendszere.
+\end{definition}
+}
+\frame{
+\begin{lemma}[generátorrendszer csere]\label{le:gencsere}
+	Legyen $\left\{ x_1,\dots,x_m \right\}$ egy generátorrendszere valamely vektortérnek,
+	és tegyük fel, hogy valamely $y$ vektorra
+	\[
+		y=\sum_{j=1}^m\eta_jx_j,
+	\]
+	ahol $\eta_k\neq 0$ valamely $1\leq k\leq m$ mellett.
+	Ekkor $y$ becserélhető a $k$-adik helyen a generátorrendszerbe,
+	úgy hogy az generátorrendszer maradjon, azaz a
+	\[
+		\left\{ x_1,\dots,x_{k-1},y,x_{k+1},\dots,x_m \right\}
+	\]
+	vektorrendszer is generátorrendszer.
+\end{lemma}
+}
+%\begin{proof}
+%	Fejezzük ki $x_k$-t az $y$-ra felírt formulából:
+%	\(\displaystyle
+%	x_k=\frac{1}{\eta_k}y+\sum_{\substack{j=1\\j\neq k}}^m\frac{-1}{\eta_k}\eta_jx_j.
+%	\)
+%	Ha $a$ eredetileg
+%	\(\displaystyle
+%	a=\sum_{j=1}^m\alpha_jx_j
+%	\)
+%	alakú, akkor $x_k$ helyére betéve, a fent kifejezett formulát és bevezetve a
+%	$\delta=\frac{\alpha_k}{\eta_k}$ jelölést, azt kapjuk hogy:
+%	\begin{multline*}
+%		a=\alpha_kx_k+\sum_{\substack{j=1\\j\neq k}}^m\alpha_jx_j=
+%		\\
+%		=
+%		\alpha_k
+%		\left(
+%		\frac{1}{\eta_k}y+\sum_{\substack{j=1\\j\neq k}}^m\frac{-1}{\eta_k}\eta_jx_j
+%		\right)
+%		+\sum_{\substack{j=1\\j\neq k}}^m\alpha_jx_j
+%		=
+%		\frac{\alpha_k}{\eta_k}y+
+%		\sum_{\substack{j=1\\j\neq k}}^m\left( \alpha_j-\frac{\alpha_k}{\eta_k}\eta_j \right)x_j=
+%		\\
+%		=\delta y+
+%		\sum_{\substack{j=1\\j\neq k}}^m\left( \alpha_j-\delta\eta_j \right)x_j.
+%	\end{multline*}
+%	Azt kaptuk tehát, hogy ha egy vektor kifejezhető az eredeti vektorrendszerből az
+%	\[
+%		\left( \alpha_1,\dots,\alpha_m \right)
+%	\]
+%	együtthatókkal, akkor ugyanez a vektor a módosított vektorrendszerből is kifejezhető,
+%	méghozzá az
+%	\[
+%		\left(
+%		\underbrace{\alpha_1-\delta\eta_1}_{1.},
+%		\underbrace{\alpha_2-\delta\eta_2}_{2.},
+%		\dots,
+%		\underbrace{\alpha_{k-1}-\delta\eta_{k-1}}_{k-1.},
+%		\underbrace{\delta}_{k.},
+%		\underbrace{\alpha_{k+1}-\delta\eta_{k+1}}_{k+1.},\dots,
+%		\underbrace{\alpha_m-\delta\eta_m}_{m.}
+%		\right)
+%	\]
+%	együtthatókkal.
+%\end{proof}
+\frame{
+	Azt kaptuk tehát, hogy ha egy vektor kifejezhető az eredeti vektorrendszerből az
+	\[
+		\left( \alpha_1,\dots,\alpha_m \right)
+	\]
+	együtthatókkal, akkor ugyanez a vektor a módosított vektorrendszerből is kifejezhető,
+	méghozzá az
+	\[
+		\left(
+		\underbrace{\alpha_1-\delta\eta_1}_{1.},
+		\underbrace{\alpha_2-\delta\eta_2}_{2.},
+		\dots,
+		\underbrace{\alpha_{k-1}-\delta\eta_{k-1}}_{k-1.},
+		\underbrace{\delta}_{k.},
+		\underbrace{\alpha_{k+1}-\delta\eta_{k+1}}_{k+1.},\dots,
+		\underbrace{\alpha_m-\delta\eta_m}_{m.}
+		\right)
+	\]
+}
+\section{Elimináció}
+\frame{
+Szokásos jelölés és a kívánatos szemlélet kialakításában is fontos szerepet játszik a következő táblázat.
+Ha $\left\{ x_1,\dots,x_m \right\}$ egy generátorrendszer az azt jelenti, hogy minden $a\in V$ vektor
+előáll mint az $x_1,\dots,x_m$ vektorok valamilyen együtthatókkal vett lineáris kombinációja.
+Ha tehát $a=\alpha_1x_1+\dots+\alpha_mx_m$, akkor azt a következőképpen fejezzük ki.
+\[
+	\begin{array}{c|c}
+		       & a        \\
+		\hline
+		x_1    & \alpha_1 \\
+		\vdots & \vdots   \\
+		x_k    & \alpha_k \\
+		\vdots & \vdots   \\
+		x_m    & \alpha_m \\
+		\hline
+	\end{array}
+\]
+Tekinthető ez egy $m\times 1$ típusú bekeretezett mátrixnak, a hol a sorok címkéi a generátorrendszer elemei,
+az egyetlen oszlop címkéje pedig az a vektor, amelynek az előállításáról van szó.
+}
+\frame{
+A generátorrendszer csere lemma arról is szólt, hogy ha $y$-t a $k$-adik helyen cseréljük a generátorrendszerbe,
+akkor a fenti táblázat hogyan változik.
+Azt kaptuk, hogy a
+\begin{eqnarray}\label{alg:G-J}
+	\begin{array}{c|cc}
+		       & y              & a                       \\
+		\hline
+		x_1    & \eta_1         & \alpha_1                \\
+		\vdots & \vdots         & \vdots                  \\
+		x_k    & \boxed{\eta_k} & \alpha_k                \\
+		\vdots & \vdots         & \vdots                  \\
+		x_m    & \eta_m         & \alpha_m                \\
+		\hline
+		       & \delta         & \frac{\alpha_k}{\eta_k}
+	\end{array}
+	&\implies&
+	\begin{array}{c|cc}
+		       & y      & a                     \\
+		\hline
+		x_1    & 0      & \alpha_1-\eta_1\delta \\
+		\vdots & \vdots & \vdots                \\
+		y      & 1      & \delta                \\
+		\vdots & \vdots & \vdots                \\
+		x_m    & 0      & \alpha_m-\eta_m\delta \\
+		\hline
+		       &        &
+	\end{array}
+\end{eqnarray}
+transzformációt kell végrehajtani.}
+\frame{
+Persze ugyanezt azt egyetlen $a$ vektor helyett kiszámolhatjuk például az $a,b,c$ vektorokra is.
+Továbbra is az $y$-t cseréljük a generátorrendszerbe, így a
+\begin{eqnarray*}
+	\begin{array}{c|cccc}
+		       & y              & a                       & b                      & c                       \\
+		\hline
+		x_1    & \eta_1         & \alpha_1                & \beta_1                & \gamma_1                \\
+		\vdots & \vdots         & \vdots                  & \vdots                 & \vdots                  \\
+		x_k    & \boxed{\eta_k} & \alpha_k                & \beta_k                & \gamma_k                \\
+		\vdots & \vdots         & \vdots                  & \vdots                 & \vdots                  \\
+		x_m    & \eta_m         & \alpha_m                & \beta_m                & \gamma_m                \\
+		\hline
+		       & \delta         & \frac{\alpha_k}{\eta_k} & \frac{\beta_k}{\eta_k} & \frac{\gamma_k}{\eta_k} \\
+	\end{array}
+	&\implies&
+	\begin{array}{c|cccc}
+		       & y      & a                       & b                      & c                       \\
+		\hline
+		x_1    & 0      & \alpha_1-\eta_1\delta_a & \beta_1-\eta_1\delta_b & \gamma_1-\eta_1\delta_c \\
+		\vdots & \vdots & \vdots                  & \vdots                 & \vdots                  \\
+		y      & 1      & \delta_a                & \delta_b               & \delta_c                \\
+		\vdots & \vdots & \vdots                  & \vdots                 & \vdots                  \\
+		x_m    & 0      & \alpha_m-\eta_m\delta_a & \beta_m-\eta_m\delta_b & \gamma_m-\eta_m\delta_c \\
+		\hline
+		       &        &
+	\end{array}
+\end{eqnarray*}
+a transzformációt hajtjuk végre.
+}
+\frame{
+Most arra figyeljünk,
+hogy végül is a keretben lévő $m\times 4$-es mátrixszal sorműveleteket hajtottunk végre:
+\begin{itemize}
+	\item
+	      Eldöntöttük, hogy az $y,a,b,c$ vektorok közül az $y$-t cseréljük be a generátorrendszerbe,
+	      mégpedig a $k$-adik helyen.
+	      Ezt jeleztük az $y$ oszlopa $k$-adik helyen lévő elemének bekeretezésével.
+	      A keretben csak nem zéró szám lehet.
+	\item
+	      Első lépésként a keretezett számmal osztottuk a $k$-adik sort. Ez az új táblázat $k$-adik sora.
+	      Pusztán segítségképpen ugyanezt a sort mint egy számolási segédsort az első táblázat alá másoltuk.
+	\item
+	      Az új táblázat első sora az eredeti első sornak és a segédsor $\eta_1$-szeresének különbsége.
+	      A második sor az eredeti második sornak és a segédsor $\eta_2$-szeresének különbsége.
+	      Hasonlóan, $m\neq k$-ra az $m$-edik sor az eredeti $m$-edik sornak és a segédsor $\eta_m$-szeresének különbsége.
+\end{itemize}
+}
+\frame{
+Látjuk tehát, hogy összesen két fajta sorművelettel alakítottuk a kiindulási mátrixot:
+\begin{enumerate}
+	\item Egy sort szoroztunk egy nem zérus számmal,
+	\item Egy sorhoz hozzáadtuk egy másik sor számszorosát.
+\end{enumerate}
+Világos, hogy ez ugyanaz, mintha a feladat az lett volna,
+hogy a fenti két sorművelet használva az $y$ oszlopában minden számot el kell tüntetni,
+a $k$-adikat pedig $1$-re kell beállítani.
+Ez a \emph{Gauss\,--\,Jordan-elimináció}.\index{Gauss\,--\,Jordan-elimináció}
+}
+\closingframes{Köszönöm a figyelmet, a türelemet, a megértést, az empátiát!}
+\end{document}
+
